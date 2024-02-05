@@ -1,0 +1,6 @@
+:root {
+  --page_bg_color: #222;
+}
+
+html { background: var(--page_bg_color); }
+body { margin: 0; }
