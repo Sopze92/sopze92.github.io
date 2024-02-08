@@ -56,9 +56,9 @@ img { user-select: none; pointer-events: none; }
 
 #brand-img {
   position: absolute;
-  top: -.5em;
-  width: 6.25em;
-  height: 6.25em;
+  top: -25%;
+  width: 3.25em;
+  height: 3.25em;
   padding: 0;
   border-radius: 50%;
   box-shadow: -3px 4px 12px #00000070;
