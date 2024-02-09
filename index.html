@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Sergio del Pino">
+  <meta name="description" content="Personal & professional page of Sergio 'Sopze' del Pino">
   <link rel="shortcut icon" href="./resources/img/favicon.ico" type="image/x-icon">
   <title>At Sopze's</title>
   <!-- GOOGLE FONTS -->
@@ -12,30 +14,38 @@
   <!-- PAGE CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="./resources/css/styles.css">
+  <!-- PAGE JS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script defer src="./resources/js/htmlbuilder.js"></script>
+  <script defer src="./resources/js/app.js"></script>
 </head>
 <body>
   <!-- HEADER -->
-  <div id="header-container" class="navbar sticky-top section-dark p-0 pt-4 m-0">
-    <div class="container-fluid pe-0">
-      <div class="row w-100 d-flex justify-content-between">
-        <div class="col-11">
-          <ul class="nav p-0 mb-0">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link fs-4 fw-bold p-0 py-1 header-tab-item" id="tab-btn-home" tab="home" type="button">Home</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link fs-4 fw-bold p-0 py-1 header-tab-item" id="tab-btn-portfolio" tab="portfolio" type="button">Portfolio</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link fs-4 fw-bold p-0 py-1 header-tab-item" id="tab-btn-aboutme" tab="aboutme" type="button">About me</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link fs-4 fw-bold p-0 py-1 header-tab-item" id="tab-btn-resumee" tab="resumee" type="button">Resumee</button>
-            </li>
-          </ul>
+  <div id="header-container" class="navbar sticky-top section-dark p-0 m-0">
+    <div class="container-fluid">
+      <div class="row w-100 m-0 px-3 justify-content-between">
+        <div class="col-11 col-md-12 d-flex flex-column-rev-until-md-row m-0 p-0">
+          <div class="col-12 col-md-8 mt-auto mb-0 pt-4 d-flex">
+            <ul class="nav p-0 mb-0">
+              <li class="nav-item" role="presentation"><button class="nav-link fs-tab fw-bold p-0 py-1 header-tab-item" id="tab-btn-home" tab="home" role="tab" type="button">Home</button></li>
+              <li class="nav-item" role="presentation"><button class="nav-link fs-tab fw-bold p-0 py-1 header-tab-item" id="tab-btn-portfolio" tab="portfolio" role="tab" type="button">Portfolio</button></li>
+              <li class="nav-item" role="presentation"><button class="nav-link fs-tab fw-bold p-0 py-1 header-tab-item" id="tab-btn-services" tab="services" role="tab" type="button">Services</button></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-4 my-auto pt-2 d-flex justify-content-center justify-content-md-end">
+            <ul class="nav p-0 m-0 mb-2">
+              <li class="nav-item" role="presentation"><button class="nav-link header-socials-item" social="sf"><img class="no-select" src="./resources/img/s_sketchfab.svg"/></button></li>
+              <li class="nav-item" role="presentation"><button class="nav-link header-socials-item" social="as"><img class="no-select" src="./resources/img/s_artstation.svg"/></button></li>
+              <li class="nav-item" role="presentation"><button class="nav-link header-socials-item" social="gh"><img class="no-select" src="./resources/img/s_github.svg"/></button></li>
+              <li class="nav-item" role="presentation"><button class="nav-link header-socials-item" social="yt"><img class="no-select" src="./resources/img/s_youtube.svg"/></button></li>
+              <li class="nav-item" role="presentation"><button class="nav-link header-socials-item" social="tw"><img class="no-select" src="./resources/img/s_twitter.svg"/></button></li>
+              <li class="nav-item" role="presentation"><button class="nav-link header-socials-item" social="li"><img class="no-select" src="./resources/img/s_linkedin.svg"/></button></li>
+              <li class="nav-item" role="presentation"><button class="nav-link header-socials-item" social="gm"><img class="no-select" src="./resources/img/s_gmail.svg"/></button></li>
+            </ul>
+          </div>
         </div>
-        <div class="col-1 d-flex justify-content-end position-relative">
-          <img id="brand-img" class="navbar-brand no-select" src="./resources/img/icon.svg"></img>
+        <div class="col-1 p-0 show-until-md d-flex justify-content-end position-relative" aria-hidden="true">
+          <img id="brand-img" class="no-select" src="./resources/img/icon.svg"></img>
         </div>
       </div>
     </div>
@@ -43,16 +53,25 @@
   <!-- CONTENT -->
   <div id="tab-container" class="container-fluid"></div>
   <!-- FOOTER -->
-  <nav id="page-footer" class="navbar section-dark w-100 m-0">
-    <div class="container-fluid flex-column m-auto no-select">
-      <p class="fs-1c fw-bold">At Sopze's</p>
-      <p class="fs-4c">© 2022-2024 · Sergio '<b>Sopze</b>' del Pino Arroyo · Spain · <a href="mailto:sergiodepa92@gmail.com" target="_blank" rel="noopener noreferrer">SergioDepa92@gmail.com</a></p>
-      <p class="fs-4c">· Created and designed by <b>Sopze</b> · Powered by <b>Github</b> using custom <b>Bootstrap</b> + vanilla <b>JavaScript</b> ·</p>
+  <div id="page-footer" class="navbar section-dark w-100 m-0">
+    <div class="row w-100 m-0 p-0 px-3 d-flex justify-content-end">
+      <div class="col-8 flex-column text-center no-select">
+        <p class="fs-1c fw-bold text-center">At Sopze's</p>
+      </div>
+      <div class="col-2 m-0 p-0 pt-sm-2 pe-sm-4 no-select d-flex justify-content-end">
+        <ul class="nav mt-0 d-flex flex-column">
+          <li class="nav-item" role="presentation"><button class="nav-link fs-tab fw-bold p-0 py-1 footer-tab-item" id="tab-btn-resumee" tab="resumee" role="tab" type="button">Resumee</button></li>
+          <li class="nav-item" role="presentation"><button class="nav-link fs-tab fw-bold p-0 py-1 footer-tab-item" id="tab-btn-aboutme" tab="aboutme" role="tab" type="button">About Me</button></li>
+        </ul>
+      </div>
     </div>
-  </nav>
-  <!-- PAGE JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  <script src="./resources/js/htmlbuilder.js"></script>
-  <script src="./resources/js/app.js"></script>
+    <div class="row w-100 m-0 px-3 d-flex justify-content-center">
+      <div class="col-12 container-fluid flex-column m-auto no-select">
+        <p class="fs-4c text-center m-0">© 2022-2024 · Sergio '<b>Sopze</b>' del Pino Arroyo · Spain ·</p>
+        <p class="fs-4c text-center">· <a href="mailto:sergiodepa92@gmail.com" target="_blank" rel="noopener noreferrer">SergioDepa92@gmail.com</a> ·</p>
+        <p class="fs-5c text-center">· Created and designed by <b>Sopze</b> · Powered by <b>Github</b> using custom <b>Bootstrap</b> + vanilla <b>JavaScript</b> ·</p>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

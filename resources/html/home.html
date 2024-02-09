@@ -1,7 +1,8 @@
 <!-- TAB-HOME -->
-<div class="container-fluid">
-  <div class="row">
-    <div id="home-title-container" class="col-12 col-lg-8 mx-auto border-top">
+<div class="container-fluid px-0 mx-0">
+  <div class="col-12 col-md-10 mx-auto border-bottom section-border-bottom"></div>
+  <div class="row" >
+    <div id="home-title-container" aria-hidden="true" class="col-12 col-lg-8 mx-auto">
       <div class="position-relative">
         <!-- nice title -->
         <div id="home-title" class="d-flex justify-content-center show-over-md no-select">
@@ -24,14 +25,28 @@
       </div>
     </div>
   </div>
+  <div class="col-12 col-md-10 mx-auto border-bottom section-border-top"></div>
   <div class="row">
     <div class="col">
-      <div class="col-12 col-md-10 mx-auto border-bottom section-border"></div>
       <p id="home-subtitle" class="mono text-center ts-bottom no-select">
-        <!-- TODO: JS driven FX for each word, with the thematic of the word itself -->
-        <span id="fx_artist">Artist</span> · <span id="fx_coder">Coder</span> · <span id="fx_developer">Developer</span> · <span id="fx_gamer">Gamer</span></p>
-      <div class="col-12 col-md-10 mx-auto border-top section-border"></div>
+        <!-- TODO: each word is made by its own theme
+          Artist: a nice picture
+          Programmer: a programmed animation
+          Developer: a buildup fx, modular, 3D
+          Gamer: just joy
+        -->
+        <span id="fx_artist">Artist</span> · <span id="fx_coder" >Programmer</span> · <span id="fx_developer" >Developer</span> · <span id="fx_gamer">Gamer</span>
+      </p>
     </div>
   </div>
+  <div class="col-12 col-md-10 mx-auto border-top section-border-bottom"></div>
+  <div class="row px-0 section-medium d-flex justify-content-center overflow-hidden">
+    <div class="col-12 px-0">
+      <div class="m-0 p-0 position-relative wordspanner-container">
+        <img class="wordspanner" src="./resources/img/wordspanner_hr.webp"/>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-md-10 mx-auto border-top section-border-bottom"></div>
   <include script="./resources/js/app-home.js"></include>
 </div>
