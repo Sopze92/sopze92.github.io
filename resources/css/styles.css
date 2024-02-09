@@ -93,19 +93,19 @@ img { user-select: none; pointer-events: none; }
 .header-socials-item {
   margin: 0px;
   padding: .25em .5em;
-  transition: .125s;
+  transition: .025s;
 }
 
 .header-socials-item img { width: 24px; }
 
 .header-socials-item:hover {
-  scale: 1.25;
-  transition: .0625s;
+  scale: 1.1;
+  transition: .0s;
 }
 
 .header-socials-item:active {
   scale: .625;
-  transition: .025s;
+  transition: .125s;
 }
 
 /* GENERAL TABS */
