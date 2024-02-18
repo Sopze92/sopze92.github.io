@@ -11,10 +11,11 @@
   <meta property="og:title" content="At Sopze's">
   <meta property="og:description" content="Sergio 'Sopze' proffesional portfolio & personal page, includes his resumee and contratable service types">
   <meta property="og:url" content="http://www.sopze.com">
-  <meta property="og:image" content="https://sopze92.github.io/resources/img/og_image.png">
-  <meta property="og:image:secure_url" content="https://sopze92.github.io/resources/img/og_image.png">
+  <meta property="og:image" content="https://sopze92.github.io/_resources/img/og_image.png">
+  <meta property="og:image:secure_url" content="https://sopze92.github.io/_resources/img/og_image.png">
+  <meta property="og:image:type" content="image/png">
   <meta property="og:locale:alternate" content="es_ES">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:card" content="summary">
   <meta name="twitter:domain" content="http://www.sopze.com">
   <meta name="twitter:site" content="@sopze92">
   <meta name="twitter:creator" content="@sopze92">
@@ -27,64 +28,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700&family=Kanit:wght@200;300;400;500;700&family=Share+Tech+Mono&display=swap" rel="stylesheet"> 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="stylesheet" href="./resources/css/styles.css">
+  <link rel="stylesheet" href="./_resources/styles.css">
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  <script defer src="./resources/js/htmlbuilder.js"></script>
-  <script defer src="./resources/js/app.js"></script>
+  <script defer src="./_resources/lib/html_builder.js"></script>
+  <script defer src="./_resources/app.js"></script>
 </head>
 <body>
-  <!-- HEADER -->
-  <div id="header-container" class="navbar sticky-top section-dark p-0 m-0">
-    <div class="container-fluid">
-      <div class="row w-100 m-0 px-3 justify-content-between">
-        <div class="col-11 col-md-12 d-flex flex-column-rev-until-md-row m-0 p-0">
-          <div class="col-12 col-md-8 mt-auto mb-0 pt-4 d-flex">
-            <ul class="nav p-0 mb-0">
-              <li class="nav-item" role="presentation"><button class="nav-link fs-tab fw-bold p-0 py-1 header-tab-item" id="tab-btn-home" tab="home" role="tab" type="button">Home</button></li>
-              <li class="nav-item" role="presentation"><button class="nav-link fs-tab fw-bold p-0 py-1 header-tab-item" id="tab-btn-portfolio" tab="portfolio" role="tab" type="button">Portfolio</button></li>
-              <li class="nav-item" role="presentation"><button class="nav-link fs-tab fw-bold p-0 py-1 header-tab-item" id="tab-btn-services" tab="services" role="tab" type="button">Services</button></li>
-            </ul>
-          </div>
-          <div class="col-12 col-md-4 my-auto pt-2 d-flex justify-content-center justify-content-md-end">
-            <ul class="nav p-0 m-0 mb-2">
-              <li class="nav-item" role="presentation"><button class="nav-link header-socials-item" social="sf"><img class="no-select" src="./resources/img/s_sketchfab.svg"/></button></li>
-              <li class="nav-item" role="presentation"><button class="nav-link header-socials-item" social="as"><img class="no-select" src="./resources/img/s_artstation.svg"/></button></li>
-              <li class="nav-item" role="presentation"><button class="nav-link header-socials-item" social="gh"><img class="no-select" src="./resources/img/s_github.svg"/></button></li>
-              <li class="nav-item" role="presentation"><button class="nav-link header-socials-item" social="yt"><img class="no-select" src="./resources/img/s_youtube.svg"/></button></li>
-              <li class="nav-item" role="presentation"><button class="nav-link header-socials-item" social="tw"><img class="no-select" src="./resources/img/s_twitter.svg"/></button></li>
-              <li class="nav-item" role="presentation"><button class="nav-link header-socials-item" social="li"><img class="no-select" src="./resources/img/s_linkedin.svg"/></button></li>
-              <li class="nav-item" role="presentation"><button class="nav-link header-socials-item" social="gm"><img class="no-select" src="./resources/img/s_email.svg"/></button></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-1 p-0 show-until-md d-flex justify-content-end position-relative" aria-hidden="true">
-          <img id="brand-img" class="no-select" src="./resources/img/icon.svg"></img>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- CONTENT -->
-  <div id="tab-container" class="container-fluid"></div>
-  <!-- FOOTER -->
-  <div id="page-footer" class="navbar section-dark w-100 m-0">
-    <div class="row w-100 m-0 p-0 px-3 d-flex justify-content-end">
-      <div class="col-8 flex-column text-center no-select">
-        <p class="fs-1c fw-bold text-center">At Sopze's</p>
-      </div>
-      <div class="col-2 m-0 p-0 pt-sm-2 pe-sm-4 no-select d-flex justify-content-end">
-        <ul class="nav mt-0 d-flex flex-column">
-          <li class="nav-item" role="presentation"><button class="nav-link fs-tab fw-bold p-0 py-1 footer-tab-item" id="tab-btn-resumee" tab="resumee" role="tab" type="button">Resumee</button></li>
-          <li class="nav-item" role="presentation"><button class="nav-link fs-tab fw-bold p-0 py-1 footer-tab-item" id="tab-btn-aboutme" tab="aboutme" role="tab" type="button">About Me</button></li>
-        </ul>
-      </div>
-    </div>
-    <div class="row w-100 m-0 px-3 d-flex justify-content-center">
-      <div class="col-12 container-fluid flex-column m-auto no-select">
-        <p class="fs-4c text-center m-0">© 2022-2024 · Sergio '<b>Sopze</b>' del Pino Arroyo · Spain ·</p>
-        <p class="fs-4c text-center">· <a href="mailto:sergiodepa92@gmail.com" target="_blank" rel="noopener noreferrer">SergioDepa92@gmail.com</a> ·</p>
-        <p class="fs-5c text-center">· Created and designed by <b>Sopze</b> · Powered by <b>Github</b> using custom <b>Bootstrap</b> + vanilla <b>JavaScript</b> ·</p>
-      </div>
-    </div>
-  </div>
 </body>
 </html>

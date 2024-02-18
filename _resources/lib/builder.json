@@ -1,0 +1,96 @@
+{
+  "internal": {
+    "404" : {
+      "name": "Nooooo :(",
+      "title": true,
+      "file": "./404.html"
+    },
+
+    "404s" : {
+      "name": "404",
+      "title": false,
+      "file": "./_pages/main/404.html" 
+    }
+  },
+
+  "pagetypes": {
+
+    "main": { 
+      "webmode":"page", 
+      "location": "./_pages/main" 
+    },
+
+    "util": { 
+      "webmode":"article", 
+      "querykey":"utils", 
+      "location": "./_pages/utils" ,
+      "resources": [
+        { "type":"pagetype-css", "file":"styles-utils.css"}
+      ] 
+    },
+
+    "project": { 
+      "webmode":"site", 
+      "querykey":"projects"
+    }
+  },
+
+  "pages": {
+    
+    "home": { 
+      "default": true,
+      "pagetype": "main",
+      "resources": [
+        { "type":"page-js", "file":"app-home.js"}
+      ] 
+    },
+
+    "portfolio": { 
+      "pagetype": "main", 
+      "name": "Portfolio",
+      "resources": [
+        { "type":"shared-js", "file":"app-sidebar.js"}
+      ] 
+    },
+    
+    "services": { 
+      "pagetype": "main",
+      "name": "Services"
+    },
+    
+    "projects": {
+      "pagetype": "project", 
+      "name": "RocketLeague AudioModding",
+      "location": "./rlam-docs/index.html"
+    },
+    
+    "aboutme": { 
+      "pagetype": "main",
+      "name": "About Me",
+      "resources": [
+        { "type":"shared-js", "file":"app-sidebar.js"}
+      ] 
+    },
+    
+    "resumee": { 
+      "pagetype": "main",
+      "name": "Resumee",
+      "resources": [
+        { "type":"shared-js", "file":"app-sidebar.js"}
+      ] 
+    }
+  },
+
+  "socials": {
+    "sketchfab": "sketchfab.com/sopze",
+    "artstation": "artstation.com/sopze",
+    "github": "github.com/Sopze92",
+    "youtube": "youtube.com/channel/UCtWxP9mwcjtHCxcmenJQYkQ",
+    "twitter": "twitter.com/Sopze92",
+    "linkedin": "linkedin.com/in/sergiodepa"
+  },
+  
+  "emails": {
+    "gmail" : "sergiodepa92@gmail.com"
+  }
+}

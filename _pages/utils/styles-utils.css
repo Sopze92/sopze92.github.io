@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+/* FETCH */
+
+#fetch-form {
+  padding: 1em;
+  & input:not([type="button"]):not[readonly] { height: 2em; }
+  & .side { width: 5em; }
+  & label, p { user-select: none; }
+  & label, input[type="button"], input[type="text"][readonly] { font-weight: 700; }
+  & #response { border: 1px solid #000; background-color: #fff; padding: .25em; min-height: 2em;}
+  & input[type="text"]:not[readonly], .btn-parameter { 
+      border: 1px solid #aaa;
+      background: #ffffff;
+      border-radius: .25em;
+      transition: 0s;
+      &:hover { outline: 1px solid #2d9ffd; }
+    }
+  & .btn-toggleheader { 
+      border: 1px solid #aaa;
+      width: 3.5em;
+      height: 2em;
+      margin-right: -.4em;
+      margin-top: .25em;
+      &:hover { outline: 1px solid #2d9ffd; }
+    }
+  & .btn-editheader {
+    width: 2em;
+    height: 2em;
+  }
+}
