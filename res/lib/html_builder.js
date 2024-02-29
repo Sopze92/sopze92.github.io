@@ -6,8 +6,8 @@ var htmlBuilder;
 
   document.addEventListener("DOMContentLoaded", async (e)=> {
     
-    const cfgfile= await fetch("./_res/lib/builder.json");
-    const resfile= await fetch("./_res/lib/resources.json");
+    const cfgfile= await fetch("./res/lib/builder.json");
+    const resfile= await fetch("./res/lib/resources.json");
 
     if(cfgfile.status == 200) {
       

@@ -11,9 +11,9 @@
   "src": {
 
     "_dirs":{
-      "img":        "./_res/img",
-      "img-soc":    "./_res/img/soc",
-      "img-tech":   "./_res/img/tech"
+      "img":        "./res/img",
+      "img-soc":    "./res/img/soc",
+      "img-tech":   "./res/img/tech"
     },
     
     "img-soc": {
@@ -83,7 +83,7 @@
       "app-node":   "app/nodejs.svg",
       "app-bln":    "app/blender.svg",
       "app-sub":    "app/subs_painter.svg",
-      "app-imat":   "app/instamat.webp",
+      "app-imat":   "app/instamat.svg",
       "app-vsc":    "app/vscode.svg",
       "app-vs":     "app/visualstudio.svg",
       "app-zb":     "app/zbrush.svg",

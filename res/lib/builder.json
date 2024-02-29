@@ -2,7 +2,7 @@
   "default": {
     "query": "?home",
     "composer": {
-      "root": "./_pages",
+      "root": "./web",
       "header": "default",
       "footer": "default"
     },
@@ -15,28 +15,34 @@
   
   "composer": {
 
+    "public": { 
+      "root": "./web/main",
+      "header": "public",
+      "footer": "minimal"
+    },
+
     "home": { 
-      "root": "./_web/main",
+      "root": "./web/main",
       "header": "home",
       "footer": "minimal"
     },
 
     "internal": { 
-      "root": "./_web/internal",
+      "root": "./web/internal",
       "header": "minimal",
       "footer": "minimal"
     },
 
-    "default": { "root": "./_web/main" },
+    "default": { "root": "./web/main" },
 
     "worker": { 
-      "root": "./_web/main",
+      "root": "./web/main",
       "header": "worker",
       "footer": "minimal"
     },
 
     "utils": { 
-      "root": "./_web/utils",
+      "root": "./web/utils",
       "header": "utils",
       "footer": "minimal",
       "resources": [
@@ -48,8 +54,18 @@
 
   "header": {
 
+    "public": {
+      "module": "./web/module/header/default",
+      "navbar": [
+        "home"
+      ],
+      "display": {
+        "socials": false
+      }
+    },
+
     "home": {
-      "module": "./_web/module/header/default",
+      "module": "./web/module/header/default",
       "navbar": [
         "home",
         "portfolio",
@@ -61,7 +77,7 @@
     },
 
     "default": {
-      "module": "./_web/module/header/default",
+      "module": "./web/module/header/default",
       "navbar": [
         "home",
         "portfolio",
@@ -77,7 +93,7 @@
     },
     
     "worker": {
-      "module": "./_web/module/header/default",
+      "module": "./web/module/header/default",
       "navbar": [
         "home",
         "portfolio",
@@ -93,7 +109,7 @@
     },
 
     "minimal": {
-      "module": "./_web/module/header/default",
+      "module": "./web/module/header/default",
       "navbar": [
         "home"
       ],
@@ -103,7 +119,7 @@
     },
 
     "utils": {
-      "module": "./_web/module/header/default",
+      "module": "./web/module/header/default",
       "navbar": [
         "home",
         "utils"
@@ -119,11 +135,11 @@
   "footer": {
 
     "default": {
-      "module": "./_web/module/footer/default"
+      "module": "./web/module/footer/default"
     },
 
     "minimal": {
-      "module": "./_web/module/footer/default",
+      "module": "./web/module/footer/default",
       "display": {
         "links": false
       }
@@ -135,7 +151,7 @@
     "err404": { "composer": "internal", "title": "404" },
     
     "home": {
-      "composer": "home",
+      "composer": "public",
       "title": "Home", "showTitle": false,
       "resources": [
         { "type":"stylesheet", "file":"styles.css" },
