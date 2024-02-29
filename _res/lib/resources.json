@@ -1,0 +1,109 @@
+{
+  "social": {
+    "sketchfab": "sketchfab.com/sopze/models",
+    "artstation": "sopze.artstation.com",
+    "github": "github.com/Sopze92",
+    "youtube": "youtube.com/channel/UCtWxP9mwcjtHCxcmenJQYkQ",
+    "twitter": "twitter.com/Sopze92",
+    "linkedin": "linkedin.com/in/sergiodepa"
+  },
+
+  "src": {
+
+    "_dirs":{
+      "img":        "./_res/img",
+      "img-soc":    "./_res/img/soc",
+      "img-tech":   "./_res/img/tech"
+    },
+    
+    "img-soc": {
+      "sfab":       "sketchfab.svg",
+      "arts":       "artstation.svg",
+      "ghub":       "github.svg",
+      "yt":         "youtube.svg",
+      "tw":         "twitter.svg",
+      "lin":        "linkedin.svg",
+      "gm":         "email.svg"
+    },
+
+    "img-tech": {
+      
+      "dev-bat":    "lang/batch.svg",
+      "dev-c":      "lang/c.svg",
+      "dev-cpp":    "lang/cpp.svg",
+      "dev-cs":     "lang/csharp.svg",
+      "dev-css":    "lang/css.svg",
+      "dev-dxsl":   "lang/dxsl.svg",
+      "dev-glsl":   "gen/opengl.svg",
+      "dev-html":   "lang/html.svg",
+      "dev-java":   "lang/java.svg",
+      "dev-js":     "lang/javascript.svg",
+      "dev-ts":     "lang/typescript.svg",
+      "dev-lua":    "lang/lua.svg",
+      "dev-py":     "lang/python.svg",
+      "dev-snes":   "lang/snes.svg",
+      "dev-scm":    "app/sannybuilder.svg",
+      
+      "lib-bs":     "lib/bootstrap.svg",
+      "lib-tail":   "lib/tailwind.svg",
+      "lib-jest":   "lib/jest.svg",
+      "lib-react":  "lib/react.svg",
+      "lib-jqery":  "lib/jquery.svg",
+      "lib-i18n":   "lib/i18n.svg",
+      "lib-lwjgl":  "lib/lwjgl.svg",
+      "lib-jogl":   "lib/jogl.webp",
+      "lib-sl2D":   "lib/slick2d.png",
+      "lib-glut":   "gen/opengl.svg",
+      "lib-dnet":   "lib/dotnet.svg",
+      "lib-glfw":   "lib/glfw.webp",
+      "lib-jasm":   "lib/jasmine.svg",
+      "lib-hono":   "lib/hono.svg",
+      "lib-redux":  "lib/redux.svg",
+      "lib-next":   "lib/next.svg",
+      "lib-astro":  "lib/astro.svg",
+      "lib-xprs":   "lib/express.svg",
+      "lib-gql":    "lib/graphql.svg",
+      "lib-deno":   "lib/deno.svg",
+      "lib-tlib":   "lib/testinglibrary.svg",
+      "lib-ig":     "lib/imgui.svg",
+
+      "eng-ue45":   "eng/unreal45.svg",
+      "eng-ue3":    "eng/unreal3.svg",
+      "eng-uni":    "eng/unity.svg",
+      "eng-src":    "eng/source.svg",
+      "eng-rware":  "eng/renderware.svg",
+      "eng-gsrc":   "eng/goldsrc.svg",
+      "eng-qkee":   "eng/quakeengine.svg",
+      "eng-dome":   "eng/doomengine.png",
+      
+      "app-git":    "app/git.svg",
+      "app-ghub":   "app/github.svg",
+      "app-fig":    "app/figma.svg",
+      "app-trlo":   "app/trello.svg",
+      "app-node":   "app/nodejs.svg",
+      "app-bln":    "app/blender.svg",
+      "app-sub":    "app/subs_painter.svg",
+      "app-imat":   "app/instamat.webp",
+      "app-vsc":    "app/vscode.svg",
+      "app-vs":     "app/visualstudio.svg",
+      "app-zb":     "app/zbrush.svg",
+      "app-skt":    "app/sketchup.svg",
+      "app-mtb":    "app/marmoset.svg",
+      "app-ink":    "app/inkscape.svg",
+      "app-aps":    "app/adb_photoshop.svg",
+      "app-apr":    "app/adb_premiere.svg",
+      "app-ail":    "app/adb_illustrator.svg",
+      "app-pdn":    "app/paintdotnet.svg",
+      "app-fls":    "app/flstudio.png",
+      "app-owr":    "app/off_word.svg",
+      "app-oex":    "app/off_excel.svg",
+      "app-che":    "app/cheatengine.svg",
+      "app-ida":    "app/ida.png",
+      "app-sany":   "app/sannybuilder.svg",
+      
+      "prf-win10":  "pref/windows10.svg",
+      "prf-ffox":   "pref/firefox.svg",
+      "prf-xbox":   "pref/xbox.svg"
+    }
+  }
+}

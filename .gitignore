@@ -1,3 +1,4 @@
 **/thumbs.db
 **/*.code-workspace
 server.py
+.dev

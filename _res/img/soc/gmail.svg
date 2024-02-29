@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="52 42 88 66.017044"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="gmail.svg"
+   width="88"
+   height="66.017044"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs5" />
+  <sodipodi:namedview
+     id="namedview5"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="6.2954545"
+     inkscape:cx="43.126354"
+     inkscape:cy="23.588448"
+     inkscape:window-width="1350"
+     inkscape:window-height="1041"
+     inkscape:window-x="234"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg5" />
+  <path
+     fill="#4285f4"
+     d="M 58,108.01704 H 72 V 74.017021 l -20,-15 v 43.000019 c 0,3.32 2.69,6 6,6"
+     id="path1" />
+  <path
+     fill="#34a853"
+     d="m 120,108.01704 h 14 c 3.32,0 6,-2.69 6,-6 V 59.017021 l -20,15"
+     id="path2" />
+  <path
+     fill="#fbbc04"
+     d="m 120,48.017021 v 26 l 20,-15 v -8 c 0,-7.42 -8.47,-11.65 -14.4,-7.2"
+     id="path3" />
+  <path
+     fill="#ea4335"
+     d="m 72,74.017021 v -26 l 24,18 24,-18 v 26 l -24,18.00002"
+     id="path4" />
+  <path
+     fill="#c5221f"
+     d="m 52,51.017021 v 8 l 20,15 v -26 l -5.6,-4.2 c -5.94,-4.45 -14.4,-0.22 -14.4,7.2"
+     id="path5" />
+</svg>
