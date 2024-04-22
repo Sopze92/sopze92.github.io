@@ -198,7 +198,6 @@ img { user-select: none; pointer-events: none; }
     }
 
     & span {
-      font-size: 1.1em;
       font-weight: 900;
       letter-spacing: .05em;
     }

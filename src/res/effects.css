@@ -5,6 +5,8 @@
   --fx-col-sec: #777;
   --fx-col-ter: #222;
   --fx-col-text: var(--cv-link-lime);
+  --cv-musrel-x: 0;
+  --cv-musrel-y: 0;
 }
 
 .bg-frostedglass-complex {
@@ -147,7 +149,7 @@
     position: absolute;
     inset: 0;
     background: radial-gradient(color-mix(in srgb, var(--fx-col-pri) 70%, #00000000), #ff000000 70%) border-box no-repeat;
-    background-position: calc(-128px + var(--cv-mouse-relative-x)) calc(-128px + var(--cv-mouse-relative-y));
+    background-position: calc(-128px + var(--cv-musrel-x)) calc(-128px + var(--cv-musrel-y));
     background-size: 256px 256px;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0, 3px 0, 2px calc(100% - 3px), calc(100% - 3px) calc(100% - 3px), calc(100% - 3px) 3px, 0 3px);
     z-index: 1;
@@ -155,7 +157,7 @@
 
   &:hover{
     background: radial-gradient(color-mix(in srgb, var(--fx-col-pri) 20%, #00000000), var(--fx-col-ter) 30%) border-box no-repeat;
-    background-position: calc(-128px + var(--cv-mouse-relative-x)) calc(-128px + var(--cv-mouse-relative-y));
+    background-position: calc(-128px + var(--cv-musrel-x)) calc(-128px + var(--cv-musrel-y));
     background-size: 256px 256px;
   }
 }
@@ -178,7 +180,7 @@
     position: absolute;
     inset: 0;
     background: radial-gradient(color-mix(in srgb, var(--fx-col-pri) 70%, #00000000), #ff000000 70%) border-box no-repeat;
-    background-position: calc(-96px + var(--cv-mouse-relative-x)) calc(-96px + var(--cv-mouse-relative-y));
+    background-position: calc(-96px + var(--cv-musrel-x)) calc(-96px + var(--cv-musrel-y));
     background-size: 192px 192px;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0, 3px 0, 3px calc(100% - 3px), calc(100% - 3px) calc(100% - 3px), calc(100% - 3px) 3px, 0 3px);
     z-index: 1;
@@ -186,7 +188,7 @@
 
   &:hover{
     background: radial-gradient(color-mix(in srgb, var(--fx-col-pri) 50%, #00000000), var(--fx-col-ter) 30%) border-box no-repeat;
-    background-position: calc(-256px + var(--cv-mouse-relative-x)) calc(-256px + var(--cv-mouse-relative-y));
+    background-position: calc(-256px + var(--cv-musrel-x)) calc(-256px + var(--cv-musrel-y));
     background-size: 512px 512px;
 
     outline: solid 3px color-mix(in srgb, var(--fx-col-pri) 80%, #00000000);

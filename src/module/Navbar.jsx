@@ -7,11 +7,11 @@ import { FrostedGlass } from "../res/Effects.jsx"
 const NavBarLink= ({ active, title, query }) => {
 
   const 
-    { actions }= React.useContext(Globals);
+    { actions }= React.useContext(Globals)
 
   return (
     <li className="nav-item" role="presentation">
-      <button className={`nav-link fs-tab fw-semibold p-0 py-1 header-tab-item ${active ? "active" : ""}`} role="tab" type="button" onClick={()=>globals.navigateQuery(query)}>
+      <button className={`nav-link fs-tab fw-semibold p-0 py-1 header-tab-item ${active ? "active" : ""}`} role="tab" type="button" onClick={()=>actions.navigateQuery(query)}>
         {title}
       </button>
     </li>
@@ -19,7 +19,7 @@ const NavBarLink= ({ active, title, query }) => {
 }
 
 const NavBarSocial= ({ data }) => {
-  console.log(data);
+  //console.log(data)
   return (
     <li className="nav-item" role="presentation">
       <a className="nav-link header-socials-item">

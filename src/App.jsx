@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
-import NavBar from "./module/Header.jsx";
+import NavBar from "./module/Navbar.jsx";
 import Footer from "./module/Footer.jsx";
 
 import { Globals, Constants } from "./context/AppContext.jsx";
@@ -14,7 +14,7 @@ const App= ()=>{
     nav= useNavigate(),
     PageElement= pagedata ? pagedata.content: null
 
-  console.log(React.useContext(Globals))
+  //console.log(React.useContext(Globals))
 
   React.useEffect(()=>{
     if(!actions.setPage(page)) nav("/404")
@@ -38,9 +38,9 @@ const App= ()=>{
 
   return ( ready.page &&
     <>
-      <NavBar type={pagedata.header}/>
+{/*       <NavBar/> */}
       <PageElement />
-      <Footer type={pagedata.footer}/>
+{/*       <Footer/> */}
     </>
   )
 }

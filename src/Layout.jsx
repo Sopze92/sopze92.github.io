@@ -17,11 +17,9 @@ const Layout= ()=>{
     <BrowserRouter>
       <Routes>
         <Route exact path="/:page" element={(<App />)} />
-{/*         <Route exact path={["/:page", "/:page/:p0"]} element={(<App />)} /> */}
 				<Route exact path="/" element={(<Redirector path={defaultRoute}/>)} />
 
-        <Route exact path="/404" element={(<Err404/>)}/>
-				<Route path="*" element={(<Redirector path="/404"/>)} />
+        <Route path="*" element={(<Err404/>)}/>
       </Routes>
     </BrowserRouter>
   )
