@@ -74,7 +74,7 @@ const AppContext= ReactComponent=>{
 
     React.useEffect(()=>{ 
       globals.actions._initialize() 
-      window.dev_globals= globals
+      window._ctx= globals
       
       //window.addEventListener('mousemove', (e)=> { _setGlobal( { events: { mousemove: e } } ) })
     },[])
@@ -103,7 +103,7 @@ const globalsState= ({ get, set })=> {
     events: {},
     resources: {},
     content: {},
-    pagedata: { content: null },
+    pagedata: { content: null, data: null },
 
     actions: {
 
@@ -128,8 +128,6 @@ const globalsState= ({ get, set })=> {
         set.settings({...builder, qry })
         set.resources(resources)
         set.content(content)
-
-        window._ctx= { settings: {...builder, qry }, resources, content}
         
         set.ready({setup:true})
 
@@ -190,13 +188,6 @@ const globalsState= ({ get, set })=> {
         return _name ? get.settings().page[_name].title : "ERR"
       },
       
-      getSrcPath: (reference)=>{
-        const 
-          res= get.resources(),
-          path= reference.split(":")
-        return `${res.src._dirs[path[0]]}/${res.src[path[0]][path[1]]}`
-      },
-      
       parseQuery: (query)=>{
         const params= query.split(/(?=-|:)/);
         return get.actions().resolvePage({
@@ -209,7 +200,12 @@ const globalsState= ({ get, set })=> {
           return param? param.slice(1) : null }
       },
 
-      navigateQuery: (query)=>{ set.pagedata(get.actions().parseQuery(query)) },
+      navigateQuery: (query)=>{ 
+        get.actions().setPage(
+          get.pagedata(
+            get.actions().parseQuery(query)
+          )
+        )},
     
       resolvePage: (data)=>{
         if(data.page === "project"){

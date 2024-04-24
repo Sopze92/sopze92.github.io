@@ -13,8 +13,8 @@ const EdgedButton= ({ resource })=>{
     if(element.current){
       const bbox= element.current.getBoundingClientRect()
       set_style({
-          "--cv-musrel-x": `${mousemove.clientX - bbox.x}px`, 
-          "--cv-musrel-y": `${mousemove.clientY - bbox.y}px`
+          "--cv-musrel-x": `${(mousemove.clientX - bbox.x).toFixed(2)}px`, 
+          "--cv-musrel-y": `${(mousemove.clientY - bbox.y).toFixed(2)}px`
         })
     }
   },[mousemove])

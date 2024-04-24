@@ -1,6 +1,7 @@
-import React from "react";
+import React from "react"
 
-import { Globals } from "../context/AppContext.jsx";
+import { Globals } from "../context/AppContext.jsx"
+import { StaticData } from "../context/AppGlobals.jsx"
 
 const Footer= ({ type }) => {
 
@@ -27,7 +28,10 @@ const Footer= ({ type }) => {
       { data.render.includes("text")  &&
         <div className="row w-100 m-0 px-3 d-flex justify-content-center">
             <div className="col-12 container-fluid flex-column m-auto no-select">
-              <p className="fs-4c text-center m-0">© 2022-{0} · Sergio &apos;<b>Sopze</b>&apos; del Pino Arroyo · Spain ·</p>
+              <p className="fs-4c text-center m-0">
+                © 2022-{StaticData.date[2]} · Sergio &apos;<b>Sopze</b>&apos; del Pino Arroyo · Spain ·<br/>
+                · Built with <b>Vite</b> + <b>React</b> · Styled with <b>Bootstrap</b> and a lot of <i>custom <b>CSS</b></i> ·
+              </p>
               <p className="fs-4c text-center">· <a href="mailto:" target="_blank" rel="noopener noreferrer">{0}</a> ·</p>
             </div>
         </div>

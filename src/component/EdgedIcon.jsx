@@ -13,15 +13,22 @@ const TechIcon= ({ resource })=>{
     [color, set_color]= React.useState(null)
 
   React.useEffect(()=>{
-    if(resource) _initializeColors()
+    if(resource) {
+      const color= {
+        "--fx-col-pri": resource.col[0], 
+        "--fx-col-neg": resource.col[1]
+      }
+      if(resource.col.length > 2) color["--fx-col-text"]= resource.col[2]
+      set_color(color)
+    }
   },[])
 
   React.useEffect(function(){ if(mousemove) 
     if(element.current){
       const bbox= element.current.getBoundingClientRect()
       set_style({
-          "--cv-musrel-x": `${mousemove.clientX - bbox.x}px`, 
-          "--cv-musrel-y": `${mousemove.clientY - bbox.y}px`
+          "--cv-musrel-x": `${(mousemove.clientX - bbox.x)>>0}px`, 
+          "--cv-musrel-y": `${(mousemove.clientY - bbox.y)>>0}px`
         })
     }
   },[mousemove])
@@ -36,16 +43,6 @@ const TechIcon= ({ resource })=>{
       <img src={resource.img} />
     </div>
   )
-
-  function _initializeColors(){
-    const color= {
-      "--fx-col-pri": resource.col[0], 
-      "--fx-col-neg": resource.col[1]
-    }
-  
-    if(resource.col.length > 2) color["--fx-col-text"]= resource.col[2]
-    set_color(color)
-  }
 }
 
 export default TechIcon

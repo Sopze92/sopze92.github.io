@@ -5,37 +5,37 @@
     "sketchfab": {
       "name": "Sketchfab",
       "img": "sketchfab.svg",
-      "href": "sketchfab.com/sopze/models"
+      "href": "https://sketchfab.com/sopze/models"
     },
     "artstation": {
       "name": "ArtStation",
       "img": "artstation.svg",
-      "href": "sopze.artstation.com"
+      "href": "https://sopze.artstation.com"
     },
     "github": {
       "name": "GitHub",
       "img": "github.svg",
-      "href": "github.com/Sopze92"
+      "href": "https://github.com/Sopze92"
     },
     "youtube": {
       "name": "YouTube",
       "img": "youtube.svg",
-      "href": "youtube.com/channel/UCtWxP9mwcjtHCxcmenJQYkQ"
+      "href": "https://youtube.com/channel/UCtWxP9mwcjtHCxcmenJQYkQ"
     },
     "twitter": {
       "name": "Twitter",
       "img": "twitter.svg",
-      "href": "twitter.com/Sopze92"
+      "href": "https://twitter.com/Sopze92"
     },
     "linkedin": {
       "name": "Linkedin",
       "img": "linkedin.svg",
-      "href": "linkedin.com/in/sergiodepa"
+      "href": "https://linkedin.com/in/sergiodepa"
     },
     "gmail": {
       "name": "Gmail",
       "img": "email.svg",
-      "href": "sergiodepa92@gmail.com"
+      "href": "mailto://sergiodepa92@gmail.com"
     }
   },
 

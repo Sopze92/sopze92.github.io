@@ -98,16 +98,11 @@ const Page= ()=>{
           </div>
         </div>
         <div className="row section-padding">
-          <div className="col">
-            <p id="home-subtitle" className="mono text-center ts-bottom no-select">
-{/*         TODO: each word is made by its own theme
-              Artist: a nice picture
-              Programmer: a programmed animation
-              Developer: a buildup fx, modular, 3D
-              Gamer: just joy */}
-{/*           <span id="fx_artist">Artist</span> · <span id="fx_coder" >Programmer</span> · <span id="fx_developer" >Developer</span> · <span id="fx_gamer">Gamer</span> */}
-              <span className="fw-bold text-warning">SITE UNDER CONSTRUCTION</span>
-            </p>
+          <div className="col text-center">
+            <p className="fw-bold fs-1 text-warning">SITE UNDER CONSTRUCTION</p>
+{/*             <p id="home-subtitle" className="mono ts-bottom no-select">
+              <span id="fx_artist">Artist</span> · <span id="fx_coder" >Programmer</span> · <span id="fx_developer" >Developer</span> · <span id="fx_gamer">Gamer</span>
+            </p> */}
           </div>
         </div>
 

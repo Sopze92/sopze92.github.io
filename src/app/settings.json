@@ -17,12 +17,12 @@
         "portfolio",
         "services"
       ],
-      "social": [
-        { "type": "email", "name": "gmail", "image":"gm" },
-        { "type": "url", "name": "linkedin", "image":"lin" },
-        { "type": "url", "name": "github", "image":"ghub" },
-        { "type": "url", "name": "artstation", "image":"arts" },
-        { "type": "url", "name": "sketchfab", "image":"sfab" }
+      "links": [
+        "social:gmail",
+        "social:linkedin",
+        "social:github",
+        "social:artstation",
+        "social:sketchfab"
       ]
     },
 

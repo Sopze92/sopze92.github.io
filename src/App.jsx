@@ -10,15 +10,18 @@ const App= ()=>{
 
   const
     { ready, settings, pagedata, actions }= React.useContext(Globals),
-    { page }= useParams(),
+    [ page, set_Page ]= React.useState(useParams().page),
     nav= useNavigate(),
     PageElement= pagedata ? pagedata.content: null
 
-  //console.log(React.useContext(Globals))
-
   React.useEffect(()=>{
     if(!actions.setPage(page)) nav("/404")
-  },[])
+    nav(`/${page}`)
+  },[page])
+
+  React.useEffect(()=>{
+    set_Page(pagedata.data._name)
+  },[pagedata.data])
 
   React.useEffect(()=>{
     let timeoutID= -1;
@@ -33,14 +36,17 @@ const App= ()=>{
         }
       }, 4000);
     }
+    else if(pagedata){
+      nav(`/${pagedata.data._name}`)
+    }
     return ()=>{ if(timeoutID != -1) clearTimeout(timeoutID); }
   }, [pagedata]);
 
   return ( ready.page &&
     <>
-{/*       <NavBar/> */}
+      <NavBar/>
       <PageElement />
-{/*       <Footer/> */}
+      <Footer/>
     </>
   )
 }
