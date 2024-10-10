@@ -1,0 +1,171 @@
+{
+  "general":{
+    "title":"At Sopze's",
+    "email":"sergiodepa92@gmail.com",
+    "indent": ["var(--cv-link-lime)", "var(--cv-link-limedark)"]
+  },
+
+  "default": {
+    "query": "?home",
+    "page": {
+      "header": "default",
+      "footer": "default",
+      "title": "UNTITLED",
+      "showTitle": true
+    }
+  },
+
+  "header": {
+
+    "default": {
+      "navbar": [
+        "home",
+        "portfolio",
+        "services"
+      ],
+      "links": [
+        "social:gmail",
+        "social:linkedin",
+        "social:github",
+        "social:artstation",
+        "social:sketchfab"
+      ]
+    },
+
+    "minimal": {
+      "navbar": [
+        "home"
+      ]
+    },
+
+    "empty": {},
+
+    "public": {
+      "navbar": [
+        "home",
+        "portfolio",
+        "aboutme"
+      ]
+    },
+
+    "home": {
+      "navbar": [
+        "home",
+        "portfolio",
+        "services"
+      ]
+    },
+    
+    "worker": {
+      "navbar": [
+        "home",
+        "portfolio",
+        "aboutme"
+      ],
+      "social": [
+        { "type": "email", "name": "gmail", "image":"gmail" },
+        { "type": "url", "name": "linkedin", "image":"linkedin" },
+        { "type": "url", "name": "github", "image":"github" },
+        { "type": "url", "name": "artstation", "image":"artstation" },
+        { "type": "url", "name": "sketchfab", "image":"sketchfab" }
+      ]
+    },
+
+    "utils": {
+      "navbar": [
+        "home",
+        "utils"
+      ],
+      "social": [
+        { "type": "url", "name": "github", "image":"github" },
+        { "type": "url", "name": "linkedin", "image":"linkedin" },
+        { "type": "email", "name": "gmail", "image":"gmail" }
+      ]
+    }
+  },
+
+  "footer": {
+
+    "default": {
+      "render": [ "links", "text" ]
+    },
+
+    "minimal": {
+      "render": [ "text" ]
+    },
+
+    "empty": {}
+  },
+
+  "page": {
+
+    "err404": {
+      "title": "404",
+      "header": "minimal",
+      "footer": "minimal"
+    },
+    
+    "leaving": {
+      "title": "Leaving...",
+      "header": "empty",
+      "footer": "NULL"
+    },
+    
+    "home": {
+      "title": "Home", 
+      "showTitle": false,
+      "header": "empty",
+      "footer": "minimal"
+    },
+
+    "portfolio": { 
+      "title": "Portfolio",
+      "header": "worker",
+      "footer": "minimal"
+    },
+    
+    "services": { 
+      "header": "worker",
+      "footer": "minimal",
+      "title": "Services"
+    },
+    
+    "projects": {
+      "title": "Projects"
+    },
+    
+    "aboutme": { 
+      "title": "About Me",
+      "header": "public",
+      "footer": "minimal"
+    },
+    
+    "resume": { 
+      "title": "Resume"
+    },
+    
+    "utils": { 
+      "header": "utils",
+      "footer": "minimal"
+    }
+  },
+
+  "aliases": {
+
+    "404": "err404",
+    "index": "home",
+    "about" : "aboutme",
+    "cv" : "resume",
+    "resumee" : "resume",
+    "util" : "utils",
+    "project" : "projects"
+  },
+  
+  "project": {
+  
+    "rlam": {
+      "absolute": false,
+      "location": "rlam-docs"
+    }
+  }
+}

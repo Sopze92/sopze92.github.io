@@ -1,0 +1,35 @@
+{
+  "title":"My Portfolio",
+  "description":"Select any item from the list on the left to view its details",
+  "date":"2024",
+  "header":[
+    "engine:unity",
+    "app:visualstudio",
+    "app:blender",
+    "app:substance_painter",
+    "lang:cplusplus",
+    "lang:csharp",
+    "lang:python",
+    "lang:lua",
+    "lang:html"
+  ],
+  "content":[
+    {"type":"sep" },
+    {"type":"txt:blk", "css":"fs-4 text-center", "data":"Featured elements:"},
+    {"type":"row", "data":[
+      {"type":"col", "data":[
+        { "type":"img:abs", "data":"https://i.imgur.com/eMbTEAN.png" },
+        { "type":"txt", "css":"fs-4 text-center", "data":"example text" }
+      ]},
+      {"type":"col", "data":[
+        { "type":"img:abs", "data":"https://i.imgur.com/eMbTEAN.png" },
+        { "type":"txt", "css":"fs-4 text-center", "data":"example text" }
+      ]},
+      {"type":"col", "data":[
+        { "type":"img:abs", "data":"https://i.imgur.com/eMbTEAN.png" },
+        { "type":"txt", "css":"fs-4 text-center", "data":"example text" }
+      ]}
+    ]},
+    {"type":"sep"}
+  ]
+}

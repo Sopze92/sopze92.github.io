@@ -1,0 +1,14 @@
+{
+  "title":"DevFont",
+  "description":"Simple font for consoles in a pixelated style, includes two variants",
+  "date":"-",
+  "header":[
+    "app:type32"
+  ],
+  "content":[
+    {"type":"sep"},
+    {"type":"fon", "data":"devfont-x8"},
+    {"type":"sep"},
+    {"type":"fon", "data":"devfont-x16"}
+  ]
+}

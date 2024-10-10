@@ -1,0 +1,1434 @@
+{
+  "social": {
+    "_imgroot": "./res/img/soc",
+
+    "sketchfab": {
+      "name": "Sketchfab",
+      "src": "sketchfab.svg",
+      "href": "https://sketchfab.com/sopze/models"
+    },
+    "artstation": {
+      "name": "ArtStation",
+      "src": "artstation.svg",
+      "href": "https://sopze.artstation.com"
+    },
+    "github": {
+      "name": "GitHub",
+      "src": "github.svg",
+      "href": "https://github.com/Sopze92"
+    },
+    "youtube": {
+      "name": "YouTube",
+      "src": "youtube.svg",
+      "href": "https://youtube.com/channel/UCtWxP9mwcjtHCxcmenJQYkQ"
+    },
+    "twitter": {
+      "name": "Twitter",
+      "src": "twitter.svg",
+      "href": "https://twitter.com/Sopze92"
+    },
+    "fab": {
+      "name": "Fab",
+      "src": "fab.svg",
+      "href": "https://fab.com"
+    },
+    "itchio": {
+      "name": "Itch.io",
+      "src": "itchio.svg",
+      "href": "https://sopze.itch.io/"
+    },
+    "linkedin": {
+      "name": "Linkedin",
+      "src": "linkedin.svg",
+      "href": "https://linkedin.com/in/sergiodepa"
+    },
+    "gmail": {
+      "name": "Gmail",
+      "src": "email.svg",
+      "href": "mailto://sergiodepa92@gmail.com"
+    }
+  },
+
+  "lang": {
+    "_imgroot": "./res/img/tech",
+    
+    "c": { 
+      "name": "C",
+      "class": "language",
+      "usage": ["software"],
+      "src": "lang/c.svg",
+      "col": ["#095996", "#965909"]
+    },
+    "cplusplus": { 
+      "name": "C++",
+      "class": "language",
+      "usage": ["software"],
+      "src": "lang/cpp.svg",
+      "col": ["#095996", "#965909"]
+    },
+    "csharp": { 
+      "name": "C#",
+      "class": "language",
+      "usage": ["software"],
+      "src": "lang/csharp.svg",
+      "col": ["#6121c3", "#c32161"]
+    },
+    "java": { 
+      "name": "Java",
+      "class": "language",
+      "usage": ["software"],
+      "src": "lang/java.svg",
+      "col": ["#11748f", "#f87411", "#e68b24"]
+    },
+    "snes": { 
+      "name": "SNES 65c816 Assembly (x16)",
+      "class": "language",
+      "usage": ["videogames"],
+      "src": "lang/snes.svg",
+      "col": ["#883333", "#333388"]
+    },
+    "python": { 
+      "name": "Python",
+      "class": "language",
+      "usage": ["backend", "software", "scripting"],
+      "src": "lang/python.svg",
+      "col": ["#30628b", "#8b6230", "#e9c745"]
+    },
+    "javascript": { 
+      "name": "JavaScript",
+      "class": "language",
+      "usage": ["webpages"],
+      "src": "lang/javascript.svg",
+      "col": ["#e2cc4a", "#4acce2", "#111f"]
+    },
+    "typescript": { 
+      "name": "TypeScript",
+      "class": "language",
+      "usage": ["webpages"],
+      "src": "lang/typescript.svg",
+      "col": ["#2e6eb5", "#b56e2e"]
+    },
+    "html": { 
+      "name": "HTML5",
+      "class": "language",
+      "usage": ["webpages"],
+      "src": "lang/html.svg",
+      "col": ["#d9562a", "#2a56d9"]
+    },
+    "css": { 
+      "name": "CSS3",
+      "class": "language",
+      "usage": ["stylesheets"],
+      "src": "lang/css.svg",
+      "col": ["#1d7fb8", "#b87f1d"]
+    },
+    "hlsl": { 
+      "name": "DirectX Shading Language",
+      "class": "language",
+      "usage": ["shaders"],
+      "src": "lang/dxsl.svg",
+      "col": ["#afc664", "#64c6af"]
+    },
+    "glsl": { 
+      "name": "OpenGL Shading Language",
+      "class": "language",
+      "usage": ["shaders"],
+      "src": "gen/opengl.svg",
+      "col": ["#527e99", "#997e52"]
+    },
+    "lua": { 
+      "name": "Lua",
+      "class": "language",
+      "usage": ["scripting"],
+      "src": "lang/lua.svg",
+      "col": ["#3434f9", "#f93434"]
+    },
+    "batch": { 
+      "name": "Batch",
+      "class": "language",
+      "usage": ["scripting"],
+      "src": "lang/batch_lq.svg",
+      "col": ["#777799", "#997777"]
+    },
+    "scm": { 
+      "name": "Rockstar's SCM",
+      "class": "language",
+      "usage": ["scripting"],
+      "src": "app/sannybuilder.svg",
+      "col": ["#ffad00", "#00adff"]
+    },
+    "sql": { 
+      "name": "SQL",
+      "class": "language",
+      "usage": ["databases"],
+      "src": "lang/sql.svg",
+      "col": ["#dc7939", "#499ade"]
+    },
+    "as": { 
+      "name": "ActionScript",
+      "class": "language",
+      "usage": ["scripting"],
+      "src": "lang/actionscript_simple.svg",
+      "col": ["#c72b2f", "#6d0407"]
+    }
+  },
+
+  "engine": {
+    "_imgroot": "./res/img/tech",
+
+    "_propietary": { 
+      "hidden": 1,
+      "name": "propietary engine",
+      "class": "engine",
+      "type": "",
+      "scopes": [],
+      "langs": [],
+      "games": [],
+      "src": "eng/propietary.svg",
+      "col": ["#888888", "#888888"]
+    },
+    "unity": { 
+      "name": "Unity Engine",
+      "class": "engine",
+      "type": "editor",
+      "scopes": ["desktop"],
+      "langs": ["csharp", "shaderlab", "cg", "hlsl"],
+      "games": ["personal"],
+      "src": "eng/unity.svg",
+      "col": ["#cccccc", "#cccccc"]
+    },
+    "unreal5": { 
+      "name": "Unreal Engine 5",
+      "class": "engine",
+      "type": "editor",
+      "scopes": ["desktop"],
+      "langs": ["cplusplus", "usf", "hlsl"],
+      "games": ["personal"],
+      "src": "eng/unreal5.svg",
+      "col": ["#888888", "#888888"]
+    },
+    "unreal4": { 
+      "name": "Unreal Engine 4",
+      "class": "engine",
+      "type": "editor",
+      "scopes": ["desktop"],
+      "langs": ["cplusplus", "usf", "hlsl"],
+      "games": ["personal"],
+      "src": "eng/unreal4.webp",
+      "col": ["#023992", "#c1a372"]
+    },
+    "torque3d": { 
+      "name": "Torque 3D",
+      "class": "engine",
+      "type": "community",
+      "scopes": ["desktop"],
+      "langs": ["lua"],
+      "games": ["beamng"],
+      "src": "eng/torque3d.svg",
+      "col": ["#be2f38", "#5a0b0c"]
+    },
+    "unreal3": { 
+      "name": "Unreal Engine 3",
+      "class": "engine",
+      "type": "editor",
+      "scopes": ["desktop"],
+      "langs": ["unrealscript", "usf", "hlsl"],
+      "games": ["rocketleague"],
+      "src": "eng/unreal3.svg",
+      "col": ["#e63333", "#3333e6"]
+    },
+    "source": { 
+      "name": "Source",
+      "class": "engine",
+      "type": "toolkit",
+      "scopes": ["desktop"],
+      "langs": ["cplusplus","lua"],
+      "games": ["personal", "halflife2", "portal", "counterstrike_source"],
+      "src": "eng/source.svg",
+      "col": ["#e49013", "#1390e4"]
+    },
+    "renderware": { 
+      "name": "RenderWare",
+      "class": "engine",
+      "type": "community",
+      "scopes": ["desktop"],
+      "langs": ["scm", "lua"],
+      "games": ["gta3", "gtavc", "gtasa"],
+      "src": "eng/renderware.svg",
+      "col": ["#73b640", "#dd155e"]
+    },
+    "quakeengine": { 
+      "name": "Quake Engine",
+      "class": "engine",
+      "type": "toolkit",
+      "scopes": ["desktop"],
+      "langs": ["c"],
+      "games": ["personal", "quake"],
+      "src": "eng/quakeengine.svg",
+      "col": ["#94652a", "#216594"]
+    },
+    "doomengine": { 
+      "name": "DoomEngine",
+      "class": "engine", 
+      "type": "source",
+      "scopes": ["desktop"],
+      "langs": ["c"],
+      "games": ["doom", "doomii", "hexen", "heretic", "strife"],
+      "src": "eng/doomengine.webp",
+      "col": ["#DEB84DFF", "#3F98ECFF"]
+    },
+    "goldsrc": { 
+      "name": "GoldSrc",
+      "class": "engine",
+      "type": "toolkit",
+      "scopes": ["desktop"],
+      "langs": ["c"],
+      "games": ["personal", "halflife", "counterstrike"],
+      "src": "eng/goldsrc.svg",
+      "col": ["#df591b", "#1b59df"]
+    },
+    "smartsim": { 
+      "name": "SmartSim",
+      "class": "engine",
+      "type": "community",
+      "scopes": ["desktop"],
+      "langs": ["lua"],
+      "games": ["sims4"],
+      "src": "eng/smartsim.webp",
+      "col": ["#5cea01", "#487a0d"]
+    },
+    "unreal2": { 
+      "name": "Unreal Engine 2",
+      "class": "engine",
+      "type": "editor",
+      "scopes": ["desktop"],
+      "langs": ["cplusplus"],
+      "games": [],
+      "src": "eng/unreal2.webp",
+      "col": ["#950000", "#dadcda"]
+    },
+    "unreal1": { 
+      "name": "Unreal Engine 1",
+      "class": "engine",
+      "type": "editor",
+      "scopes": ["desktop"],
+      "langs": ["cplusplus"],
+      "games": [],
+      "src": "eng/unreal1.webp",
+      "col": ["#121e75", "#b3781f"]
+    },
+    "idtech3": { 
+      "name": "id Tech 3",
+      "class": "engine",
+      "type": "toolkit",
+      "scopes": ["desktop"],
+      "langs": ["c"],
+      "games": ["personal", "quake3", "sof2", "amgalice"],
+      "src": "eng/idtech3.webp",
+      "col": ["#94652a", "#216594"]
+    },
+    "quake2engine": { 
+      "name": "Quake II Engine",
+      "class": "engine",
+      "type": "toolkit",
+      "scopes": ["desktop"],
+      "langs": ["c"],
+      "games": ["personal", "quake2", "kingpin", "sof"],
+      "src": "eng/quake2engine.webp",
+      "col": ["#94652a", "#216594"]
+    }
+  },
+
+  "tech": {
+    "_imgroot": "./res/img/tech",
+
+    "webpack": { 
+      "name": "WebPack",
+      "class": "library",
+      "type": "webapps",
+      "scopes": ["frontend"],
+      "langs": ["javascript", "typescript"],
+      "src": "lib/webpack.svg",
+      "col": ["#1b74ba", "#8acff3"]
+    },
+    "vite": { 
+      "name": "Vite",
+      "class": "library",
+      "type": "webapps",
+      "scopes": ["frontend"],
+      "langs": ["javascript", "typescript"],
+      "src": "lib/vite.svg",
+      "col": ["#f7cb28", "#9859f7"]
+    },
+    "react": { 
+      "name": "React",
+      "class": "library",
+      "type": "webapps",
+      "scopes": ["frontend"],
+      "langs": ["javascript", "typescript"],
+      "src": "lib/react.svg",
+      "col": ["#61dafb", "#61FBD2FF"]
+    },
+    "react_router": { 
+      "name": "React Router",
+      "class": "library",
+      "type": "webapps",
+      "scopes": ["frontend"],
+      "langs": ["javascript", "typescript"],
+      "src": "lib/react_router_dark.svg",
+      "col": ["#f44250", "#ffffff"]
+    },
+    "bootstrap": { 
+      "name": "Bootstrap",
+      "class": "framework",
+      "type": "ui",
+      "scopes": ["frontend"],
+      "langs": ["css", "javascript"],
+      "src": "lib/bootstrap.svg",
+      "col": ["#7011f5", "#8a13fc"]
+    },
+    "tailwind": {
+      "name": "TailWind",
+      "class": "framework",
+      "type": "ui",
+      "scopes": ["frontend"],
+      "langs": ["css"],
+      "src": "lib/tailwind.svg",
+      "col": ["#38bdf8", "#3842F8FF"]
+    },
+    "flask": { 
+      "name": "Flask",
+      "class": "library",
+      "type": "backend",
+      "scopes": ["backend"],
+      "langs": ["python"],
+      "src": "lib/flask_dark.svg",
+      "col": ["#6abbc6", "#f4f0ef"]
+    },
+    "dotnet": { 
+      "learning": true,
+      "name": "DotNet",
+      "class": "library",
+      "type": "opengl",
+      "scopes": ["desktop"],
+      "langs": ["csharp"],
+      "src": "lib/dotnet.svg",
+      "col": ["#1fa9e7", "#165698"]
+    },
+    "lwjgl": { 
+      "name": "LWJGL", "class": "library",
+      "type": "opengl",
+      "scopes": ["desktop"],
+      "langs": ["java", "glsl"],
+      "src": "lib/lwjgl.svg",
+      "col": ["#b9b9ea", "#a9a9a9"]
+    },
+    "i18n": {
+      "name": "i18n",
+      "class": "library",
+      "type": "localization",
+      "langs": ["java", "javascript", "python", "cplusplus"],
+      "scopes": ["frontend", "desktop"],
+      "src": "lib/i18n.svg",
+      "col": ["#009688", "#004d40"]
+    },
+    "glfw": { 
+      "name": "GLFW",
+      "class": "library",
+      "type": "opengl",
+      "scopes": ["desktop"],
+      "langs": ["c", "cplusplus", "glsl"],
+      "src": "lib/glfw.webp",
+      "col": ["#fdab5c","#5586a4"]
+    },
+    "freeglut": { 
+      "name": "FreeGLUT",
+      "class": "library",
+      "type": "opengl",
+      "scopes": ["desktop"],
+      "langs": ["c", "glsl"],
+      "src": "gen/opengl.svg",
+      "col": ["#5586a4", "#777777"]
+    },
+    "imgui": { 
+      "name": "ImGui",
+      "class": "library",
+      "type": "ui",
+      "scopes": ["desktop"],
+      "langs": ["c", "cplusplus"],
+      "src": "lib/imgui.svg",
+      "col": ["#4296fa", "#20324d"]
+    },
+    "jquery": { 
+      "learning": true,
+      "name": "JQuery",
+      "class": "library",
+      "type": "general",
+      "scopes": ["frontend"],
+      "langs": ["javascript"],
+      "src": "lib/jquery.svg",
+      "col": ["#0868ac", "#777777"]
+    },
+    "sqlalchemy": { 
+      "name": "SQLAlchemy",
+      "class": "library",
+      "type": "database",
+      "scopes": ["backend"],
+      "langs": ["python"],
+      "src": "lib/sqlalchemy_custom_dark.svg",
+      "col": ["#c42626", "#313131"]
+    },
+    "jest": { 
+      "name": "Jest",
+      "class": "library",
+      "type": "testing",
+      "scopes": ["frontend", "development"],
+      "langs": ["javascript"],
+      "src": "lib/jest.svg",
+      "col": ["#c21325", "#15c213"]
+    },
+    "jogl": { 
+      "name": "JOGL",
+      "class": "library",
+      "type": "opengl",
+      "scopes": ["desktop"],
+      "langs": ["java", "glsl"],
+      "src": "lib/jogl.webp",
+      "col": ["#a6ceff", "#3b4d4f"]
+    }
+  },
+
+  "app": {
+    "_imgroot": "./res/img/tech",
+    
+    "git": { 
+      "name": "Git",
+      "class": "software",
+      "src": "app/git.svg",
+      "col": ["#f05133", "#F0C733FF"]
+    },
+    "github": { 
+      "name": "GitHub",
+      "class": "web",
+      "src": "app/github.svg",
+      "col": ["#777777", "#777777"]
+    },
+    "figma": { 
+      "name": "Figma",
+      "class": "app",
+      "src": "app/figma.svg",
+      "col": ["#0acf83", "#a259ff","#ff7262"]
+    },
+    "trello": { 
+      "name": "Trello",
+      "class": "app",
+      "src": "app/trello.svg",
+      "col": ["#007dc6", "#0C6395FF"]
+    },
+    "miro": { 
+      "name": "Miro",
+      "class": "app",
+      "src": "app/miro.svg",
+      "col": ["#ffdd33", "#050037", "#050037"]
+    },
+    "blender": { 
+      "name": "Blender",
+      "class": "software",
+      "scope": ["3d", "modeling", "sculpting", "texturing", "rendering", "animation", "rigging"],
+      "src": "app/blender.svg",
+      "col": ["#ea7600", "#265787"]
+    },
+    "bforartist": { 
+      "name": "Bforartists",
+      "class": "software",
+      "scope": ["3d", "modeling", "sculpting", "texturing", "rendering", "animation", "rigging"],
+      "src": "app/bforartists_simple.svg",
+      "col": ["#4191d3", "#0c487a"]
+    },
+    "3dsmax": { 
+      "name": "Autodesk 3ds Max",
+      "class": "software",
+      "scope": ["3d", "modeling", "rendering", "animation", "rigging"],
+      "src": "app/3dsmax.svg",
+      "col": ["#016b6b", "#013535"]
+    },
+    "maya": { 
+      "name": "Autodesk Maya",
+      "class": "software",
+      "scope": ["3d", "modeling", "rendering", "animation", "rigging"],
+      "src": "app/maya.svg",
+      "col": ["#068c8f", "#85bdc3"]
+    },
+    "substance_painter": { 
+      "name": "Substance Painter",
+      "class": "software",
+      "scope": ["3d", "texturing"],
+      "src": "app/subs_painter.svg",
+      "col": ["#e1262f", "#ffffff"]
+    },
+    "zbrush": { 
+      "name": "ZBrush",
+      "class": "software",
+      "scope": ["3d", "sculpting"],
+      "src": "app/zbrush.svg",
+      "col": ["#d7d7ac", "#000000"]
+    },
+    "sketchup": { 
+      "name": "SketchUp",
+      "class": "software",
+      "scope": ["3d", "cad"],
+      "src": "app/sketchup.svg",
+      "col": ["#005f9e", "#777777"]
+    },
+    "rizomuv": { 
+      "name": "Rizom UV",
+      "class": "software",
+      "scope": ["uv"],
+      "src": "app/rizomuv.svg",
+      "col": ["#ef3e00", "#b93502"]
+    },
+    "substance_designer": { 
+      "name": "Substance Designer",
+      "class": "software",
+      "scope": ["3d", "texturing"],
+      "src": "app/subs_designer.svg",
+      "col": ["#f04e25", "#1b1b1b"]
+    },
+    "instamat": { 
+      "name": "InstaMat",
+      "class": "software",
+      "scope": ["3d", "texturing"],
+      "src": "app/instamat.svg",
+      "col": ["#777777", "#777777"]
+    },
+    "visualstudio": { 
+      "name": "Visual Studio",
+      "class": "software",
+      "scope": ["coding"],
+      "src": "app/visualstudio2022.svg",
+      "col": ["#a87ade", "#5e438f"]
+    },
+    "vscode": { 
+      "name": "Visual Studio Code",
+      "class": "software",
+      "scope": ["coding"],
+      "src": "app/vscode.svg",
+      "col": ["#24a9f2", "#006bab"]
+    },
+    "eclipse": { 
+      "name": "Eclipse",
+      "class": "software",
+      "scope": ["coding"],
+      "src": "app/eclipse.svg",
+      "col": ["#3e3076", "#f7941e", "#f7941e"]
+    },
+    "postman": { 
+      "name": "Postman",
+      "class": "app",
+      "scope": ["api"],
+      "src": "app/postman_small.svg",
+      "col": ["#ff6c37", "#ffffff"]
+    },
+    "paintdotnet": { 
+      "name": "PaintDotNet",
+      "class": "software",
+      "scope": ["imageeditor", "texturing"],
+      "src": "app/paintdotnet.svg",
+      "col": ["#91c0de", "#e41241"]
+    },
+    "photoshop": { 
+      "name": "Adobe Photoshop",
+      "class": "software",
+      "scope": ["imageeditor", "texturing"],
+      "src": "app/adb_photoshop.svg",
+      "col": ["#31a8ff", "#001e36"]
+    },
+    "illustrator": { 
+      "name": "Adobe Illustrator",
+      "class": "software",
+      "scope": ["vectorial"],
+      "src": "app/adb_illustrator.svg",
+      "col": ["#ff9a00", "#330000"]
+    },
+    "coreldraw": { 
+      "name": "CorelDraw",
+      "class": "software",
+      "scope": ["vectorial"],
+      "src": "app/coreldraw.svg",
+      "col": ["#2ac64b", "#c2d80e"]
+    },
+    "inkscape": { 
+      "name": "Inkscape",
+      "class": "software",
+      "scope": ["vectorial"],
+      "src": "app/inkscape.svg",
+      "col": ["#e7e7e7", "#777777"]
+    },
+    "premiere": { 
+      "name": "Adobe Premiere",
+      "class": "software",
+      "scope": ["videoeditor"],
+      "src": "app/adb_premiere.svg",
+      "col": ["#8989ee", "#00005b"]
+    },
+    "flstudio": { 
+      "name": "FL Studio",
+      "class": "software",
+      "scope": ["music"],
+      "src": "app/flstudio.webp",
+      "col": ["#e86513", "#d2e45e"]
+    },
+    "cheatengine": { 
+      "name": "CheatEngine",
+      "class": "software",
+      "scope": ["reverseenginering", "dissasembly", "coding"],
+      "src": "app/cheatengine.svg",
+      "col": ["#006699", "#072b3d"]
+    },
+    "ida": { 
+      "name": "IDA",
+      "class": "software",
+      "scope": ["reverseenginering", "dissasembly", "coding"],
+      "src": "app/ida.png",
+      "col": ["#34c3c0", "#2f5e62"]
+    },
+    "marmoset_toolbag": { 
+      "name": "Marmoset Toolbag",
+      "class": "software",
+      "scope": ["3d", "rendering"],
+      "src": "app/marmoset.svg",
+      "col": ["#ff0044", "#222222"]
+    },
+    "office": { 
+      "name": "Office Pack",
+      "class": "software",
+      "scope": ["textproccessor","datasheet"],
+      "src": "app/office.svg",
+      "col": ["#bc4a7e", "#ef8400"]
+    },
+    "type3": { 
+      "name": "Type 3",
+      "class": "software",
+      "scope": ["font"],
+      "src": "app/type3.webp",
+      "col": ["#777777", "#777777"]
+    }
+  },
+
+  "content": {
+    "games": [
+      {
+        "name": "Adventure Pinball: Forgotten Island",
+        "year": "2001",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "unreal1",
+        "comment": ""
+      },
+      {
+        "name": "Beam.NG",
+        "year": "2013",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "torque3d",
+        "comment": ""
+      },
+      {
+        "name": "Breakneck (N.I.C.E 2)",
+        "year": "1998",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "_propietary",
+        "comment": ""
+      },
+      {
+        "name": "Bud Tucker in: Double Trouble",
+        "year": "1996",
+        "platform": "pc",
+        "online": false,
+        "best": true,
+        "modded": true,
+        "special": false,
+        "engine": "_propietary",
+        "comment": "Comedy click'n'point adventure, to me it's the best of its kind"
+      },
+      {
+        "name": "Call of Duty",
+        "year": "2003",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "idtech3",
+        "comment": ""
+      },
+      {
+        "name": "Carmageddon II",
+        "year": "1998",
+        "platform": "pc",
+        "online": false,
+        "best": true,
+        "modded": true,
+        "special": false,
+        "engine": "brender",
+        "comment": "Mesmerized by the deformation system and the ability to cut the cars im half"
+      },
+      {
+        "name": "Carmageddon TDR2000",
+        "year": "2000",
+        "platform": "pc",
+        "online": false,
+        "best": true,
+        "modded": true,
+        "special": false,
+        "engine": "_propietary",
+        "comment": "Nice cars, they go boom"
+      },
+      {
+        "name": "Counter-Strike",
+        "year": "2000",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "goldsrc",
+        "comment": ""
+      },
+      {
+        "name": "Counter-Strike: Condition Zero",
+        "year": "2004",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "goldsrc",
+        "comment": ""
+      },
+      {
+        "name": "Counter-Strike Source",
+        "year": "2004",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "source",
+        "comment": ""
+      },
+      {
+        "name": "Die Hard: Nakatomi Plaza",
+        "year": "2002",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "lithtech",
+        "comment": ""
+      },
+      {
+        "name": "DooM",
+        "year": "1993",
+        "platform": "pc",
+        "online": false,
+        "best": true,
+        "modded": true,
+        "special": false,
+        "engine": "doomengine",
+        "comment": "Masterpiece."
+      },
+      {
+        "name": "DooM II",
+        "year": "1994",
+        "platform": "pc",
+        "online": false,
+        "best": true,
+        "modded": true,
+        "special": false,
+        "engine": "doomengine",
+        "comment": "Well known if you don't live in a cave, it was my very first game for the PC, still playing it to this day"
+      },
+      {
+        "name": "Driver",
+        "year": "1999",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "_propietary",
+        "comment": ""
+      },
+      {
+        "name": "Driver 2",
+        "year": "2000",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "_propietary",
+        "comment": ""
+      },
+      {
+        "name": "Duke Nukem: Manhattan Project",
+        "year": "2002",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "prims3d",
+        "comment": ""
+      },
+      {
+        "name": "Edgar Torronteras' eXtreme Biker",
+        "year": "1999",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "_propietary",
+        "comment": ""
+      },
+      {
+        "name": "Golf It!",
+        "year": "2017",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "unreal4",
+        "comment": ""
+      },
+      {
+        "name": "Grand Theft Auto III",
+        "year": "2001",
+        "platform": "pc",
+        "online": false,
+        "best": true,
+        "modded": true,
+        "special": false,
+        "engine": "renderware",
+        "comment": "Best 3D sandbox, the feel, the features, the soundtrack..."
+      },
+      {
+        "name": "Grand Theft Auto Vice City",
+        "year": "2002",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "renderware",
+        "comment": ""
+      },
+      {
+        "name": "Grand Theft Auto San Andreas",
+        "year": "2004",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "renderware",
+        "comment": ""
+      },
+      {
+        "name": "Grand Theft Auto V",
+        "year": "2013",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "rage",
+        "comment": ""
+      },
+      {
+        "name": "Gunman Chronicles",
+        "year": "2000",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "goldsrc",
+        "comment": ""
+      },
+      {
+        "name": "Half-Life",
+        "year": "1998",
+        "platform": "pc",
+        "online": false,
+        "best": true,
+        "modded": true,
+        "special": false,
+        "engine": "goldsrc",
+        "comment": ""
+      },
+      {
+        "name": "Half-Life: Opposing Force",
+        "year": "1999",
+        "platform": "pc",
+        "online": false,
+        "best": true,
+        "modded": true,
+        "special": false,
+        "engine": "goldsrc",
+        "comment": "Liked it better than Half-Life, was nice to see the other side of the story. PS: I loved the nightvision effect"
+      },
+      {
+        "name": "Half-Life 2",
+        "year": "2004",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "source",
+        "comment": ""
+      },
+      {
+        "name": "Half-Life 2: Episode 1",
+        "year": "2006",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "source",
+        "comment": ""
+      },
+      {
+        "name": "Half-Life 2: Episode 2",
+        "year": "2007",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "source",
+        "comment": ""
+      },
+      {
+        "name": "Jelly Boy",
+        "year": "1994",
+        "platform": "snes",
+        "online": false,
+        "best": true,
+        "modded": true,
+        "special": false,
+        "engine": "lang:snes",
+        "comment": "This one made me wanted to learn the SNES assembly language, and so I did"
+      },
+      {
+        "name": "Kingpin: Life of Crime",
+        "year": "1999",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "idtech2",
+        "comment": ""
+      },
+      {
+        "name": "Left 4 Dead",
+        "year": "2008",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "source",
+        "comment": ""
+      },
+      {
+        "name": "Mafia",
+        "year": "2002",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "ls3d",
+        "comment": ""
+      },
+      {
+        "name": "Max Payne",
+        "year": "2001",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "maxfx",
+        "comment": ""
+      },
+      {
+        "name": "Minecraft",
+        "year": "2009",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "lang:java",
+        "comment": ""
+      },
+      {
+        "name": "Medal of Honor: Allied Assault",
+        "year": "2002",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "unreal3",
+        "comment": ""
+      },
+      {
+        "name": "Motocross Madness",
+        "year": "1998",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "_propietary",
+        "comment": ""
+      },
+      {
+        "name": "Motocross Madness 2",
+        "year": "2000",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "_propietary",
+        "comment": ""
+      },
+      {
+        "name": "Portal",
+        "year": "2007",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "source",
+        "comment": ""
+      },
+      {
+        "name": "Portal 2",
+        "year": "2011",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "source",
+        "comment": ""
+      },
+      {
+        "name": "Postal 2",
+        "year": "2003",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "unreal2",
+        "comment": ""
+      },
+      {
+        "name": "Quake",
+        "year": "1996",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "quakeengine",
+        "comment": ""
+      },
+      {
+        "name": "Quake II",
+        "year": "1997",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "idtech2",
+        "comment": ""
+      },
+      {
+        "name": "Rally Championship 2000",
+        "year": "1999",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "_propietary",
+        "comment": ""
+      },
+      {
+        "name": "Rocket League",
+        "year": "2015",
+        "platform": "pc",
+        "online": true,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "unreal3",
+        "comment": ""
+      },
+      {
+        "name": "Soldier of Fortune II: Double Helix",
+        "year": "2003",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "idtech3",
+        "comment": ""
+      },
+      {
+        "name": "Starbound",
+        "year": "2016",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "_propietary",
+        "comment": ""
+      },
+      {
+        "name": "Strife",
+        "year": "1996",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "doomengine",
+        "comment": ""
+      },
+      {
+        "name": "Super Mario World",
+        "year": "1990",
+        "platform": "snes",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "lang:snes",
+        "comment": ""
+      },
+      {
+        "name": "The Sims",
+        "year": "2000",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "sims1",
+        "comment": ""
+      },
+      {
+        "name": "The Sims 2",
+        "year": "2004",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "sims2",
+        "comment": ""
+      },
+      {
+        "name": "The Sims 4",
+        "year": "2014",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "smartsim",
+        "comment": ""
+      },
+      {
+        "name": "Terraria",
+        "year": "2011",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "XNA",
+        "comment": ""
+      },
+      {
+        "name": "Trials",
+        "year": "2003",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "lang:java",
+        "comment": ""
+      },
+      {
+        "name": "Viper Racing",
+        "year": "1998",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "_propietary",
+        "comment": ""
+      },
+      {
+        "name": "Wanted!",
+        "year": "2001",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "goldsrc",
+        "comment": ""
+      },
+      {
+        "name": "Worms",
+        "year": "1995",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "_propietary",
+        "comment": ""
+      },
+      {
+        "name": "Worms and Reinforcements United",
+        "year": "1996",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "_propietary",
+        "comment": ""
+      },
+      {
+        "name": "Worms 3D",
+        "year": "2003",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "_propietary",
+        "comment": ""
+      },
+      {
+        "name": "Worms 4: Mayhem",
+        "year": "2005",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "_propietary",
+        "comment": ""
+      },
+      {
+        "name": "Xpand Rally",
+        "year": "2004",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "_propietary",
+        "comment": ""
+      },
+      {
+        "name": "Xpand Rally Xtreme",
+        "year": "2006",
+        "platform": "pc",
+        "online": false,
+        "best": false,
+        "modded": true,
+        "special": false,
+        "engine": "_propietary",
+        "comment": ""
+      }
+    ]
+  },
+
+  "_names": {
+    "class": {
+      "language": "Language",
+      "library": "Library",
+      "framework": "Framework",
+      "engine": "Engine",
+      "software": "Software",
+      "app": "App",
+      "web": "Webpage"
+    },
+    "type": {
+      "general": "General Purpose",
+      "opengl": "OpenGL",
+      "ui": "UI",
+      "localization": "Localization",
+      "testing": "Testing",
+      "webapps": "Web Apps",
+      "backend": "BackEnd",
+      "database": "Database",
+      "editor": "Editor",
+      "toolkit": "Toolkit",
+      "community": "Community",
+      "source": "Source Code"
+    },
+    "usage": {
+      "scripting": "Scripting",
+      "software": "Software Development",
+      "stylesheets": "Web Styling",
+      "shaders": "Graphical Shaders",
+      "webpages": "Webpage Development",
+      "backend": "BackEnd",
+      "videogames": "Videogames",
+      "databases": "Databases"
+    },
+    "scope": {
+      "desktop": "Desktop",
+      "frontend": "FrontEnd",
+      "backend": "BackEnd"
+    }
+  }
+}

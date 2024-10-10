@@ -1,0 +1,19 @@
+{
+  "title":"AirDribbler [PC]",
+  "description":"Skillful videogame inspired by a <b2>Rocket League</b> mechanic",
+  "date":"2024",
+  "header":[
+    "engine:unity",
+    "lang:csharp",
+    "app:blender",
+    "app:paintdotnet"
+  ],
+  "content":[
+    {"type":"sep"},
+    {"type":"txt", "data":"PLACEHOLDER TEXT"},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Trivia"},
+    {"type":"txt:ul", "data":[
+      "PLACEHOLDER ELEMENT"
+    ]}
+  ]
+}

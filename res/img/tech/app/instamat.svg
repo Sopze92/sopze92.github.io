@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Blender, SVG Export for Grease Pencil - v1.0 -->
+
+<svg
+   version="1.0"
+   x="0px"
+   y="0px"
+   width="694.38287"
+   height="582.76831"
+   viewBox="0 0 694.38287 582.76831"
+   id="svg3"
+   sodipodi:docname="instamat.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     id="namedview3"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.3803987"
+     inkscape:cx="346.63899"
+     inkscape:cy="290.858"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3" />
+  <g
+     id="blender_frame_-1"
+     style="fill:#ffffff;fill-opacity:1;stroke:none"
+     transform="translate(-10,-10)">
+    <g
+       id="blender_object_gp_instamat"
+       style="fill:#ffffff;fill-opacity:1;stroke:none">
+      <!--Layer: instamat_Lines-->
+      <g
+         id="instamat_Lines"
+         style="fill:#ffffff;fill-opacity:1;stroke:none">
+        <polyline
+           stroke="#000000"
+           stroke-opacity="1"
+           fill="none"
+           stroke-linecap="round"
+           stroke-width="4"
+           points="577.030334,82.140808 704.382874,300.833923 534.128723,592.372681 278.578430,592.768311 345.484314,478.991577 461.043518,478.512146 564.798157,300.833923 507.629089,202.069092 577.030334,82.140808"
+           id="polyline1"
+           style="fill:#ffffff;fill-opacity:1;stroke:none" />
+        <polyline
+           stroke="#000000"
+           stroke-opacity="1"
+           fill="none"
+           stroke-linecap="round"
+           stroke-width="4"
+           points="136.923645,518.776733 10.000000,300.833984 179.648560,10.365234 434.337219,10.000000 367.982727,122.681763 253.407227,123.116089 149.584656,300.833984 206.355957,398.913879 136.923645,518.776733"
+           id="polyline2"
+           style="fill:#ffffff;fill-opacity:1;stroke:none" />
+        <polyline
+           stroke="#000000"
+           stroke-opacity="1"
+           fill="none"
+           stroke-linecap="round"
+           stroke-width="4"
+           points="246.403015,386.307983 196.964111,300.833984 277.107361,163.657959 376.731262,163.263489 467.110168,10.108154 534.773987,10.389526 560.458313,53.970642 467.530457,214.575500 517.418762,300.833954 437.363953,437.958313 336.789734,438.420349 245.488403,592.663025 180.294067,592.396973 153.659241,547.216492 246.403015,386.307983"
+           id="polyline3"
+           style="fill:#ffffff;fill-opacity:1;stroke:none" />
+      </g>
+    </g>
+  </g>
+</svg>

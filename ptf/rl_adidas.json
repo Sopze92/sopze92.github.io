@@ -1,0 +1,21 @@
+{
+  "title":"Rocket League Custom Field for Adidas",
+  "description":"full environment with extra features for Rocket League (not official)",
+  "date":"Sep-Oct 2023",
+  "indent":["#1EF8FFFF","#20DBCBFF"],
+  "header":[
+    "engine:unreal3",
+    "lang:as",
+    "app:blender",
+    "app:substance_painter"
+  ],
+  "content":[
+    {"type":"sep"},
+    {"type":"txt", "data":"PLACEHOLDER TEXT"},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Trivia"},
+    {"type":"txt:ul", "data":[
+      "<b>T</b>here are some <b-0>Easter Eggs</b> included in the field, most of them are <b-0>cheatcodes</b> you just type in-game but one is a <b-0>hidden minigame</b> involving the 4 statues surrounding the field.",
+      "<b>A</b> week after starting this project I discovered the way to add user-made audio content into the game, so this environment doesn't make any use of custom audio."
+    ]}
+  ]
+}

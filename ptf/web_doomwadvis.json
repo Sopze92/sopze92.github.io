@@ -1,0 +1,22 @@
+{
+  "title":"DooM WAD Visualizer",
+  "description":"Resource and metadata viewer for DooM engine packages",
+  "date":"-",
+  "indent":["#FF3838FF","#D04018FF"],
+  "header":[
+    "engine:doomengine",
+    "lang:html",
+    "lang:css",
+    "lang:javascript",
+    "tech:bootstrap",
+    "tech:react"
+  ],
+  "content":[
+    {"type":"sep"},
+    {"type":"txt", "data":"PLACEHOLDER TEXT"},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Trivia"},
+    {"type":"txt:ul", "data":[
+      "PLACEHOLDER ELEMENT"
+    ]}
+  ]
+}

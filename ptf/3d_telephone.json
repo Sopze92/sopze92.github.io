@@ -1,0 +1,49 @@
+{
+  "title":"Vintage Telephone",
+  "description":"3D model of a vintage telephone made using real-life pictures as reference, PBR + LODs + Game-Ready",
+  "date":"-",
+  "indent":["#9F9C25","#8A883E"],
+  "header":[
+    "app:blender",
+    "app:substance_painter"
+  ],
+  "content":[
+    {"type":"txt:ul", "css":"ptf-bunch-list ptf-tag-bunch", "data":[
+      "14k/ 2k/ 300 Tris",
+      "1 UV Set",
+      "3 LODs",
+      "PBR"
+    ]},
+    {"type":"txt", "css":"ptf-section-title", "data":"- 3D Preview"},
+    {"type":"emb:sketchfab", "full":1, "id":"058fc3d9badf4bd3af57c1888531136a"},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Renders"},
+    {"type":"img:xcar", "aspect":"1", "data":[
+      { "abs":1, "src":"https://cdna.artstation.com/p/assets/images/images/052/938/492/large/sergio-sopze-00.jpg"
+      },{
+        "abs":1, "src":"https://cdna.artstation.com/p/assets/images/images/052/938/520/large/sergio-sopze-04.jpg"
+      },{
+        "abs":1, "src":"https://cdnb.artstation.com/p/assets/images/images/052/938/509/large/sergio-sopze-03.jpg"
+      },{
+        "abs":1, "src":"https://cdnb.artstation.com/p/assets/images/images/052/938/499/large/sergio-sopze-02.jpg"
+      },{
+        "abs":1, "src":"https://cdna.artstation.com/p/assets/images/images/052/938/530/large/sergio-sopze-05.jpg"
+      },{
+        "abs":1, "src":"https://cdnb.artstation.com/p/assets/images/images/052/938/497/large/sergio-sopze-01.jpg"
+      },{
+        "abs":1, "src":"https://cdna.artstation.com/p/assets/images/images/052/938/540/large/sergio-sopze-06.jpg"
+      }
+    ]},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Technical"},
+    {"type":"img:box", "data":{
+      "abs":1, "src":"https://cdna.artstation.com/p/assets/images/images/052/938/460/large/sergio-sopze-lod00.jpg",
+      "text":"Hand-made LOD Levels"
+    }},
+    {"type":"img:box", "data":{
+      "abs":1, "src":"https://cdnb.artstation.com/p/assets/images/images/052/938/473/large/sergio-sopze-preview.jpg",
+      "text":"PBR Material + UV Layout"
+    }}
+  ],
+  "overlay":[
+    { "type":"slideshow" }
+  ]
+}

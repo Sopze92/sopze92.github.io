@@ -1,0 +1,37 @@
+{
+  "title":"Font Types",
+  "description":"Some typefaces I've made to use in my projects",
+  "date":"-",
+  "header":[
+    "app:type3"
+  ],
+  "content":[
+    {"type":"sep"},
+    {"type":"txt", "css":"ptf-section-title", "data":"- DevFont [Monospace]"},
+    {"type":"txt", "css":"text-start", "data":"<b>P</b>ixelated-style font for game command-consoles"},
+    {"type":"img:box", "data":{
+      "src":"ptf/{0}/devfont8.webp",
+      "text":"x8 variant"
+    }},
+    {"type":"img:box", "data":{
+      "src":"ptf/{0}/devfont16.webp",
+      "text":"x16 variant"
+    }},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Climb"},
+    {"type":"txt", "css":"text-start", "data":"<b>W</b>ide font made for using it in videogame texts"},
+    {"type":"img:box", "data":{
+      "src":"ptf/{0}/climb.webp",
+      "text":"regular variant"
+    }},
+    {"type":"txt", "css":"ptf-section-title", "data":"- POS Videogame Font"},
+    {"type":"txt", "css":"text-start", "data":"<b>M</b>ain font of a currently <b-0>WIP</b> videogame"},
+    {"type":"img:box", "data":{
+      "src":"ptf/{0}/pos.webp",
+      "text":"regular variant"
+    }},
+    {"type":"img:box", "data":{
+      "src":"ptf/{0}/posout.webp",
+      "text":"outline variant"
+    }}
+  ]
+}

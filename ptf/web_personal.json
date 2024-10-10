@@ -1,0 +1,34 @@
+{
+  "title":"At Sopze's",
+  "description":"This entire site",
+  "date":"Oct 2024",
+  "header":[
+    "lang:html",
+    "lang:css",
+    "lang:javascript",
+    "lang:python",
+    "tech:vite",
+    "tech:react",
+    "tech:react_router",
+    "tech:bootstrap"
+  ],
+  "content":[
+    {"type":"sep"},
+    {"type":"txt", "data":"PLACEHOLDER TEXT"},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Components"},
+    {"type":"txt:ul", "css":"ptf-tag-bunch-list", "data":[
+      "Title",
+      "Static Carousel",
+      "Image Slideshow",
+      "Edged Icon",
+      "Edged Button",
+      "Tag Bunch List"
+    ]},
+    {"type":"sep"},
+    {"type":"txt", "data":"PLACEHOLDER TEXT"},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Trivia"},
+    {"type":"txt:ul", "separator":":", "data":[
+      "<b>T</b>his page doesn't use any third party React component, hook or library."
+    ]}
+  ]
+}

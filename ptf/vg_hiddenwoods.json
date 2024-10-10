@@ -1,0 +1,20 @@
+{
+  "title":"Hidden Woods [PC]",
+  "description":"Polished prototype I wanted to release because of its beauty",
+  "date":"2019",
+  "indent":["#FFE438FF","#EBC52EFF"],
+  "header":[
+    "engine:unity",
+    "lang:csharp",
+    "app:blender",
+    "app:paintdotnet"
+  ],
+  "content":[
+    {"type":"sep"},
+    {"type":"txt", "data":"PLACEHOLDER TEXT"},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Trivia"},
+    {"type":"txt:ul", "data":[
+      "PLACEHOLDER ELEMENT"
+    ]}
+  ]
+}

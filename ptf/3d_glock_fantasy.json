@@ -1,0 +1,65 @@
+{
+  "title":"Fantasy Glock s17",
+  "description":"Custom handgun based on the Glock 17 made from a single-image concept art, PBR + Game-Ready",
+  "date":"-",
+  "indent":["#FFE438FF","#EBC52EFF"],
+  "header":[
+    "app:blender",
+    "app:substance_painter"
+  ],
+  "content":[
+    {"type":"txt:ul", "css":"ptf-bunch-list ptf-tag-bunch", "data":[
+      "5K Tris",
+      "2 UV Set",
+      "4K/2K",
+      "PBR"
+    ]},
+    {"type":"txt", "css":"ptf-section-title", "data":"- 3D Preview"},
+    {"type":"emb:sketchfab", "full":1, "id":"62fcf849a4d14112a17987420bd9ef00"},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Renders"},
+    {"type":"img:xcar", "aspect":"10/7", "data":[
+      { "abs":1, "src":"https://cdnb.artstation.com/p/assets/images/images/061/657/509/large/sergio-sopze-000.jpg"
+      },{
+        "abs":1, "src":"https://cdna.artstation.com/p/assets/images/images/061/657/524/large/sergio-sopze-001.jpg"
+      },{
+        "abs":1, "src":"https://cdnb.artstation.com/p/assets/images/images/061/657/549/large/sergio-sopze-e00.jpg",
+        "title":"Right view"
+      },{
+        "abs":1, "src":"https://cdna.artstation.com/p/assets/images/images/061/657/556/large/sergio-sopze-e01.jpg",
+        "title":"Left view"
+      },{
+        "abs":1, "src":"https://cdnb.artstation.com/p/assets/images/images/061/658/435/large/sergio-sopze-e04.jpg",
+        "title":"Front/Back view"
+      },{
+        "abs":1, "src":"https://cdnb.artstation.com/p/assets/images/images/061/657/515/large/sergio-sopze-000b.jpg",
+        "title":"Shaded view 0"
+      },{
+        "abs":1, "src":"https://cdnb.artstation.com/p/assets/images/images/061/657/527/large/sergio-sopze-001b.jpg",
+        "title":"Shaded view 1"
+      },{
+        "abs":1, "src":"https://cdnb.artstation.com/p/assets/images/images/061/657/575/large/sergio-sopze-n00.jpg"
+      },{
+        "abs":1, "src":"https://cdnb.artstation.com/p/assets/images/images/061/657/581/large/sergio-sopze-n01.jpg"
+      },{
+        "abs":1, "src":"https://cdnb.artstation.com/p/assets/images/images/061/657/587/large/sergio-sopze-n02.jpg",
+        "title":"Magazine close-up"
+      },{
+        "abs":1, "src":"https://cdnb.artstation.com/p/assets/images/images/061/657/589/large/sergio-sopze-stripped.jpg",
+        "title":"Frame comparison",
+        "desc":"<b>I</b>t's a stripped version of the one I made for the Glock17 Gen3 (a previous project)."
+      }
+    ]},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Technical"},
+    {"type":"img:box", "data":{
+      "abs":1, "src":"https://cdnb.artstation.com/p/assets/images/images/061/658/415/large/sergio-sopze-matshow-body.jpg",
+      "text":"Body (4K) PBR Material + UV Layout"
+    }},
+    {"type":"img:box", "data":{
+      "abs":1, "src":"https://cdnb.artstation.com/p/assets/images/images/061/658/413/large/sergio-sopze-matshow-extra.jpg",
+      "text":"Extra (2K) PBR Material + Emissive + UV Layout"
+    }}
+  ],
+  "overlay":[
+    { "type":"slideshow" }
+  ]
+}

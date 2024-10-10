@@ -1,0 +1,14 @@
+{
+  "title":"-POS-",
+  "description":"Main font of a currently WIP videogame with an outline variant",
+  "date":"-",
+  "header":[
+    "app:type32"
+  ],
+  "content":[
+    {"type":"sep"},
+    {"type":"fon", "data":"pos-regular"},
+    {"type":"sep"},
+    {"type":"fon", "data":"pos-outline"}
+  ]
+}

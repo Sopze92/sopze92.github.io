@@ -1,0 +1,26 @@
+{
+  "title":"ChocoFile + ChocoPack file formats (.chd / .chp)",
+  "description":"Plain text structured data + general purpose file packing + file encryption",
+  "indent":["#835D29FF","#493116FF"],
+  "header":[
+    "lang:java"
+  ],
+  "content":[
+    {"type":"sep"},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Introduction"},
+    {"type":"txt:blk", "data":"<b1>A</b>s a lover of memory management and optimization, I'm one of those who dislike <b0>JSON</b>. I don't remember how did I came with the peculiar name for this format specification but I still find it cool.\nThe file format (<b0>.CHD</b>) basically stores structured data with the simplicity of a <b0>I18N</b> plain definition file.\nThe pack format (<b0>.CHP</b>) just concatenate files one after another with a data table on the end.\nSeparatelly, there's a file encryptor/decryptor."},
+    {"type":"sep"},
+    {"type":"txt", "css":"ptf-section-title", "data":"- ChocoFile (.chd)"},
+    {"type":"txt", "data":"PLACEHOLDER TEXT"},
+    {"type":"sep"},
+    {"type":"txt", "css":"ptf-section-title", "data":"- ChocoPack (.chp)"},
+    {"type":"txt", "data":"PLACEHOLDER TEXT"},
+    {"type":"sep"},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Built-in encryption"},
+    {"type":"txt", "data":"PLACEHOLDER TEXT"},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Trivia"},
+    {"type":"txt:ul", "data":[
+      "<b1>I</b> stated I dislike <b0>JSON</b> yet this article is <a:ptf/chocofile.json>actually written in it</a>."
+    ]}
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "title":"Little Nightmares 2 Diorama",
+  "description":"3D replica of the real-life figure that came with the Little Nightmares 2 Collectors Edition",
+  "date":"-",
+  "indent":["#EFEFEFFF","#C3C3C3FF"],
+  "header":[
+    "app:blender",
+    "app:substance_painter"
+  ],
+  "content":[
+    {"type":"txt:ul", "css":"ptf-bunch-list ptf-tag-bunch", "data":[
+      "1 UV Set",
+      "PBR",
+      "Rigged"
+    ]},
+    {"type":"txt", "css":"ptf-section-title", "data":"- 3D Preview"},
+    {"type":"emb:sketchfab", "full":1, "id":"bf2bf8c3d74c44f895777a88432ad931"},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Renders"},
+    {"type":"img:xcar", "aspect":"16/10", "data":[
+      { "abs":1, "src":"https://cdnb.artstation.com/p/assets/images/images/052/436/783/large/sergio-del-pino-sopze-00.jpg"
+      },{
+        "abs":1, "src":"https://cdnb.artstation.com/p/assets/images/images/052/436/785/large/sergio-del-pino-sopze-01.jpg"
+      },{
+        "abs":1, "src":"https://cdnb.artstation.com/p/assets/images/images/052/436/795/large/sergio-del-pino-sopze-02.jpg"
+      },{
+        "abs":1, "src":"https://cdnb.artstation.com/p/assets/images/images/052/436/821/large/sergio-del-pino-sopze-00-preview.jpg"
+      },{
+        "abs":1, "src":"https://cdna.artstation.com/p/assets/images/images/052/436/826/large/sergio-del-pino-sopze-01-preview.jpg"
+      },{
+        "abs":1, "src":"https://cdna.artstation.com/p/assets/images/images/052/436/832/large/sergio-del-pino-sopze-02-preview.jpg"
+      }
+    ]}
+  ],
+  "overlay":[
+    { "type":"slideshow" }
+  ]
+}

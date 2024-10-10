@@ -1,0 +1,13 @@
+// Bad bots, Bad bots, what u gonna do, what u gonna do when they come for you
+User-agent: *
+
+Disallow: /project/*
+Disallow: /portfolio/*
+
+User-agent: Twitterbot
+Allow: /project
+Allow: /portfolio
+
+User-agent: facebookexternalhit
+Allow: /project
+Allow: /portfolio

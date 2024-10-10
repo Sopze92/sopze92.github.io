@@ -1,0 +1,26 @@
+{
+  "title":"KeQQu",
+  "description":"Kanban boards full-stack app made for the final project of a master",
+  "date":"Apr 2024",
+  "indent":["#A914FFFF","#6520DBFF"],
+  "header":[
+    "lang:html",
+    "lang:css",
+    "lang:javascript",
+    "lang:python",
+    "tech:tailwind",
+    "tech:react",
+    "tech:react_router",
+    "tech:webpack",
+    "tech:flask",
+    "tech:sqlalchemy"
+  ],
+  "content":[
+    {"type":"sep"},
+    {"type":"txt", "data":"PLACEHOLDER TEXT"},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Trivia"},
+    {"type":"txt:ul", "data":[
+      "PLACEHOLDER ELEMENT"
+    ]}
+  ]
+}
