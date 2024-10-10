@@ -10,7 +10,7 @@
     { "id":"fon",     "name":"Font",    "active":false,   "mode":"or"}
   ],
   "items":[
-    { "id":"_welcome", "types":[], "default":true },
+    { "id":".welcome", "types":[], "default":true },
 
     { "id":"bng_junker",            "types":["ftd","wip"],        "name":"<#-64>BeamNG</#> <b-1>::</b> <#-32>The Junker</#>" },
     { "id":"vg_airdribbler",        "types":["ftd","wip","vgm"],  "name":"<#-33>AirDribbler</#>" },
@@ -41,6 +41,6 @@
     { "id":"vg_ramengrave",         "types":["vgm"],              "name":"<#-33>Ramen Grave</#>" },   
     { "id":"prototypes",            "types":["dev","vgm","app"],  "name":"<#-37>Prototypes</#>" },
 
-    { "id":"_miscellanea", "name":"<#-37>miscellanea...</#>" }
+    { "id":".miscellanea", "name":"<#-37>miscellanea...</#>" }
   ]
 }

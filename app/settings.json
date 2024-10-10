@@ -114,7 +114,7 @@
     "home": {
       "title": "Home", 
       "showTitle": false,
-      "header": "public",
+      "header": "empty",
       "footer": "minimal"
     },
 
