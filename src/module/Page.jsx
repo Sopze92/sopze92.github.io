@@ -7,7 +7,7 @@ const Page= ({ _name })=>{
 
   return (
     <div className="container-fluid px-0 mx-0 overflow-hidden page-start">
-       {pages[_name] ? pages[_name]() : <h1>PAGE NOT FOUND</h1>}
+      {pages[_name] ? pages[_name]() : <h1>PAGE NOT FOUND</h1>}
     </div>
   );
 }

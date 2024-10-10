@@ -1,0 +1,41 @@
+{
+  "title":"The Junker",
+  "titlepic": { "replace":true, "src":"ptf/{0}/title.webp" },
+  "description":"Remake of the musclecar from Half-Life 2 Episode 2 for BeamNG",
+  "date":"2023-2024",
+  "indent":["#FF9D13FF","#D47C17FF"],
+  "header":[
+    "engine:torque3d",
+    "lang:lua",
+    "lang:javascript",
+    "lang:html",
+    "lang:css",
+    "app:substance_painter",
+    "app:blender"
+  ],
+  "content":[
+    {"type":"sep"},
+    {"type":"txt", "data":"<#-0><b>T</b>his is not a finished project but a <b>WIP</b> <i-0>(Work In Progress)</i>, it's not very common to showcase <b>WIP</b>s in a portfolio, still, it's here because I'm proud of how it's turning out due the amount of required quality and the effort it takes.</#>"},
+    {"type":"sep"},
+    {"type":"txt", "data":"<b>T</b>his is a project I started back in <b>2017</b> with zero idea about <b-0>BeamNG</b> modding, then in <b>2019</b> I had to pause this project and it stayed like that until in <b>2024</b> when I finally decided it was time to finish it."},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Latest video"},
+    {"type":"emb:youtube", "full":1, "id":"AYghp4bFHzU"},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Implications"},
+    {"type":"txt:ol", "data":[
+      "<b>T</b>he <b>3D</b> model has been fully remade <i-0>(not yet finished)</i> from scratch, as the original from <b>2007</b> was a single-mesh-mess, too far from this game standards and from the current generation ones.",
+      "<b>T</b>extures are currently upscaled versions of the originals, except for the wheels. I won't start with car texture work until I finish the <b>3D</b> model.",
+      "<b-0>JBEAM</b> syntax is a custom <b-0>JSON</b> derivation so the base is the same, it's used to setup the vehicle data, variables and define all the shapes to be used in the game / physics engine.",
+      "<b-0>LUA</b> is the main language for most of the game engine content, it's used to drive the extra logic added to this specific vehicle such as the radar and some engine behaviours.",
+      "<b-0>Javascript</b>, <b-0>HTML</b> and <b-0>CSS</b> are the languages for all UI and <b>2D</b> rendering via <b-0>Angular Components</b>, it's used to give the radar <b-0>LUA</b> data nice visuals then use it as a <b>2D</b> texture."
+    ]},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Links"},
+    {"type":"lnk:ul", "css":"ptf-bunch-list ptf-link-bunch", "data":[
+      ["https://www.beamng.com/threads/63933", "WIP Forum thread"],
+      ["{g}/rlam-docs/data/reference/RocketLeague_SoundEvents_Reference.xml", "SoundEvents XSTL"]
+    ]},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Trivia"},
+    {"type":"txt:ul", "data":[
+      "<b>A</b>fter the <b>5</b>-year pause, I did basically restarted the mod instead of resuming it as I had grown a lot in overall knowledge."
+    ]}
+  ]
+}

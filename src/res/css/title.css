@@ -1,5 +1,14 @@
 @charset "UTF-8";
 
+:root {
+  --title-tx: 0px;
+  --title-ty: 0px;
+  --title-prx: 0deg;
+  --title-pry: 0deg;
+  --title-ptx: 0px;
+  --title-pty: 0px;
+}
+
 #home-title {
   position: relative;
   overflow: hidden;
@@ -14,21 +23,16 @@
   margin-top: -5%;
   min-width: 110%;
   min-height: 120%;
-  transform-style: preserve-3d;
   transition-timing-function: ease-in;
   transition: .05s;
+
+  &.anim {
+    transform: translate(var(--title-tx), var(--title-ty));
+    transform-style: preserve-3d;
+  }
 }
 
 #home-title-bg {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  inset:0px;
-  border-radius: 2em;
-  box-shadow: inset 0 0 64px #8a8a8a30;
-}
-
-#home-title-bg-simple {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,9 +42,19 @@
   box-shadow: inset 0 0 64px #00000030;
 }
 
-#home-title-bg img {
-  transform-style: preserve-3d;
-  transition: .025s;
+#home-title-bg-anim {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  inset:0px;
+  border-radius: 2em;
+  box-shadow: inset 0 0 64px #8a8a8a30;
+
+  & > img {
+    transform: perspective(200px) rotateX(var(--title-prx)) rotateY(var(--title-pry)) translate(var(--title-ptx), var(--title-pty));
+    transform-style: preserve-3d;
+    transition: .025s;
+  }
 }
 
 #home-title-img-at {

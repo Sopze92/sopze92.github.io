@@ -1,0 +1,16 @@
+{
+  "title":"PLACEHOLDER TITLE",
+  "description":"PLACEHOLDER DESCRIPTION",
+  "date":"-",
+  "header":[
+    ":"
+  ],
+  "content":[
+    {"type":"sep"},
+    {"type":"txt", "data":"PLACEHOLDER TEXT"},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Trivia"},
+    {"type":"txt:ul", "data":[
+      "PLACEHOLDER ELEMENT"
+    ]}
+  ]
+}

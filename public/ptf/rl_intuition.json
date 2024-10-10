@@ -1,0 +1,47 @@
+{
+  "title":"Rocket League Intuition Stadium [MOD]",
+  "description":"Clean environment to maximize in-game performance, useful for training",
+  "date":"May 2023",
+  "indent":["#1EF8FFFF","#20DBCBFF"],
+  "header":[
+    "engine:unreal3",
+    "app:blender",
+    "app:paintdotnet"
+  ],
+  "content":[
+    {"type":"sep"},
+    {"type":"txt", "data":"It's a very simple and configurable <b-0>Rocket League</b> stadium consisting in just the shape lines and a background with some visual effects"},
+    {"type":"lnk", "css":"fs-2", "href":"https://steamcommunity.com/sharedfiles/filedetails/?id=2977666226", "data":"<b>See item on Steam Workshop</b"},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Screenshots"},
+    {"type":"img:xcar", "aspect":"17/10", "data":[
+      { 
+        "src":"ptf/{0}/image0.webp"
+      },{
+        "src":"ptf/{0}/image1.webp"
+      },{
+        "src":"ptf/{0}/image2.webp"
+      },{
+        "src":"ptf/{0}/image3.webp"
+      },{
+        "src":"ptf/{0}/image4.webp"
+      }
+    ]},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Video"},
+    {"type":"emb:youtube", "full":1, "id":"jyv2htZKyko"},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Configuration"},
+    {"type":"txt:ul", "data":[
+      "<b-0>Difficulty</b> - 3 different choices that set the amount of lines shown in the field, the less lines, the more you'll have to use your <b>intuition</b>",
+      "<b-0>Boost</b> - Select the boost mode: <b>normal | outline | outline simple</b>",
+      "<b-0>Lines</b> - Select the line material: <b>white | black | team-colored | intuition</b> <i-0>(transparent when player gets close)</i>",
+      "<b-0>Ball</b> - Select the ball model: <b>normal | plain-white | plain-black | plain-team-colored | trypofobia | inverted trypofobia</b>",
+      "<b-0>Ball Indicator</b> - Enable/disable the default on-floor ball position indicator",
+      "<b-0>Goal Indicators</b> - Enable/disable the default goalpost edge indicator",
+      "<b-0>Background</b> - Selects the background: <b>Black | Gray | White | Night | Dawn | Day | Universe | Inferno</b>",
+      "<b-0>Fog</b> - Enables/disables environment fog",
+      "<b-0>Infinite FX</b> - Turns on/off the infinite FX in some field lines"
+    ]}
+  ],
+  "overlay":[
+    { "type":"slideshow" }
+  ]
+}

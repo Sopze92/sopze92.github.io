@@ -1,0 +1,19 @@
+{
+  "title":"Rocket League Froggy Swamp Field [MOD]",
+  "description":"Living froggy swamp themed field made from scratch for Rocket League",
+  "date":"May 2023",
+  "indent":["#1EF8FFFF","#20DBCBFF"],
+  "header":[
+    "engine:unreal3",
+    "lang:as",
+    "app:blender"
+  ],
+  "content":[
+    {"type":"sep"},
+    {"type":"txt", "data":"PLACEHOLDER TEXT"},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Trivia"},
+    {"type":"txt:ul", "data":[
+      "PLACEHOLDER ELEMENT"
+    ]}
+  ]
+}

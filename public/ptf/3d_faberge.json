@@ -1,0 +1,54 @@
+{
+  "title":"Faberge Egg",
+  "description":"3D model of the blue wind up horse carousel Faberge Egg made from pictures",
+  "date":"-",
+  "indent":["#31B2F8FF","#1A7EE2FF"],
+  "header":[
+    "app:blender",
+    "app:substance_painter"
+  ],
+  "content":[
+    {"type":"txt:ul", "css":"ptf-bunch-list ptf-tag-bunch", "data":[
+      "2 UV Sets",
+      "4K",
+      "PBR",
+      "Rigged"
+    ]},
+    {"type":"txt", "css":"ptf-section-title", "data":"- 3D Preview"},
+    {"type":"emb:sketchfab", "full":1, "id":"ec68a4ccd286443fbabfb717dd35768d"},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Renders"},
+    {"type":"img:xcar", "aspect":"1", "data":[
+      { "abs":1, "src":"https://cdna.artstation.com/p/assets/images/images/052/717/780/large/sergio-del-pino-sopze-00.jpg"
+      },{
+        "abs":1, "src":"https://cdna.artstation.com/p/assets/images/images/052/717/814/large/sergio-del-pino-sopze-01.jpg"
+      },{
+        "src":"ptf/{0}/shaded0.webp"
+      },{
+        "abs":1, "src":"https://cdna.artstation.com/p/assets/images/images/052/717/856/large/sergio-del-pino-sopze-02.jpg"
+      },{
+        "src":"ptf/{0}/shaded1.webp"
+      }
+    ]},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Videos"},
+    {"type":"vid:box", "data":{
+      "abs":1, "src":"https://cdn.artstation.com/p/video_sources/000/911/187/eggcarousel.mp4",
+      "text":"Little animation"
+    }},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Technical"},
+    {"type":"img:box", "data":{
+      "abs":1, "src":"https://cdna.artstation.com/p/assets/images/images/052/718/728/large/sergio-del-pino-sopze-eggmain-preview.jpg",
+      "text":"Egg Body PBR Material + UV Layout"
+    }},
+    {"type":"img:box", "data":{
+      "abs":1, "src":"https://cdnb.artstation.com/p/assets/images/images/052/718/749/large/sergio-del-pino-sopze-eggdetail-preview.jpg",
+      "text":"Egg Detail PBR Material + UV Layout"
+    }},
+    {"type":"img:box", "data":{
+      "abs":1, "src":"https://cdna.artstation.com/p/assets/images/images/052/718/742/large/sergio-del-pino-sopze-horse-preview.jpg",
+      "text":"Horse PBR Material + UV Layout"
+    }}
+  ],
+  "overlay":[
+    { "type":"slideshow" }
+  ]
+}

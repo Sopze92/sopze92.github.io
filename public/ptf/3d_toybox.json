@@ -1,0 +1,49 @@
+{
+  "title":"Emily's Toybox",
+  "description":"3D model of a toybox made from a single-image concept art, PBR + Game-Ready",
+  "date":"-",
+  "indent":["#FF79FDFF","#CD54E2FF"],
+  "header":[
+    "app:blender",
+    "app:substance_painter"
+  ],
+  "content":[
+    {"type":"txt:ul", "css":"ptf-bunch-list ptf-tag-bunch", "data":[
+      "< 1K Tris",
+      "1 UV Set",
+      "4K",
+      "PBR",
+      "Rigged"
+    ]},
+    {"type":"txt", "css":"ptf-section-title", "data":"- 3D Preview"},
+    {"type":"emb:sketchfab", "full":1, "id":"d3e20f13e29f4651982a0518aaa2ffee"},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Renders"},
+    {"type":"img:xcar", "aspect":"1", "data":[
+      { "abs":1, "src":"https://cdna.artstation.com/p/assets/images/images/054/554/774/large/sergio-sopze-00.jpg"
+      },{
+        "abs":1, "src":"https://cdna.artstation.com/p/assets/images/images/054/554/798/large/sergio-sopze-01.jpg"
+      },{
+        "abs":1, "src":"https://cdna.artstation.com/p/assets/images/images/054/554/852/large/sergio-sopze-02.jpg"
+      },{
+        "abs":1, "src":"https://cdnb.artstation.com/p/assets/images/images/054/554/885/large/sergio-sopze-03.jpg"
+      },{
+        "abs":1, "src":"https://cdnb.artstation.com/p/assets/images/images/054/554/911/large/sergio-sopze-b00.jpg"
+      },{
+        "abs":1, "src":"https://cdnb.artstation.com/p/assets/images/images/054/554/945/large/sergio-sopze-b01.jpg"
+      }
+    ]},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Videos"},
+    {"type":"vid:box", "data":{
+      "abs":1, "src":"https://cdn.artstation.com/p/video_sources/000/982/093/spin-up-x264.mp4",
+      "text":"360 video"
+    }},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Technical"},
+    {"type":"img:box", "data":{
+      "abs":1, "src":"https://cdnb.artstation.com/p/assets/images/images/054/556/541/large/sergio-sopze-materialpreview.jpg",
+      "text":"PBR Material + UV Layout"
+    }}
+  ],
+  "overlay":[
+    { "type":"slideshow" }
+  ]
+}

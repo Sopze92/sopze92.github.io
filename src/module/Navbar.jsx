@@ -1,8 +1,21 @@
 import React from "react"
+import { useNavigate } from "react-router-dom"
 
 import { Globals } from "../context/AppContext.jsx"
 
-import { FrostedGlass } from "../res/Effects.jsx"
+const FrostedGlass= ()=>{
+  return (
+    <>
+      <div className="m-0 p-0 position-absolute w-100 h-100 no-pointer">
+        {
+          Array(8).fill(null).map((e,i)=>
+            <div key={`frostedglass-layer-${i}`} className={`bg-frostedglass-complex layer${i}`} />
+          )
+        }
+      </div>
+    </>
+  )
+}
 
 const NavBarPage= ({ active, title, action }) => {
 
@@ -27,54 +40,86 @@ const NavBarLink= ({ resource }) => {
 
 const NavBar= ({ type }) => {
 
-  const 
-    { ready, pagedata, actions }= React.useContext(Globals),
-    [ data, setData ]= React.useState(null)
+  //console.log(`Using header: ${type}`)
 
+  const 
+    { ready, eventdata, pagedata, actions }= React.useContext(Globals),
+    [ scroll, set_scroll ]= React.useState(0),
+    [ showHeader, set_showHeader ]= React.useState(true),
+    [ data, set_data ]= React.useState(null),
+    nav= useNavigate();
+
+  // self-setup
   React.useEffect(()=>{
-    setData(ready.setup ? actions.getHeader(type) : null)
-  }, [ready.setup])
+    if(pagedata.header){
+      set_data(ready.setup ? actions.getHeader(type) : null)
+    }
+  }, [pagedata.header?? false])
+  
+  // scroll effect
+  React.useEffect(()=>{
+
+    const target= actions.getEventdata('scroll')?.target
+
+    if(target){
+
+      const lscroll= target.scrollTop
+
+      set_showHeader(lscroll <= scroll)
+      set_scroll(lscroll)
+    }
+
+  },[eventdata.scroll.timestamp])
+
+  // proccesses page link from name
+  function getNavbarPageLink(name){
+
+    const bCurrent= name===pagedata._name
+
+    return <NavBarPage 
+      key={`hn-${name}`} 
+      active={bCurrent} 
+      title={actions.getPageTitle(name)} 
+      action={bCurrent ? ()=> actions.setPageDirty(true) : ()=>nav(`/${name}`)}
+    />
+  }
 
   return ( data &&
-    <div id="header-container" className="navbar fixed-top p-0 m-0">
-      <FrostedGlass />
-      <div className="container-fluid">
-        <div className="row w-100 m-0 px-3 justify-content-center">
-          <div className="col-10 col-lg-9 d-flex flex-column-rev-until-md-row m-0 p-0">
-            { data.navbar && 
+    <div id="header-container" className="navbar sticky-top m-0 p-0">
+      <div className={`header-wrapper w-100 h-100 ${!showHeader ? "header-hidden" : ""}`}>
+        <FrostedGlass />
+        <div className="container-fluid h-100">
+          <div className="row w-100 m-0 px-3 justify-content-center">
+            <div className="col-10 col-lg-9 d-flex flex-column-rev-until-md-row m-0 p-0">
               <div className="col-12 col-md-8 mt-auto mb-0 pt-4 d-flex">
-                <ul className="nav p-0 mb-0 gap-3">
-                  {
-                    data.navbar.map(e=> 
-                      <NavBarPage 
-                        key={`header-navbar-${e}`} 
-                        active={e===pagedata.data._name} 
-                        title={actions.getPageTitle(e)} 
-                        action={()=>actions.setPage(e)}
-                      />
-                    )
-                  }
-                </ul>
+                { data.navbar && 
+                    <ul className="nav p-0 mb-0 gap-3">
+                      {
+                        data.navbar.map(e=> 
+                          getNavbarPageLink(e)
+                        )
+                      }
+                    </ul>
+                }
               </div>
-            }
-            { data.links && 
               <div className="col-12 col-md-4 my-auto pt-2 d-flex justify-content-center justify-content-md-end">
-                <ul className="nav p-0 m-0 mb-2">
-                  {
-                    data.links.map((e,i)=> {
-                      return <NavBarLink 
-                        key={`header-social-${e}-${i}`} 
-                        resource={actions.getResource(e)} 
-                      />
-                    }
-                    )
-                  }
-                </ul>
+                { data.links && 
+                    <ul className="nav p-0 m-0 mb-2">
+                      {
+                        data.links.map((e,i)=>
+                          <NavBarLink 
+                            key={`header-social-${e}-${i}`} 
+                            resource={actions.getResource(e)} 
+                          />
+                        )
+                      }
+                    </ul>
+                }
               </div>
-            }
-          </div>
-          <div className="col-2 p-0 show-until-md d-flex justify-content-end position-relative" aria-hidden="true">
-            <img id="brand-img" className="no-select" src="./_res/img/title/icon.svg"></img>
+            </div>
+            <div className="col-2 p-0 show-until-md d-flex justify-content-end position-relative" aria-hidden="true">
+              <img id="brand-img" className="no-select" src="./res/img/icon.svg"></img>
+            </div>
           </div>
         </div>
       </div>

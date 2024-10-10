@@ -1,0 +1,40 @@
+{
+  "title":"Mobile Game Weapons",
+  "description":"3D models of several weapons mode from concepts for an isometric mobile game, PBR + Game-Ready",
+  "date":"-",
+  "header":[
+    "app:blender",
+    "app:substance_painter"
+  ],
+  "content":[
+    {"type":"txt:ul", "css":"ptf-bunch-list ptf-tag-bunch", "data":[
+      "29K Tris (All 12 together)",
+      "1 Shared UV set",
+      "Lowpoly",
+      "4K",
+      "PBR"
+    ]},
+    {"type":"img:xcar", "aspect":"10/7", "data":[
+      { "src":"ptf/{0}/chaingun.webp",
+        "title":"Chaingun"
+      },{
+        "src":"ptf/{0}/cannon.webp",
+        "title":"Cannon"
+      },{
+        "src":"ptf/{0}/laser.webp",
+        "title":"Laser"
+      },{
+        "src":"ptf/{0}/stun.webp",
+        "title":"Stunner"
+      }
+    ]},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Technical"},
+    {"type":"img:box", "data":{
+      "src":"ptf/{0}/textures.webp",
+      "text":"PBR Material + Emissive + UV Layout"
+    }}
+  ],
+  "overlay":[
+    { "type":"slideshow" }
+  ]
+}

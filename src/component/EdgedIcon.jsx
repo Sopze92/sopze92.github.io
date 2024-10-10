@@ -1,48 +1,99 @@
 import React from "react"
 
-import useMousemove from '../hooks/useMousemove.jsx'
+import { Globals } from "../context/AppContext.jsx"
 
 import LabelBox from "./LabelBox.jsx"
 
-const TechIcon= ({ resource })=>{
+const __RESOURCE__= {
+  name:null, 
+  src:null,
+  col:["#777","#777"],
+  href:null
+}
+
+export const EdgedIcon= ({ name=__RESOURCE__.name, src=__RESOURCE__.src, href=__RESOURCE__.href, buttons=[0], bgsize=1.0, callback=null, col=__RESOURCE__.col, className=null })=>{
 
   const
+    { eventdata, actions }= React.useContext(Globals),
     element= React.useRef(null),
-    mousemove= useMousemove(),
-    [style, set_style]= React.useState(null),
-    [color, set_color]= React.useState(null)
+    [coords, set_coords]= React.useState({ x:128, y:128 }),
+    [style, set_style]= React.useState(null)
+
+  const 
+    ElementType= href ? 'button' : 'div',
+    bsvg= false
 
   React.useEffect(()=>{
-    if(resource) {
-      const color= {
-        "--fx-col-pri": resource.col[0], 
-        "--fx-col-neg": resource.col[1]
-      }
-      if(resource.col.length > 2) color["--fx-col-text"]= resource.col[2]
-      set_color(color)
+
+    const n= 128*bgsize
+
+    const _style= {
+      "--fx-edi-bgs-px": `${n}px`,
+      "--fx-edi-bgh-px": `${n*-.5}px`,
+      "--fx-col-pri": col[0], 
+      "--fx-col-neg": col[1]??__RESOURCE__.col[1]
     }
+    if(col[2]) _style["--fx-col-text"]= col[2]
+    if(col[3]) {
+      _style["--fx-svg-nrm"]= col[3]
+      _style["--fx-svg-hov"]= col[4]??col[3]
+    } 
+    else if(col[4]) _style["--fx-svg-hov"]= col[4]
+
+    set_style(_style)
   },[])
 
-  React.useEffect(function(){ if(mousemove) 
+  React.useEffect(function(){
     if(element.current){
-      const bbox= element.current.getBoundingClientRect()
-      set_style({
-          "--cv-musrel-x": `${(mousemove.clientX - bbox.x)>>0}px`, 
-          "--cv-musrel-y": `${(mousemove.clientY - bbox.y)>>0}px`
-        })
+
+      const event= actions.getEventdata('mousemove')
+
+      const 
+        bbox= element.current.getBoundingClientRect(),
+        x= event.clientX - bbox.x,
+        y= event.clientY - bbox.y
+
+      const n= 128*bgsize
+
+      if(Math.abs(x) < n && Math.abs(y) < n) set_coords({ x: x, y: y })
+      else if (coords.x != n || coords.y != n) set_coords({ x: n, y: n })
     }
-  },[mousemove])
+  },[eventdata.mousemove.timestamp])
+
+  function handleClickButton(e){
+    if(buttons.includes(e.button)){
+      e.preventDefault()
+      e.stopPropagation()
+      if(callback) callback(e)
+      else handleClickButtonDefault(e)
+    }
+  }
+  
+  function handleClickButtonDefault(e){
+    window.open(href, "_blank")
+  }
 
   return (
-    <div ref={element} className="m-2 box-page-tech fs-5 fx-edgedbox fx-colorize fx-labelbox-container" 
-      style={{
-        ...style, 
-        ...color
-        }}>
-      <LabelBox label={resource.name} />
-      <img src={resource.img} />
+    <div style={style} className={`edgedicon ${className??""}`}>
+      <ElementType 
+        ref={element} 
+        className={`${href? "to-div " : ""} m-2 box-page-tech fs-5 fw-semibold fx-colorize fx-edgedbox fx-labelbox-container`}
+        style={{"--cv-musrel-x": `${coords.x}px`, "--cv-musrel-y": `${coords.y}px`}}
+        {...(href? {onMouseDown:(e)=>handleClickButton(e)} : {})}>
+        { name &&
+          <LabelBox label={name} />
+        }
+        { src && src != "" &&
+          <img src={src} />
+        }
+      </ElementType>
     </div>
   )
 }
 
-export default TechIcon
+export const EdgedResourceIcon= ({ resource=null, className=null, ...rest })=>{
+
+  return (
+    <EdgedIcon {...(Object.assign(structuredClone(__RESOURCE__), resource??{}))} {...rest} className={className}/>
+  )
+}

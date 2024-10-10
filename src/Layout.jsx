@@ -1,27 +1,66 @@
 import React from "react"
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
 
-import AppContext, { Globals } from "./context/AppContext.jsx";
+import AppContext, { Globals } from "./context/AppContext.jsx"
 
-import Redirector from "./component/Redirector.jsx"
-import App from "./App.jsx"
-import { Err404 } from "./module/Internal.jsx"
+import NavBar from "./module/Navbar.jsx"
+import Footer from "./module/Footer.jsx"
 
-const defaultRoute= "/home"
+import Home from "./view/Home.jsx"
+import AboutMe from "./view/AboutMe.jsx"
+import Portfolio from "./view/Portfolio.jsx"
+import Services from "./view/Services.jsx"
+import Resume from "./view/Resume.jsx"
+
+import { Redirector, NotFound_Generic, HealthCheck } from "./app/Internal.jsx"
+
+import GlobalListener from "./app/GlobalListener.jsx"
+
+import EdgedScrollbar from "./component/EdgedScrollbar.jsx"
 
 const Layout= ()=>{
 
-  const { ready }= React.useContext(Globals)
+  const { ready, pagedata, actions }= React.useContext(Globals)
+
+  function handleEvent(e){
+    actions.setEventdata(e)
+  }
 
   return ( ready.setup &&
-    <BrowserRouter>
-      <Routes>
-        <Route exact path="/:page" element={(<App />)} />
-				<Route exact path="/" element={(<Redirector path={defaultRoute}/>)} />
-
-        <Route path="*" element={(<Err404/>)}/>
-      </Routes>
-    </BrowserRouter>
+    (
+    <EdgedScrollbar id="app" onMouseMove={handleEvent} options={{overflow:{x:'hidden'}, scrollbars:{visibility:'visible'}}} events={{ scroll: (_,e)=>handleEvent(e) }}>
+      <BrowserRouter>
+        <Routes>
+          <Route strict exact path="/404" element={<NotFound_Generic />} />
+          <Route strict exact path="/healthcheck" element={<HealthCheck />} />
+          <Route path="*" element={
+            <>
+            {
+              ready.page && 
+              <NavBar type={pagedata.header?? null}/>
+            }
+            <Routes>
+              <Route exact path="/" element={(<Redirector url="/home"/>)} />
+  
+              <Route exact path="/home" element={(<Home />)} />
+              <Route exact path="/portfolio" element={(<Portfolio />)} />
+              <Route exact path="/services" element={(<Services />)} />
+              <Route exact path="/aboutme" element={(<AboutMe />)} />
+              <Route exact path="/resume" element={(<Resume />)} />
+  
+              <Route path="*" element={<NotFound_Generic />} />
+            </Routes>
+            {
+              ready.page && 
+              <Footer type={pagedata.footer?? null}/>
+            }
+            </>
+          } />
+        </Routes>
+        <GlobalListener/>
+      </BrowserRouter>
+    </EdgedScrollbar>
+    )
   )
 }
 

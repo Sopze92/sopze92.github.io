@@ -21,6 +21,12 @@
 .fsp-4 { letter-spacing: .0625rem; }
 
 .m-6 { margin: 4rem; }
+.my-6 { margin-top: 4rem; margin-bottom: 4rem; }
+.mx-6 { margin-left: 4rem; margin-left: 4rem; }
+
+.m-7 { margin: 6rem; }
+.my-7 { margin-top: 6rem; margin-bottom: 6rem; }
+.mx-7 { margin-left: 6rem; margin-left: 6rem; }
 
 .mt-n2 { margin-top: -.5rem; }
 .mt-n3 { margin-top: -1.0rem; }
@@ -30,6 +36,10 @@
 .mt-n7 { margin-top: -5rem; }
 
 .pt-6 { padding-top: 4rem; }
+.pb-6 { padding-bottom: 4rem; }
+
+.pt-7 { padding-top: 6rem; }
+.pb-7 { padding-bottom: 6rem; }
 
 .ts-bottom { text-shadow: 0 .25rem .5rem #0000007f; }
 
@@ -41,22 +51,16 @@
 .row-over-sm {
   display: flex;
   flex-direction: row;
-  margin: 0;
-  padding: 0;
 }
 
 .row-over-md {
   display: flex;
   flex-direction: row;
-  margin: 0;
-  padding: 0;
 }
 
 .row-over-lg {
   display: flex;
   flex-direction: row;
-  margin: 0;
-  padding: 0;
 }
 
 /* REACTIVE THINGS */

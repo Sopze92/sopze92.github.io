@@ -1,0 +1,55 @@
+{
+  "title":"Glock s17 Gen3",
+  "description":"Close 3D replica of one of the most well known handguns, PBR + Game-Ready",
+  "date":"-",
+  "indent":["#EFEFEFFF","#C3C3C3FF"],
+  "header":[
+    "app:blender",
+    "app:substance_painter"
+  ],
+  "content":[
+    {"type":"txt:ul", "css":"ptf-bunch-list ptf-tag-bunch", "data":[
+      "18k Tris",
+      "1 UV Set",
+      "4K",
+      "PBR",
+      "Rigged"
+    ]},
+    {"type":"txt", "css":"ptf-section-title", "data":"- 3D Preview"},
+    {"type":"emb:sketchfab", "full":1, "id":"a01dd41d1e2b42e49fcb5e19df01b8e4"},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Renders"},
+    {"type":"img:xcar", "aspect":"10/7", "data":[
+      { "abs":1, "src":"https://cdnb.artstation.com/p/assets/images/images/060/668/145/large/sergio-sopze-002.jpg"
+      },{
+        "abs":1, "src":"https://cdnb.artstation.com/p/assets/images/images/060/670/309/large/sergio-sopze-001.jpg"
+      },{
+        "abs":1, "src":"https://cdnb.artstation.com/p/assets/images/images/060/668/151/large/sergio-sopze-006.jpg",
+        "title":"Trigger close-up"
+      },{
+        "abs":1, "src":"https://cdnb.artstation.com/p/assets/images/images/060/668/157/large/sergio-sopze-007.jpg",
+        "title":"Slider close-up"
+      },{
+        "abs":1, "src":"https://cdna.artstation.com/p/assets/images/images/060/668/346/large/sergio-sopze-010.jpg",
+        "title":"Frame view"
+      },{
+        "abs":1, "src":"https://cdna.artstation.com/p/assets/images/images/060/668/338/large/sergio-sopze-003a.jpg",
+        "title":"Inner parts"
+      }
+    ]},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Videos"},
+    {"type":"vid:box", "data":{
+      "abs":1, "src":"https://cdn.artstation.com/p/video_sources/001/245/754/glock17-showcase-0-x264.mp4",
+      "text":"360 video"
+    }},
+    {"type":"emb:youtube", "full":1, "id":"k62ItVgomfo"},
+    {"type":"emb:youtube", "full":1, "id":"d0pZad6PehU"},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Technical"},
+    {"type":"img:box", "data":{
+      "abs":1, "src":"https://cdnb.artstation.com/p/assets/images/images/060/668/351/large/sergio-sopze-matshow.jpg",
+      "text":"PBR Material + UV Layout"
+    }}
+  ],
+  "overlay":[
+    { "type":"slideshow" }
+  ]
+}

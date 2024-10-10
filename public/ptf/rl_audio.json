@@ -1,0 +1,69 @@
+{
+  "title":"Rocket League Audio-Modding",
+  "titlepic": { "replace":true, "src":"ptf/{0}/title.webp" },
+  "description":"Ability to add user-made audio content in Rocket League + HTML Documentation",
+  "date":"May 2023-Feb 2024",
+  "indent":["#a7e655","#90c48d"],
+  "header":[
+    "engine:unreal3",
+    "lang:cplusplus",
+    "lang:python",
+    "lang:html",
+    "lang:css",
+    "lang:javascript"
+  ],
+  "content":[
+    {"type":"sep"},
+    {"type":"txt", "data":"<#-0><b>S</b>ometimes projects doesn't have to be tangible products that one just release or sell, and so is in this case, this project was more focused in gather information and investigate a subject to achieve certain goal than developing an actual product or piece of software.</#>"},
+    {"type":"sep"},
+    {"type":"img:xcar-", "data":[
+      { "src":"ptf/{0}/preview.webp",
+        "title":"Front page",
+        "desc":"Front page of the audio modding documentation."
+      },{
+        "src":"ptf/{0}/preview2.webp",
+        "title":"Secondary page",
+        "desc":"Another page of the documentation, explaining how to use <b-0>AudioKinetic</b> assets in <b-0>UDK</b>."
+      },{
+        "src":"ptf/{0}/wwise.webp",
+        "title":"Wwise project",
+        "desc":"Some views of the diferent <b-0>Wwise</b> project hierarchies showing buses, variables and effects."
+      },{
+        "src":"ptf/{0}/soundevents.webp",
+        "title":"Soundevents document",
+        "desc":"<b-0>XSLT</b>+<b-0>JS</b> formatting of all the soundevents included in <b-0>Rocket League</b>, gathered by hand via package decryption."
+      },{
+        "src":"ptf/{0}/buses_pdf.webp",
+        "title":"Buses PDF info",
+        "desc":"<b-0>PDF</b> showing some useful info about each audio bus in the <b-0>Wwise</b> template project."
+      }
+    ]},
+    {"type":"sep"},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Context & Info"},
+    {"type":"txt", "data":"<b>A</b>s <b-0>Rocket League</b> does not officially give us any tool to create custom content for the game, the <b-0>RocketLeague Modding community</b> counts with a great amount of very skilled people on different scopes who developed certain tools and procedures to make possible to add user-made content in the game, however, by whatever reason, none of them pressed the right key when we talk about support for custom audio."},
+    {"type":"txt", "data":"<b>T</b>he <i>key</i> wasn't an easy one, <b-0>Rocket League</b> is made with the good ol' <b-0>Unreal Engine 3</b> and uses <b-0>AudioKinetic's Wwise</b> as audio system. I had to make use of reverse enginering to discover the way to success, then learnt <b-0>Wwise tools</b> just to create <i-0>(by hand and from scratch)</i> a dummy-project that mimics the one that Rocket League developers use. That way its possible to create custom <b-0>SoundBanks</b> that are fully compatible the game."},
+    {"type":"txt", "data":"<b>A</b>fter all that, the mere fact of being the person who discovered and made possible to add user-made audio content in <b-0>Rocket League</b> made me felt like my duty was to share everything I developed for this purpose and write down all my knowledge about it in some kind of easy-to-read documentation explaining anyone interested how to proceed. No need for it to be a polished professional product, but a clear, concise and useful resource."},
+    {"type":"sep"},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Project Results"},
+    {"type":"txt:ol", "separator":":", "data":[
+      "<b-0>Wwise project</b> fully compatible with Rocket League, allowing people to replace any in-game sound or add their own ones.",
+      "<b>P</b>lugin in <b-0>C++</b> that hack'n'tricks <b-0>Rocket League</b> into loading <b-0>SoundBank</b> files from other directories other than the game's root, useful to avoid people messing around with game folder and files.",
+      "<b-0>HTML Documentation</b> hosted in <b-0>Github Pages</b>. <i-0>(Simple vanilla site, enough to serve its purpose, I used no frameworks or external libraries.)</i>",
+      "<b>N</b>icely organized <b-0>XSTL</b>+<b-0>JS</b> pages listing all original in-game sound events as well as <b-0>Wwise project</b> data, retrieved and written down by hand.",
+      "<b>P</b>ython script for <b-0>FNV-132</b> de-hasher. <i-0>(Generate words in several ways to test against a given list of hashes)</i>"
+    ]},
+    {"type":"sep"},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Links"},
+    {"type":"lnk:ul", "css":"ptf-bunch-list ptf-link-bunch", "data":[
+      ["{g}/rlam-docs", "Online HTML Documentation"],
+      ["{g}/rlam-docs/data/reference/RocketLeague_SoundEvents_Reference.xml", "SoundEvents XSTL"]
+    ]},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Trivia"},
+    {"type":"txt:ul", "separator":":", "data":[
+      "<b>I</b> did let the <b-0>FNV-132</b> de-haser running overnight several times <i-0>(which translates into hundreds of hours)</i> to decrypt hashed audio element names such as <b-0>buses</b>, <b-0>effects</b>, <b-0>variables</b>, etc... whose name was required for the dummy project to be able to actually use those elements in-game."
+    ]}
+  ],
+  "overlay":[
+    { "type":"slideshow" }
+  ]
+}

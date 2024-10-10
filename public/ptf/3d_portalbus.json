@@ -1,0 +1,62 @@
+{
+  "title":"Portal Bus",
+  "description":"3D model of a hovering bus made from a single-image concept art",
+  "date":"-",
+  "indent":["#DE79FFFF","#AE54E2FF"],
+  "header":[
+    "app:blender",
+    "app:substance_painter"
+  ],
+  "content":[
+    {"type":"txt:ul", "css":"ptf-bunch-list ptf-tag-bunch", "data":[
+      "1 UV Set",
+      "PBR",
+      "Rigged"
+    ]},
+    {"type":"txt", "css":"ptf-section-title", "data":"- 3D Preview"},
+    {"type":"emb:sketchfab", "full":1, "id":"2654b0de7df34591ae55ca7828ee5666"},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Renders"},
+    {"type":"img:xcar", "aspect":"16/10", "data":[
+      { "abs":1, "src":"https://cdnb.artstation.com/p/assets/images/images/053/451/797/large/sergio-sopze-00.jpg"
+      },{
+        "abs":1, "src":"https://cdna.artstation.com/p/assets/images/images/053/451/820/large/sergio-sopze-01.jpg"
+      },{
+        "abs":1, "src":"https://cdnb.artstation.com/p/assets/images/images/053/451/837/large/sergio-sopze-02.jpg"
+      },{
+        "abs":1, "src":"https://cdnb.artstation.com/p/assets/images/images/053/451/859/large/sergio-sopze-03.jpg"
+      },{
+        "abs":1, "src":"https://cdna.artstation.com/p/assets/images/images/053/451/938/large/sergio-sopze-04.jpg"
+      },{
+        "abs":1, "src":"https://cdna.artstation.com/p/assets/images/images/053/452/004/large/sergio-sopze-05.jpg"
+      },{
+        "abs":1, "src":"https://cdnb.artstation.com/p/assets/images/images/053/451/973/large/sergio-sopze-c00b.jpg",
+        "title":"Cycles render"
+      }
+    ]},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Videos"},
+    {"type":"vid:box", "data":{
+      "abs":1, "src":"https://cdn.artstation.com/p/video_sources/000/938/486/portalbus-v-00.mp4",
+      "text":"Showcase video"
+    }},
+    {"type":"vid:box", "data":{
+      "abs":1, "src":"https://cdn.artstation.com/p/video_sources/000/938/491/portalbus-v-02.mp4",
+      "text":"360 video"
+    }},
+    {"type":"vid:box", "data":{
+      "abs":1, "src":"https://cdn.artstation.com/p/video_sources/000/938/493/portalbus-v-01.mp4",
+      "text":"Nigth video"
+    }},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Technical"},
+    {"type":"vid:box", "data":{
+      "abs":1, "src":"https://cdn.artstation.com/p/video_sources/000/938/496/portalbus-v-viewport.mp4",
+      "text":"Behind the scenes video"
+    }},
+    {"type":"img:box", "data":{
+      "abs":1, "src":"https://cdnb.artstation.com/p/assets/images/images/053/451/981/large/sergio-sopze-portalbus-maps.jpg",
+      "text":"PBR Material + UV Layout"
+    }}
+  ],
+  "overlay":[
+    { "type":"slideshow" }
+  ]
+}

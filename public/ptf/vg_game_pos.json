@@ -1,0 +1,21 @@
+{
+  "title":"-POS- [PC]",
+  "description":"Very hard action-platformer videogame, currently in progress",
+  "date":"2021",
+  "header":[
+    "engine:unity",
+    "lang:csharp",
+    "app:blender",
+    "app:substance_painter",
+    "app:paintdotnet",
+    "app:flstudio"
+  ],
+  "content":[
+    {"type":"sep"},
+    {"type":"txt", "data":"PLACEHOLDER TEXT"},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Trivia"},
+    {"type":"txt:ul", "data":[
+      "PLACEHOLDER ELEMENT"
+    ]}
+  ]
+}

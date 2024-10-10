@@ -1,0 +1,18 @@
+{
+  "title":"PinkerCar",
+  "description":"3D model fully rigged of a car made for a personal petition",
+  "date":"-",
+  "indent":["#FF79FDFF","#CD54E2FF"],
+  "header":[
+    "app:blender",
+    "app:substance_painter"
+  ],
+  "content":[
+    {"type":"sep"},
+    {"type":"txt", "data":"PLACEHOLDER TEXT"},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Trivia"},
+    {"type":"txt:ul", "data":[
+      "PLACEHOLDER ELEMENT"
+    ]}
+  ]
+}

@@ -2,32 +2,48 @@ import React from 'react'
 
 import { _FetchJsonData } from "../res/lib/util.js"
 
-import Home from "../page/home.jsx"
-import Portfolio from "../page/portfolio.jsx"
-import AboutMe from "../page/aboutme.jsx"
-import Resume from "../page/resume.jsx"
-import Services from "../page/services.jsx"
-//import Utils from "../page/utils.jsx"
-//import Project from "../page/project.jsx"
-//
-//import Err404 from "./module/err404.jsx"
+const _APP_PATH= "app"
+const _PORTFOLIO_PATH= "ptf"
 
 export const Constants= Object.freeze({
   APP_MODE: { standard:0, util:1, project:2 },
-  APP_PAGES: { 
-    home:       Home, 
-    portfolio:  Portfolio,
-    aboutme:    AboutMe,
-    services:   Services,
-    resume:     Resume,
-/*    utils:      Utils,
-    project:    Project,
-    err404:     Err404*/
-  },
-  LEAVE_MODE: { link:0, mailto:1, project:2 }
+  LEAVE_MODE: { link:0, mailto:1, project:2 },
+  
+  MISSING_FILE_STRING: '<b class="col-1">Missing file</b>',
+  MISSING_TEXT_STRING: '<b class="col-1">Missing text string</b>',
+  UNSAFE_HTML_STRING: '<b class="col-1">Unsafe Html detected</b>',
+
+  INVALID_OVERLAY_ELEMENT: <b className="col-1">Invalid Overlay ID</b>
 })
 
-const _APP_PATH= "src/app"
+export const Functions= Object.freeze({
+  checkHtmlSafety: (text)=>{
+    return text.match(/<[^>]*(\s|script|javascript|=)+[^>]*>/g)== null
+  },
+
+  getOverlayElement: (id)=>{
+    return _OVERLAY_COMPONENT_[id]
+  },
+  
+  voidEvent: (e)=>{
+    e.preventDefault()
+    e.stopPropagation()
+    return false
+  }
+})
+
+import OverlaySlideshow from "../module/OverlaySlideshow.jsx"
+
+const _OVERLAY_COMPONENT_= Object.freeze({
+  slideshow: OverlaySlideshow
+})
+
+const _ERROR_RESOURCE_= Object.freeze({
+  name: "ERROR",
+  class: "",
+  img: "",
+  col: ["#FF00FF", "#FF00FF"]
+})
 
 export const Globals= React.createContext(null)
 
@@ -36,48 +52,58 @@ const AppContext= ReactComponent=>{
     const 
       [ globals, setGlobals ]= React.useState(
         globalsState({
+          actions: ()=> globals.actions,
           get: {
-            ready: ()=> globals.ready,
-            settings: ()=> globals.settings,
-            events: ()=> globals.events,
-            resources: ()=> globals.resources,
-            content: ()=> globals.content,
-            pagedata: ()=> globals.pagedata,
-
-            actions: ()=> globals.actions
+            ready:        ()=> globals.ready,
+            timestamp:    ()=> globals.timestamp,
+            settings:     ()=> globals.settings,
+            eventdata:    ()=> globals.eventdata,
+            resources:    ()=> globals.resources,
+            content:      ()=> globals.content,
+            portfolio:    ()=> globals.portfolio,
+            pagedata:     ()=> globals.pagedata,
+            overlaydata:  ()=>globals.overlaydata,
           },
           set: {
-            ready: (newReady)=> _setGlobal({ ready: Object.assign(globals.ready, newReady ? newReady : { setup:false, page:false } ) }),
-            settings: (newSettings, replace=false)=> _setGlobal({ main: replace ? newSettings : Object.assign(globals.settings, newSettings) }),
-            events: (newEvents, replace=false)=> _setGlobal({ main: replace ? newEvents : Object.assign(globals.events, newEvents) }),
-            resources: (newResources, replace=false)=> _setGlobal({ main: replace ? newResources : Object.assign(globals.resources, newResources) }),
-            content: (newContent, replace=false)=> _setGlobal({ main: replace ? newContent : Object.assign(globals.content, newContent) }),
-            pagedata: (newPagedata, replace=false)=> _setGlobal({ main: replace ? newPagedata : Object.assign(globals.pagedata, newPagedata) })
-          }
+            ready:        (newData)=> _setGlobal({ ready: Object.assign(globals.ready, newData ? newData : { setup:false, page:false } ) }),
+            timestamp:    (newData)=> _setGlobal({ timestamp: Object.assign(globals.timestamp, newData ? newData : { page:false } ) }),
+            settings:     (newData, replace=false)=> _setGlobal({ main: replace ? newData : Object.assign(globals.settings, newData) }),
+            eventdata:    (newData, replace=false)=> _setGlobal({ main: replace ? newData : Object.assign(globals.eventdata, newData) }),
+            resources:    (newData, replace=false)=> _setGlobal({ main: replace ? newData : Object.assign(globals.resources, newData) }),
+            content:      (newData, replace=false)=> _setGlobal({ main: replace ? newData : Object.assign(globals.content, newData) }),
+            portfolio:    (newData, replace=false)=> _setGlobal({ main: replace ? newData : Object.assign(globals.portfolio, newData) }),
+            pagedata:     (newData, replace=false)=> _setGlobal({ main: replace ? newData : Object.assign(globals.pagedata, newData) }),
+            overlaydata:  (newData, replace=false)=> _setGlobal({ main: replace ? newData : Object.assign(globals.overlaydata, newData) }),
+				  }
         })
     )
 
     const _setGlobal= (newData)=> {
-			const newGlobals= {
-        ready: globals.ready,
-        settings: globals.settings,
-        events: globals.events,
-        resources: globals.resources,
-        content: globals.content,
-        pagedata: globals.pagedata,
 
-        actions: globals.actions
-			}
+			const newGlobals= {}
+      for(let [k,v] of Object.entries(globals)){
+        newGlobals[k]= v
+      }
 			for(const k in newData) newGlobals[k]= newData[k]
 			setGlobals(newGlobals)
     }
 
     React.useEffect(()=>{ 
       globals.actions._initialize() 
-      window._ctx= globals
-      
-      //window.addEventListener('mousemove', (e)=> { _setGlobal( { events: { mousemove: e } } ) })
     },[])
+
+    React.useEffect(()=>{
+
+      let scrollbar= true
+      for (const [, v] of Object.entries(globals.overlaydata)) {
+        if(v.active) {
+          scrollbar= false
+          break;
+        }
+      }
+      document.body.classList.toggle("hidescroll", !scrollbar)
+
+    },[globals.overlaydata.timestamp])
 
 		return (
 			<Globals.Provider value={globals}>
@@ -90,22 +116,23 @@ const AppContext= ReactComponent=>{
 
 export default AppContext
 
-const eventsState= ({ get, set })=> {
-  return {
-    mousemove: { event: null }
-  }
-}
+// #region GLOBALSTATE
 
-const globalsState= ({ get, set })=> {
+const globalsState= ({ actions, get, set })=> {
   return {
-    ready: { setup: false, page: false },
+    ready: { setup:false, page:false, portfolioList:false, portfolioBody:false },
+    timestamp: { page: 0 },
     settings: {},
-    events: {},
-    resources: {},
+    eventdata: { mousemove: {}, scroll: {} },
     content: {},
-    pagedata: { content: null, data: null },
+    resources: {},
+    portfolio: {},
+    pagedata: {},
+    overlaydata: { slideshow:{} },
 
     actions: {
+
+      // #region GENERAL
 
       _initialize: async ()=>{
 
@@ -129,7 +156,7 @@ const globalsState= ({ get, set })=> {
         set.resources(resources)
         set.content(content)
         
-        set.ready({setup:true})
+        set.ready({ setup:true })
 
         function _resolveImagePaths(types){
           for(const i in types){
@@ -139,8 +166,8 @@ const globalsState= ({ get, set })=> {
             for(const e in resources[_type]) {
               if(e=="_imgroot") continue
               else {
-                const img= resources[_type][e].img
-                resources[_type][e].img= `${imgroot}/${img}`
+                const src= resources[_type][e].src
+                resources[_type][e].src= src ? `${imgroot}/${src}` : null
               }
             }
             delete resources[_type]._imgroot
@@ -148,29 +175,67 @@ const globalsState= ({ get, set })=> {
         }
       },
 
+      setEventdata: (e)=>{
+        const new_eventdata= {}
+
+        switch(e.type??null){
+          case 'mousemove':
+            new_eventdata.mousemove= { timestamp: Date.now(), event: e }
+            break
+          case 'scroll':
+            new_eventdata.scroll= { timestamp: Date.now(), event: e }
+            break
+        }
+        set.eventdata({ ...get.eventdata(), ...new_eventdata } )
+      },
+
+      getEventdata: (name)=>{
+        return get.eventdata()[name]?.event?? {}
+      },
+
+      submitContactForm: async(data)=>{
+        const res= await fetch("https://fabform.io/f/W8Kl5O7", { method: "POST", body: data })
+        console.log(res.ok)
+        return res.ok
+      },
+
+      // #region PAGE
+
       setPage: (name)=>{
 
-        const _name= get.actions().parsePageName(name)
+        set.ready({page: false})
+        const _name= actions().parsePageName(name)
 
         if(_name){
-          const 
-            data= get.settings().page[_name],
-            content= Constants.APP_PAGES[_name]
+          const data= get.settings().page[_name]
 
-          set.pagedata({content, data})
-          set.ready({page: content != null})
-          return content != null
+          if(!data.indent) data.indent= get.settings().general.indent;
+
+          set.pagedata(data)
+          set.ready({page: data != null})
+          return data != null
         }
         return false
       },
-  
-      parsePageName: (name)=>{
-        const cfg= get.settings()
-        return cfg.page[name] ? name : cfg.aliases[name] ? cfg.aliases[name] : null
+
+      setPageDirty: (hard=false)=>{
+        set.timestamp({ page: Date.now(), pageHard: hard })
+      },
+
+      getPageTitle: (name)=>{
+        const _name= actions().parsePageName(name)
+        return _name ? get.settings().page[_name].title : "ERR"
       },
       
-      getHeader: (name)=>{ return get.actions().getObjectByName("header", name) },
-      getFooter: (name)=>{ return get.actions().getObjectByName("footer", name) },
+      getHeader: (name)=>{ return actions().getObjectByName("header", name) },
+      getFooter: (name)=>{ return actions().getObjectByName("footer", name) },
+
+      getResourceList: (typename)=> Object.keys(get.resources()[typename]??{}),
+      getAllResources: (typename)=> Array.from(Object.values(get.resources()[typename]?? {})).filter(e=>typeof e === 'object'),
+      getResource: (name)=> {
+        const path= name.includes(':') ? name.split(":") : name
+        return get.resources()[path[0]][path[1]]?? _ERROR_RESOURCE_
+      },
 
       getObjectByName: (type, name)=>{
         if(!name) return get.settings()[type].default
@@ -178,19 +243,133 @@ const globalsState= ({ get, set })=> {
         return obj==="NULL" ? null : obj
       },
 
-      getResource: (reference)=> {
-        const path= reference.split(":")
-        return get.resources()[path[0]][path[1]]
+      setIndentColor: (value)=>{
+        if(!value) value= get.settings().general.indent
+        const new_pagedata= structuredClone(get.pagedata())
+        new_pagedata.indent= value
+
+        set.pagedata(new_pagedata)
+      },
+      
+      // #endregion
+
+      // #region PORTFOLIO
+
+      loadPortfolioElement: async(id)=>{
+        
+        set.ready({portfolioBody: false})
+
+        let 
+          body= {},
+          success= false
+        
+        try{
+          body= await _FetchJsonData(_PORTFOLIO_PATH, id + ".json")
+
+          //console.log(`parsing item with id: ${id}`)
+
+          body.name= id
+          if(body.description && !Functions.checkHtmlSafety(body.description)) body.description=Constants.UNSAFE_HTML_STRING
+          
+          if(body.content?.length?? -1 > 0){
+            for(let i in body.content) ensureHtmlSafety(body.content[i])
+          }
+
+          success= true
+        }
+        catch(e){
+          console.log(`Unable to read portfolio file: ${id}.json`)
+         }
+
+        set.portfolio({...get.portfolio(), body})
+        set.ready({portfolioBody: success})
+
+        function ensureHtmlSafety(element){
+          
+          switch(element.type?? -1){
+
+            case "row":
+            case "col":
+              //console.log(`found div with ${element.data.length} elements`)
+              for(let i in element.data) ensureHtmlSafety(element.data[i])
+              break
+            case "txt":
+            case "txt:blk":
+              //console.log("found text")
+              if (!Functions.checkHtmlSafety(element.data)) {
+                console.log("unsafe HTML detected: ", element.data)
+                element.data= Constants.UNSAFE_HTML_STRING
+              }
+              break
+            case "txt:ol":
+            case "txt:ul":
+              //console.log(`found list with ${element.data.length} elements`)
+              for(let i in element.data){
+                if (!Functions.checkHtmlSafety(element.data[i])) {
+                  console.log("unsafe HTML detected: ", element.data[i])
+                  element.data[i]= Constants.UNSAFE_HTML_STRING
+                }
+              }
+              break
+          }
+        }
       },
 
-      getPageTitle: (name)=>{
-        const _name= get.actions().parsePageName(name)
-        return _name ? get.settings().page[_name].title : "ERR"
+      loadPortfolio: async( reset=false )=>{
+        set.ready({portfolioList: false, portfolioBody: get.ready().portfolioBody && !reset})
+        
+        const 
+          portfolio= await _FetchJsonData(_APP_PATH, "portfolio.json")
+
+        for(let i in portfolio.items){
+          if(portfolio.items[i].name && !Functions.checkHtmlSafety(portfolio.items[i].name)) portfolio.items[i].name=Constants.UNSAFE_HTML_STRING
+        }
+
+        set.portfolio({...get.portfolio(), ...portfolio})
+        set.ready({portfolioList: portfolio != null})
+      },
+
+      getPortfolioItem: (name)=>{
+        try{
+          if(get.ready().portfolio){
+            const item= get.portfolio().content[name]
+            return {...item, id:name, timestamp: Date.now() }
+          }
+        }
+        catch(e){
+          console.log(e)
+          set.portfolio({ active: null })
+          return null
+        }
+      },
+      
+      // #endregion
+
+      // #region OVERLAYS
+
+      setOverlayData: (id, data)=>{
+        const new_overlaydata= structuredClone(get.overlaydata())
+        new_overlaydata[id]= data
+        new_overlaydata.timestamp= Date.now()
+        set.overlaydata(new_overlaydata)
+      },
+
+      clearOverlayData: (id)=>{
+        actions().setOverlayData(id, {active:false})
+      },
+
+      // #endregion
+
+      // #region PARSERS
+  
+      parsePageName: (name)=>{
+        const cfg= get.settings()
+        return cfg.page[name] ? name : cfg.aliases[name] ? cfg.aliases[name] : null
       },
       
       parseQuery: (query)=>{
         const params= query.split(/(?=-|:)/);
-        return get.actions().resolvePage({
+        return actions().resolvePage({
           page: getParam('?'),
           post: getParam('-'),
           section: getParam(':')
@@ -201,9 +380,9 @@ const globalsState= ({ get, set })=> {
       },
 
       navigateQuery: (query)=>{ 
-        get.actions().setPage(
+        actions().setPage(
           get.pagedata(
-            get.actions().parseQuery(query)
+            actions().parseQuery(query)
           )
         )},
     
@@ -218,11 +397,11 @@ const globalsState= ({ get, set })=> {
           };
         }
         else{
-          const _page= get.actions().getObjectByName("page", data.page)
+          const _page= actions().getObjectByName("page", data.page)
           if(_page){
             return {
-              header: get.actions().getObjectByName("header", _page.header),
-              footer: get.actions().getObjectByName("footer", _page.footer),
+              header: actions().getObjectByName("header", _page.header),
+              footer: actions().getObjectByName("footer", _page.footer),
               page: _page,
               post: data.post,
               section: data.section,
@@ -230,12 +409,15 @@ const globalsState= ({ get, set })=> {
             }
           }
           else {
-            console.warn("null or bad pageData provided, fallback to default")
+            console.warn("null or bad pagedata provided, fallback to default")
             onPageFailedSoft()
           }
         }
         return null
       }
+      
+      // #endregion
     }
   }
 }
+// #endregion

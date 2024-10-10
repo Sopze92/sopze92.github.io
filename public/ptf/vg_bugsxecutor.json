@@ -1,0 +1,19 @@
+{
+  "title":"Bugsxecutor [PC]",
+  "description":"Small and frenetic videogame inspired by the classic Flash-Player game BoxHead",
+  "date":"2021",
+  "header":[
+    "engine:unity",
+    "lang:csharp",
+    "app:blender",
+    "app:paintdotnet"
+  ],
+  "content":[
+    {"type":"sep"},
+    {"type":"txt", "data":"PLACEHOLDER TEXT"},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Trivia"},
+    {"type":"txt:ul", "data":[
+      "PLACEHOLDER ELEMENT"
+    ]}
+  ]
+}

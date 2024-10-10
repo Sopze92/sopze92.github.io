@@ -1,0 +1,18 @@
+{
+  "title":"RefleXes [Android]",
+  "description":"Small commercial APP to train your reaction time and kill some time",
+  "date":"2021",
+  "header":[
+    "engine:unity",
+    "lang:csharp",
+    "app:paintdotnet"
+  ],
+  "content":[
+    {"type":"sep"},
+    {"type":"txt", "data":"PLACEHOLDER TEXT"},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Trivia"},
+    {"type":"txt:ul", "data":[
+      "PLACEHOLDER ELEMENT"
+    ]}
+  ]
+}
