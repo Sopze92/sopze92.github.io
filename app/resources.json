@@ -50,7 +50,7 @@
   },
 
   "lang": {
-    "_imgroot": "./res/img/tech",
+    "_imgroot": "./res/img/ico",
     
     "c": { 
       "name": "C",
@@ -82,6 +82,7 @@
     },
     "snes": { 
       "name": "SNES 65c816 Assembly (x16)",
+      "label": "snes",
       "class": "language",
       "usage": ["videogames"],
       "src": "lang/snes.svg",
@@ -123,14 +124,16 @@
       "col": ["#1d7fb8", "#b87f1d"]
     },
     "hlsl": { 
-      "name": "DirectX Shading Language",
+      "name": "HLSL",
+      "label": "directx",
       "class": "language",
       "usage": ["shaders"],
       "src": "lang/dxsl.svg",
       "col": ["#afc664", "#64c6af"]
     },
     "glsl": { 
-      "name": "OpenGL Shading Language",
+      "name": "GLSL",
+      "label": "opengl",
       "class": "language",
       "usage": ["shaders"],
       "src": "gen/opengl.svg",
@@ -174,7 +177,7 @@
   },
 
   "engine": {
-    "_imgroot": "./res/img/tech",
+    "_imgroot": "./res/img/ico",
 
     "_propietary": { 
       "hidden": 1,
@@ -340,7 +343,7 @@
   },
 
   "tech": {
-    "_imgroot": "./res/img/tech",
+    "_imgroot": "./res/img/ico",
 
     "webpack": { 
       "name": "WebPack",
@@ -348,7 +351,7 @@
       "type": "webapps",
       "scopes": ["frontend"],
       "langs": ["javascript", "typescript"],
-      "src": "lib/webpack.svg",
+      "src": "tech/webpack.svg",
       "col": ["#1b74ba", "#8acff3"]
     },
     "vite": { 
@@ -357,7 +360,7 @@
       "type": "webapps",
       "scopes": ["frontend"],
       "langs": ["javascript", "typescript"],
-      "src": "lib/vite.svg",
+      "src": "tech/vite.svg",
       "col": ["#f7cb28", "#9859f7"]
     },
     "react": { 
@@ -366,7 +369,7 @@
       "type": "webapps",
       "scopes": ["frontend"],
       "langs": ["javascript", "typescript"],
-      "src": "lib/react.svg",
+      "src": "tech/react.svg",
       "col": ["#61dafb", "#61FBD2FF"]
     },
     "react_router": { 
@@ -375,7 +378,7 @@
       "type": "webapps",
       "scopes": ["frontend"],
       "langs": ["javascript", "typescript"],
-      "src": "lib/react_router_dark.svg",
+      "src": "tech/react_router_dark.svg",
       "col": ["#f44250", "#ffffff"]
     },
     "bootstrap": { 
@@ -384,7 +387,7 @@
       "type": "ui",
       "scopes": ["frontend"],
       "langs": ["css", "javascript"],
-      "src": "lib/bootstrap.svg",
+      "src": "tech/bootstrap.svg",
       "col": ["#7011f5", "#8a13fc"]
     },
     "tailwind": {
@@ -393,7 +396,7 @@
       "type": "ui",
       "scopes": ["frontend"],
       "langs": ["css"],
-      "src": "lib/tailwind.svg",
+      "src": "tech/tailwind.svg",
       "col": ["#38bdf8", "#3842F8FF"]
     },
     "flask": { 
@@ -402,7 +405,7 @@
       "type": "backend",
       "scopes": ["backend"],
       "langs": ["python"],
-      "src": "lib/flask_dark.svg",
+      "src": "tech/flask_dark.svg",
       "col": ["#6abbc6", "#f4f0ef"]
     },
     "dotnet": { 
@@ -412,7 +415,7 @@
       "type": "opengl",
       "scopes": ["desktop"],
       "langs": ["csharp"],
-      "src": "lib/dotnet.svg",
+      "src": "tech/dotnet.svg",
       "col": ["#1fa9e7", "#165698"]
     },
     "lwjgl": { 
@@ -420,7 +423,7 @@
       "type": "opengl",
       "scopes": ["desktop"],
       "langs": ["java", "glsl"],
-      "src": "lib/lwjgl.svg",
+      "src": "tech/lwjgl.svg",
       "col": ["#b9b9ea", "#a9a9a9"]
     },
     "i18n": {
@@ -429,7 +432,7 @@
       "type": "localization",
       "langs": ["java", "javascript", "python", "cplusplus"],
       "scopes": ["frontend", "desktop"],
-      "src": "lib/i18n.svg",
+      "src": "tech/i18n.svg",
       "col": ["#009688", "#004d40"]
     },
     "glfw": { 
@@ -438,7 +441,7 @@
       "type": "opengl",
       "scopes": ["desktop"],
       "langs": ["c", "cplusplus", "glsl"],
-      "src": "lib/glfw.webp",
+      "src": "tech/glfw.webp",
       "col": ["#fdab5c","#5586a4"]
     },
     "freeglut": { 
@@ -456,7 +459,7 @@
       "type": "ui",
       "scopes": ["desktop"],
       "langs": ["c", "cplusplus"],
-      "src": "lib/imgui.svg",
+      "src": "tech/imgui.svg",
       "col": ["#4296fa", "#20324d"]
     },
     "jquery": { 
@@ -466,7 +469,7 @@
       "type": "general",
       "scopes": ["frontend"],
       "langs": ["javascript"],
-      "src": "lib/jquery.svg",
+      "src": "tech/jquery.svg",
       "col": ["#0868ac", "#777777"]
     },
     "sqlalchemy": { 
@@ -475,7 +478,7 @@
       "type": "database",
       "scopes": ["backend"],
       "langs": ["python"],
-      "src": "lib/sqlalchemy_custom_dark.svg",
+      "src": "tech/sqlalchemy_custom_dark.svg",
       "col": ["#c42626", "#313131"]
     },
     "jest": { 
@@ -484,7 +487,7 @@
       "type": "testing",
       "scopes": ["frontend", "development"],
       "langs": ["javascript"],
-      "src": "lib/jest.svg",
+      "src": "tech/jest.svg",
       "col": ["#c21325", "#15c213"]
     },
     "jogl": { 
@@ -493,13 +496,13 @@
       "type": "opengl",
       "scopes": ["desktop"],
       "langs": ["java", "glsl"],
-      "src": "lib/jogl.webp",
+      "src": "tech/jogl.webp",
       "col": ["#a6ceff", "#3b4d4f"]
     }
   },
 
   "app": {
-    "_imgroot": "./res/img/tech",
+    "_imgroot": "./res/img/ico",
     
     "git": { 
       "name": "Git",
