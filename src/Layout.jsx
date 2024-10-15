@@ -1,7 +1,7 @@
 import React from "react"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 
-import AppContext, { Globals } from "./context/AppContext.jsx"
+import AppContext, { Globals, Constants } from "./context/AppContext.jsx"
 
 import NavBar from "./module/Navbar.jsx"
 import Footer from "./module/Footer.jsx"
@@ -12,23 +12,18 @@ import Portfolio from "./view/Portfolio.jsx"
 import Services from "./view/Services.jsx"
 import Resume from "./view/Resume.jsx"
 
+import DevTest from "./view/DevTest.jsx"
+
 import { Redirector, NotFound_Generic, HealthCheck } from "./app/Internal.jsx"
 
 import GlobalListener from "./app/GlobalListener.jsx"
 
-import EdgedScrollbar from "./component/EdgedScrollbar.jsx"
-
 const Layout= ()=>{
 
-  const { ready, pagedata, actions }= React.useContext(Globals)
-
-  function handleEvent(e){
-    actions.setEventdata(e)
-  }
+  const { ready, pagedata }= React.useContext(Globals)
 
   return ( ready.setup &&
     (
-    <EdgedScrollbar id="app" onMouseMove={handleEvent} options={{overflow:{x:'hidden'}, scrollbars:{visibility:'visible'}}} events={{ scroll: (_,e)=>handleEvent(e) }}>
       <BrowserRouter>
         <Routes>
           <Route strict exact path="/404" element={<NotFound_Generic />} />
@@ -47,6 +42,8 @@ const Layout= ()=>{
               <Route exact path="/services" element={(<Services />)} />
               <Route exact path="/aboutme" element={(<AboutMe />)} />
               <Route exact path="/resume" element={(<Resume />)} />
+              
+              <Route exact path="/dev" element={(<DevTest />)} />
   
               <Route path="*" element={<NotFound_Generic />} />
             </Routes>
@@ -59,7 +56,6 @@ const Layout= ()=>{
         </Routes>
         <GlobalListener/>
       </BrowserRouter>
-    </EdgedScrollbar>
     )
   )
 }

@@ -8,7 +8,6 @@ const EdgedScrollbar= ({ children, colors=["var(--cv-indent-0)", "var(--cv-inden
 
   const
     { eventdata, actions }= React.useContext(Globals),
-    [coords, set_coords]= React.useState({ x:4096, y:4096 }),
     [scrollbar_ref, set_scrollbar_ref]= React.useState(null)
     
   React.useEffect(function(){

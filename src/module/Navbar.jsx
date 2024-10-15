@@ -85,7 +85,7 @@ const NavBar= ({ type }) => {
   }
 
   return ( data &&
-    <div id="header-container" className="navbar sticky-top m-0 p-0">
+    <div id="header-container" className="navbar fixed-top m-0 p-0">
       <div className={`header-wrapper w-100 h-100 ${!showHeader ? "header-hidden" : ""}`}>
         <FrostedGlass />
         <div className="container-fluid h-100">
@@ -116,9 +116,6 @@ const NavBar= ({ type }) => {
                     </ul>
                 }
               </div>
-            </div>
-            <div className="col-2 p-0 show-until-md d-flex justify-content-end position-relative" aria-hidden="true">
-              <img id="brand-img" className="no-select" src="./res/img/icon.svg"></img>
             </div>
           </div>
         </div>

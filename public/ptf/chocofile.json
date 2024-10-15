@@ -20,7 +20,7 @@
     {"type":"txt", "data":"PLACEHOLDER TEXT"},
     {"type":"txt", "css":"ptf-section-title", "data":"- Trivia"},
     {"type":"txt:ul", "data":[
-      "<b1>I</b> stated I dislike <b0>JSON</b> yet this article is <a:ptf/chocofile.json>actually written in it</a>."
+      "<b1>I</b> stated I dislike <b0>JSON</b> yet this article is <a-l:ptf/chocofile.json>actually written in it</a>."
     ]}
   ]
 }

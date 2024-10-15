@@ -83,7 +83,7 @@ export const CarouselRow= ({ cssClass, aspect=null, items })=>{
   }
 
   return (
-     <div className={`s-carouselrow ${cssClass?? ""}`}>
+     <div className={`s-carouselrow ptf-width-limit ${cssClass?? ""}`}>
       <div className="p-4 carousel-bigimage" {...(aspect ? { style: {aspectRatio: aspect} } : null)} >
         <a className="d-block" onClick={handleClickImage} onDoubleClick={handleDoubleclickImage} href={items[activeIndex].src}>
           <img src={items[activeIndex].src}/>

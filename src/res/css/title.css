@@ -58,7 +58,6 @@
 }
 
 #home-title-img-at {
-  filter: invert(1);
   position: absolute;
   margin-top: -7vw;
   margin-left: -7vw;
@@ -69,7 +68,6 @@
 }
 
 #home-title-img-s {
-  filter: invert(1);
   position: absolute;
   margin-top: -4vw;
   margin-left: -4vw;
@@ -84,18 +82,18 @@
   letter-spacing: .25em;
 }
 
-@media screen and (max-width: 150em) {
+#home-foottitle {
+  font-size: 3em;
+  letter-spacing: .125em;
+}
+
+/* ------------------------------------------------------------ REACTIVE */
+
+@media screen and (max-width: 991.5px) {
   #home-subtitle { margin: .5vw 0; font-size: 2.7vw; }
+  #home-foottitle { margin: 0 12vw; font-size: 3.5vw; }
 }
 
-@media screen and (max-width: 992px) { 
-  #home-title { height: 25vw; max-height: 25vw; }
-  #home-title-img-at { left: 10%; }
-  #home-title-img-s { right: 15%; }
-}
-
-@media screen and (max-width: 768px) { 
-  #home-title { height: 30vw; max-height: 30vw; }
-  #home-title-img-at { top: 27%; left: 7%; }
-  #home-title-img-s { top: 20%; right: 10%; }
-}
+.mobile #home-title { height: 30vw; max-height: 30vw; }
+.mobile #home-title-img-at { top: 27%; left: 7%; }
+.mobile #home-title-img-s { top: 20%; right: 8%; }

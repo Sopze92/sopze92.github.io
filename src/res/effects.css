@@ -3,6 +3,9 @@
 :root {
   --fx-edi-bgs-px: 128px;
   --fx-edi-bgh-px: -64px;
+  --fx-edi-bgn-px: -128px;
+  --fx-edi-bgd-px: 256px;
+
   --fx-col-pri: #777;
   --fx-col-sec: #777;
   --fx-col-ter: #222;
@@ -12,9 +15,7 @@
 }
 
 .bg-frostedglass-complex {
-  content: "";
-  position: absolute;
-  inset: 0;
+  content:""; position: absolute; inset: 0;
   z-index: -3;
   background: none;
   mask-position: var(--cv-frostedglass-mx) var(--cv-frostedglass-my);
@@ -79,8 +80,8 @@
   }
 }
 
-.fx-labelbox-container:hover .fx-labelbox {
-  transform: translate(0, -32px) scale(1.0);
+.labelbox-container:hover .fx-labelbox {
+  transform: translate(0, -110%) scale(1.0);
   opacity: 1.0;
 }
 
@@ -88,20 +89,19 @@
 
   position: absolute;
   pointer-events: none;
-  top: 0px;
 
   white-space: nowrap;
   text-align: center;
-  width: fit-content;
   font-size: 1.2em;
-  padding: 1px 6px;
+  padding: .05em .4em;
   color: var(--fx-col-text);
-  border-radius: 4px;
+  border-radius: .3em;
   z-index:3;
   background: color-mix(in srgb, var(--fx-col-sec) 40%, #000000ff);
   border: solid 2px color-mix(in srgb, var(--fx-col-pri) 80%, #00000000);
   
-  transform: translate(0, 16px) scale(0);
+  transform-origin: center;
+  transform: translate(0, 0) scale(0);
   opacity: 0.0;
 
   transition: transform .125s, opacity .125s;
@@ -138,17 +138,13 @@
   color: var(--fx-col-text);
 
   &:before {
-    content: "";
-    position: absolute;
-    inset: 0;
+    content:""; position: absolute; inset: 0;
     background: color-mix(in srgb, var(--fx-col-sec) 10%, #00000000);
     z-index: -1;
   }
 
   &:after {
-    content:"";
-    position: absolute;
-    inset: 0;
+    content:""; position: absolute; inset: 0;
     background: radial-gradient(color-mix(in srgb, var(--fx-col-pri) 70%, #00000000), #ff000000 70%) border-box no-repeat;
     background-position: calc(var(--fx-edi-bgh-px) + var(--cv-musrel-x)) calc(var(--fx-edi-bgh-px) + var(--cv-musrel-y));
     background-size: var(--fx-edi-bgs-px) var(--fx-edi-bgs-px);
@@ -157,9 +153,9 @@
   }
 
   &:hover{
-    background: radial-gradient(color-mix(in srgb, var(--fx-col-pri) 20%, #00000000), var(--fx-col-ter) 30%) border-box no-repeat;
-    background-position: calc(-64px + var(--cv-musrel-x)) calc(-64px + var(--cv-musrel-y));
-    background-size: 128px 128px;
+    background: radial-gradient(color-mix(in srgb, var(--fx-col-sec) 45%, #00000000), var(--fx-col-ter) 50%, #00000000 55%) border-box no-repeat;
+    background-position: calc(var(--fx-edi-bgn-px) + var(--cv-musrel-x)) calc(var(--fx-edi-bgn-px) + var(--cv-musrel-y));
+    background-size: var(--fx-edi-bgd-px) var(--fx-edi-bgd-px);
 
     outline: solid 2px var(--fx-col-pri);
     outline-offset: -2px;
@@ -172,17 +168,13 @@
   color: var(--fx-col-text);
 
   &:before{
-    content:"";
-    position: absolute;
-    inset: 0;
+    content:""; position: absolute; inset: 0;
     background: color-mix(in srgb, var(--fx-col-sec) 10%, #00000000);
     z-index: -1;
   }
 
   &:not(:hover):after{
-    content:"";
-    position: absolute;
-    inset: 0;
+    content:""; position: absolute; inset: 0;
     background: radial-gradient(color-mix(in srgb, var(--fx-col-pri) 70%, #00000000), #ff000000 70%) border-box no-repeat;
     background-position: calc(-128px + var(--cv-musrel-x)) calc(-128px + var(--cv-musrel-y));
     background-size: 256px 256px;
@@ -204,17 +196,13 @@
   position: relative;
 
   &:before {
-    content: "";
-    position: absolute;
-    inset: 0;
+    content: ""; position: absolute; inset: 0;
     background: color-mix(in srgb, var(--fx-col-sec) 10%, #00000000);
     z-index: -1;
   }
 
   &:after {
-    content:"";
-    position: absolute;
-    inset: 0;
+    content:""; position: absolute; inset: 0;
     background: radial-gradient(color-mix(in srgb, var(--fx-col-pri) 70%, #00000000), #ff000000 70%) border-box no-repeat;
     background-position: calc(-256px + var(--cv-musrel-x)) calc(-256px + var(--cv-musrel-y));
     background-size: 512px 512px;
@@ -241,7 +229,7 @@
 }
 
 .fx-colorize {
-  --fx-col-sec: color-mix(in srgb, var(--fx-col-pri) 75%,  var(--fx-col-neg));
+  --fx-col-sec: color-mix(in srgb, var(--fx-col-pri) 64%,  var(--fx-col-neg));
   --fx-col-ter: color-mix(in srgb, var(--fx-col-sec) 33%, #000000ff);
 }
 

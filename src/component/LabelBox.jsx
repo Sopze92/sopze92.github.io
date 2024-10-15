@@ -1,9 +1,9 @@
 import React from "react"
 
-const LabelBox= ({ label })=>{
+const LabelBox= ({ label, variant=null })=>{
   return (
-    <div className="d-flex justify-content-center">
-      <div className="fx-labelbox">{label}</div>
+    <div className="labelbox-wrapper">
+      <div className={`fx-labelbox ${variant??""}`}>{label}</div>
     </div>
   )
 }

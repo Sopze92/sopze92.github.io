@@ -1,6 +1,6 @@
 {
   "title":"My Portfolio",
-  "description":"Select any item from the list on the left to view its details",
+  "description":"Select an item from the <b>Portfolio Explorer</b> to view its details",
   "date":"2024",
   "header":[
     "engine:unity",

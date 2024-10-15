@@ -210,7 +210,7 @@ const PortfolioArticle= ()=>{
   }
 
   return (
-    <div className={`col-8 ptf-content ${animStyle}`}>
+    <div className={`ptf-content ${animStyle}`}>
       <div className="d-flex flex-column ptf-title-block">
         {
           portfolio.body.titlepic?.replace && 
@@ -224,7 +224,7 @@ const PortfolioArticle= ()=>{
         }
       </div>
       { portfolio.body.header &&
-        <div className="d-flex justify-content-center my-auto ptf-header-block">
+        <div className="d-flex justify-content-center mx-auto ptf-header-block ptf-edgedicon-container">
           {
             portfolio.body.header.map((e,i)=> 
               <EdgedResourceIcon key={`pf-ah-${i}`} resource={actions.getResource(e)}/>

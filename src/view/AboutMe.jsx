@@ -41,9 +41,9 @@ const Page= ()=>{
 {/* PAGES-SERVICES */}
       <div className="container-fluid px-0 mx-0 overflow-hidden section-dark page-start">
         <div className="row d-flex justify-content-center subsection-padding gap-page-social">
-          <div className="col-8 m-0 p-0 d-flex flex-column align-items-center">
+          <div className="col-8 col-mobile-11 m-0 p-0 d-flex flex-column align-items-center">
             <div className="row section-padding">
-              <div className="am-section text-center">
+              <div className="section-lit text-center">
                 <div className="am-title-container">
                   <p className="no-select am-title">BORN CURIOUS</p>
                   <p className="no-select am-subtitle">1992-2009</p>
@@ -64,7 +64,7 @@ const Page= ()=>{
                 </div>
               </div>
               <div className="section-padding"/>
-              <div className="am-section text-center">
+              <div className="section-lit text-center">
                 <div className="am-title-container">
                   <p className="no-select am-title">ROAD TO GAMEDEV</p>
                   <p className="no-select am-subtitle">2009-2019</p>
@@ -82,7 +82,7 @@ const Page= ()=>{
                 <p className="am-footnote">* - I still have leftovers of a lot of those projects, althought most of them don't even work anymore</p>
               </div>
               <div className="section-padding"/>
-              <div className="am-section text-center">
+              <div className="section-lit text-center">
                 <div className="am-title-container">
                   <p className="no-select am-title">SETTLING MY CAREER</p>
                   <p className="no-select am-subtitle">2019-2022</p>

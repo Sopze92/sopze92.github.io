@@ -2,18 +2,17 @@ import React from 'react'
 
 import "../res/css/title.css"
 
-import { Globals } from "../context/AppContext.jsx"
+import { Globals, Constants } from "../context/AppContext.jsx"
 
 import usePagedata from '../hooks/usePagedata.jsx'
 
 import img_title_bg from "../res/img/title/bg.webp"
-import img_title_at from "../res/img/title/at.webp"
-import img_title_s from "../res/img/title/s.webp"
 
-import svg_title_name from "../res/img/title/name.svg"
-import svg_title_motto from "../res/img/title/motto.svg"
-import svg_title_full from "../res/img/title/full.svg"
-
+import svg_title_at from "../res/img/title/at.svg?url"
+import svg_title_s from "../res/img/title/s.svg?url"
+import svg_title_name from "../res/img/title/name.svg?url"
+import svg_title_motto from "../res/img/title/motto.svg?url"
+import svg_title_full from "../res/img/title/full.svg?url"
 
 const Title= ()=>{
 
@@ -29,7 +28,7 @@ const Title= ()=>{
       "--title-pty": "0px"
     })
 
-  // using a constant update interval of 17ms (60fps) because using eventdata.mousemove 
+  // using a constant update interval of 25ms (40fps) because using eventdata.mousemove 
   // as dependecy builds strange lag only after hovering another element, which makes 
   // no sense as there are other components using it as dependency with no problem
   React.useEffect(function(){
@@ -62,7 +61,7 @@ const Title= ()=>{
           '--title-pty': -movy*.25 + "px"
         })
       }
-    }, 17)
+    }, 25)
     return () => { clearInterval(interval_id) }
   },[])
 
@@ -70,21 +69,30 @@ const Title= ()=>{
     <>
       <div id="home-title-container" aria-hidden="true" className="col-10 col-lg-7 mx-auto cba" style={styles}>
         <div className="position-relative">
-          <div id="home-title" className="d-flex justify-content-center show-over-md no-select">
-            <img ref={title} id="home-title-3D" className="anim" src={img_title_bg}/>
-            <div id="home-title-bg-anim">
-              <img width="60%" src={svg_title_full}/>
-            </div>
+          <div id="home-title" className="d-flex justify-content-center no-select">
+            { Constants.DESKTOP && 
+              (
+              <>
+                <img ref={title} id="home-title-3D" className="anim" src={img_title_bg}/>
+                <div id="home-title-bg-anim">
+                  <img width="60%" src={svg_title_full}/>
+                </div>
+              </>
+              )
+              ||
+              (
+              <>
+                <img id="home-title-3D" src={img_title_bg}/>
+                <div id="home-title-bg">
+                  <img className="mx-auto" width="70%" src={svg_title_name}/>
+                  <img className="mx-auto mt-n4" width="80%" src={svg_title_motto}/>
+                </div>
+              </>
+              )
+            }
           </div>
-          <div id="home-title" className="d-flex justify-content-center w-100 show-until-md">
-            <img id="home-title-3D" src={img_title_bg}/>
-            <div id="home-title-bg">
-              <img className="mx-auto" width="70%" src={svg_title_name}/>
-              <img className="mx-auto mt-n4" width="80%" src={svg_title_motto}/>
-            </div>
-          </div>
-          <img id="home-title-img-at" className="opacity-75" src={img_title_at}></img>
-          <img id="home-title-img-s" className="opacity-75" src={img_title_s}></img>
+          <img id="home-title-img-at" className="opacity-75" src={svg_title_at}/>
+          <img id="home-title-img-s" className="opacity-75" src={svg_title_s}/>
         </div>
       </div>
     </>
@@ -101,7 +109,7 @@ const Page= ()=>{
   usePagedata("home")
 
   const
-    { pagedata, actions }= React.useContext(Globals),
+    { actions }= React.useContext(Globals),
     [ showContact, set_showContact]= React.useState(false),
     [ contactForm, set_contactForm] = React.useState(__CONTACT_FORM_DEFAULT__)
     
@@ -124,68 +132,66 @@ const Page= ()=>{
   return (
     <>
 {/* TAB-HOME */}
-      <div className="container-fluid px-0 mx-0 overflow-hidden">
+      <div className="container-fluid px-0 mx-0 overflow-hidden page-start">
         
         <div className="row section-padding" >
           <Title />
         </div>
 
-        <div className="row subsection-padding d-flex flex-column justify-content-center gap-page-social">
-          <div className="row d-flex justify-content-center gap-page-social">
-            <EdgedResourceIcon resource={actions.getResource("social:github")} bgsize={1.25}/>
-            <EdgedResourceIcon resource={actions.getResource("social:linkedin")} bgsize={1.25}/>
-            <EdgedResourceIcon resource={actions.getResource("social:artstation")} bgsize={1.25}/>
-            <EdgedResourceIcon resource={actions.getResource("social:sketchfab")} bgsize={1.25}/>
+        <div className="row subsection-padding edgedicon-home-social d-flex flex-column justify-content-center gap-page-social">
+          <div className="d-flex justify-content-center gap-page-social">
+            <EdgedResourceIcon resource={actions.getResource("social:github")} bgsize={1.5}/>
+            <EdgedResourceIcon resource={actions.getResource("social:linkedin")} bgsize={1.5}/>
+            <EdgedResourceIcon resource={actions.getResource("social:artstation")} bgsize={1.5}/>
+            <EdgedResourceIcon resource={actions.getResource("social:sketchfab")} bgsize={1.5}/>
           </div>
-          <div className="row d-flex justify-content-center gap-page-social">
-{/*             <EdgedResourceIcon resource={actions.getResource("social:fab")} bgsize={1.25}/> */}
-            <EdgedResourceIcon resource={actions.getResource("social:itchio")} bgsize={1.25}/>
-            <EdgedResourceIcon resource={actions.getResource("social:youtube")} bgsize={1.25}/>
-            <EdgedResourceIcon resource={actions.getResource("social:twitter")} bgsize={1.25}/>
+          <div className="d-flex justify-content-center gap-page-social">
+{/*             <EdgedResourceIcon resource={actions.getResource("social:fab")} bgsize={1.5}/> */}
+            <EdgedResourceIcon resource={actions.getResource("social:itchio")} bgsize={1.5}/>
+            <EdgedResourceIcon resource={actions.getResource("social:youtube")} bgsize={1.5}/>
+            <EdgedResourceIcon resource={actions.getResource("social:twitter")} bgsize={1.5}/>
           </div>
         </div>
 
-        { false &&
-          <div className="row d-flex flex-column subsection-padding">
-            <EdgedButton name="Contact Me" callback={()=>set_showContact(!showContact)} className="btn-page btn-page-contact mx-auto"/>
-            { showContact &&
-            <div className="col-8 mx-auto p-0 d-flex flex-column align-items-center">
-              <div className="row d-flex section-lit">
-                <div className="col-4">
-                  
-                </div>
-                <div className="col-8 d-flex justify-content-center text-center">
-                  <div className="am-title-container">
-                    <p className="no-select am-title">CONTACT FORM</p>
-                    <p className="no-select am-subtitle">Tell me what's on your mind</p>
-                    <form onSubmit={handleFormSubmit}>
-                      <div className="d-flex flex-column">
-                        <div>
-                          <label>Name</label>
-                          <input type="text" name="name" onChange={handleInputChange} value={contactForm.name} placeholder="Some name" required/>
-                        </div>
-                        <div>
-                          <label>Email</label>
-                          <input type="email" name="email" onChange={handleInputChange} value={contactForm.email} placeholder="Email for contacting back" required/>
-                        </div>
-                        <div>
-                          <label>Subject</label>
-                          <input type="text" name="subject" onChange={handleInputChange} value={contactForm.subject} placeholder="What's all about?" required/>
-                        </div>
-                        <div>
-                          <label>Content</label>
-                          <input type="text" name="message" onChange={handleInputChange} value={contactForm.message} placeholder="Your thoughts" required/>
-                        </div>
-                        <button type="submit">Send</button>
+{/*         <div className="row d-flex flex-column subsection-padding">
+          <EdgedButton name="Contact Me" callback={()=>set_showContact(!showContact)} className="btn-page btn-page-contact mx-auto"/>
+          { showContact &&
+          <div className="col-8 mx-auto p-0 d-flex flex-column align-items-center">
+            <div className="row d-flex section-lit">
+              <div className="col-4">
+                
+              </div>
+              <div className="col-8 d-flex justify-content-center text-center">
+                <div className="am-title-container">
+                  <p className="no-select am-title">CONTACT FORM</p>
+                  <p className="no-select am-subtitle">Tell me what's on your mind</p>
+                  <form onSubmit={handleFormSubmit}>
+                    <div className="d-flex flex-column">
+                      <div>
+                        <label>Name</label>
+                        <input type="text" name="name" onChange={handleInputChange} value={contactForm.name} placeholder="Some name" required/>
                       </div>
-                    </form>
-                  </div>
+                      <div>
+                        <label>Email</label>
+                        <input type="email" name="email" onChange={handleInputChange} value={contactForm.email} placeholder="Email for contacting back" required/>
+                      </div>
+                      <div>
+                        <label>Subject</label>
+                        <input type="text" name="subject" onChange={handleInputChange} value={contactForm.subject} placeholder="What's all about?" required/>
+                      </div>
+                      <div>
+                        <label>Content</label>
+                        <input type="text" name="message" onChange={handleInputChange} value={contactForm.message} placeholder="Your thoughts" required/>
+                      </div>
+                      <button type="submit">Send</button>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
-            }
           </div>
-        }
+          }
+        </div> */}
 
         <div className="row subsection-padding">
           <div className="col text-center">
@@ -197,11 +203,11 @@ const Page= ()=>{
         
         <div className="row big-section-separator"/>
 
-        <div className="d-flex flex-column container-fluid m-0 p-0 fw-semibold justify-content-center" style={{"--fx-col-text": "#eee"}}>
-          <div className="row row-over-md justify-content-center mx-auto px-0 pt-0 pb-7 gap-5">
-            <div className="col-3 techbox-column m-0 p-0 d-flex flex-column align-items-center">
-              <p className="w-100 text-center m-0 py-3 fs-4 no-select">Languages</p>
-              <div className="d-flex techbox-container justify-content-center my-auto">
+        <div className="col col-lg-8 d-flex flex-column justify-content-center m-0 mx-auto p-0 fw-semibold edgedicon-home" style={{"--fx-col-text": "#eee"}}>
+          <div className="row col-below-lg justify-content-center mx-auto px-0 pt-0 pb-7 techbox-multicontainer">
+            <div className="d-flex flex-column techbox-container align-items-center">
+              <p className="m-0 py-3 fs-4 no-select">Languages</p>
+              <div className="d-flex edgedicon-container justify-content-center my-auto">
                 {
                   actions.getAllResources("lang").filter(e=>!e.hidden).map((e,i)=>
                     <EdgedResourceIcon key={`rl-l${i}`} resource={e}/>
@@ -209,9 +215,9 @@ const Page= ()=>{
                 }
               </div>
             </div>
-            <div className="col-3 techbox-column m-0 p-0 d-flex flex-column align-items-center">
-              <p className="w-100 text-center m-0 py-3 fs-4 no-select">Game Engines</p>
-              <div className="d-flex techbox-container justify-content-center my-auto">
+            <div className="d-flex flex-column techbox-container align-items-center">
+              <p className="m-0 py-3 fs-4 no-select">Game Engines</p>
+              <div className="d-flex edgedicon-container justify-content-center my-auto">
                 {
                   actions.getAllResources("engine").filter(e=>!e.hidden).map((e,i)=>
                     <EdgedResourceIcon key={`rl-e${i}`} resource={e}/>
@@ -220,10 +226,10 @@ const Page= ()=>{
               </div>
             </div>
           </div>
-          <div className="row row-over-md justify-content-center mx-auto px-0 pt-0 pb-7 gap-4">
-            <div className="col techbox-column m-0 p-0">
-              <p className="w-100 text-center m-0 py-3 fs-4 no-select">Technologies</p>
-              <div className="d-flex techbox-container-full justify-content-center my-auto">
+          <div className="row justify-content-center mx-auto px-0 pt-0 pb-7 gap-5">
+            <div className="d-flex flex-column techbox-container align-items-center">
+              <p className="m-0 py-3 fs-4 no-select">Technologies</p>
+              <div className="d-flex edgedicon-container justify-content-center my-auto">
                 {
                   actions.getAllResources("tech").filter(e=>!e.hidden).map((e,i)=>
                     <EdgedResourceIcon key={`rl-t${i}`} resource={e}/>
@@ -232,10 +238,10 @@ const Page= ()=>{
               </div>
             </div>
           </div>
-          <div className="row row-over-md justify-content-center mx-auto px-0 pt-0 pb-7 gap-4">
-            <div className="col techbox-column m-0 p-0">
-              <p className="w-100 text-center m-0 py-3 fs-4 no-select">Software</p>
-              <div className="d-flex techbox-container-full justify-content-center my-auto">
+          <div className="row justify-content-center mx-auto px-0 pt-0 pb-7 gap-5">
+            <div className="d-flex flex-column techbox-container align-items-center">
+              <p className="m-0 py-3 fs-4 no-select">Software</p>
+              <div className="d-flex edgedicon-container justify-content-center my-auto">
                 {
                   actions.getAllResources("app").filter(e=>!e.hidden).map((e,i)=>
                     <EdgedResourceIcon key={`rl-a${i}`} resource={e}/>
@@ -249,7 +255,7 @@ const Page= ()=>{
               <div className="col techbox-column m-0 p-0">
                 <p className="w-100 text-center m-0 pt-3 fs-4 no-select">Other</p>
                 <p className="w-100 text-center m-0 pb-3 no-select">(I wanted to flex but not very relevant nowadays)</p>
-                <div className="d-flex techbox-container-full justify-content-center my-auto">
+                <div className="d-flex edgedicon-container justify-content-center my-auto">
                   {
                     actions.getAllResources("flex").filter(e=>!e.hidden).map((e,i)=>
                       <EdgedResourceIcon key={`rl-a${i}`} resource={e}/>
@@ -261,7 +267,15 @@ const Page= ()=>{
           }
         </div>
 
-        <div className="row big-section-separator"/>
+        <div className="row subsection-padding">
+          <div id="home-foottitle" className="col text-center">
+            <p className="mono ts-bottom no-select m-0 p-0">Whatever you set your mind to,</p>
+            <p className="mono ts-bottom no-select m-0 p-0"><b>there's always a way</b></p>
+            <p className="mono ts-bottom no-select m-0 p-0">to achieve it.</p>
+          </div>
+        </div>
+
+        <div className="row subsection-padding"/>
 
       </div>
     </>

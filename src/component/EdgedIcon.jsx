@@ -11,7 +11,18 @@ const __RESOURCE__= {
   href:null
 }
 
-export const EdgedIcon= ({ name=__RESOURCE__.name, src=__RESOURCE__.src, href=__RESOURCE__.href, buttons=[0], bgsize=1.0, callback=null, col=__RESOURCE__.col, className=null })=>{
+export const EdgedIcon= (
+  { 
+    name=__RESOURCE__.name, 
+    src=__RESOURCE__.src, 
+    href=__RESOURCE__.href, 
+    label= null,
+    buttons=[0], 
+    bgsize=1.0, 
+    callback=null, 
+    col=__RESOURCE__.col, 
+    className=null 
+  })=>{
 
   const
     { eventdata, actions }= React.useContext(Globals),
@@ -29,7 +40,9 @@ export const EdgedIcon= ({ name=__RESOURCE__.name, src=__RESOURCE__.src, href=__
 
     const _style= {
       "--fx-edi-bgs-px": `${n}px`,
-      "--fx-edi-bgh-px": `${n*-.5}px`,
+      "--fx-edi-bgh-px": `-${n*.5}px`,
+      "--fx-edi-bgn-px": `-${n}px`,
+      "--fx-edi-bgd-px": `${n*2}px`,
       "--fx-col-pri": col[0], 
       "--fx-col-neg": col[1]??__RESOURCE__.col[1]
     }
@@ -77,11 +90,11 @@ export const EdgedIcon= ({ name=__RESOURCE__.name, src=__RESOURCE__.src, href=__
     <div style={style} className={`edgedicon ${className??""}`}>
       <ElementType 
         ref={element} 
-        className={`${href? "to-div " : ""} m-2 box-page-tech fs-5 fw-semibold fx-colorize fx-edgedbox fx-labelbox-container`}
+        className={`${href? "to-div " : ""} box-page-tech fx-colorize fx-edgedbox labelbox-container`}
         style={{"--cv-musrel-x": `${coords.x}px`, "--cv-musrel-y": `${coords.y}px`}}
         {...(href? {onMouseDown:(e)=>handleClickButton(e)} : {})}>
         { name &&
-          <LabelBox label={name} />
+          <LabelBox label={name} variant={label?? null} />
         }
         { src && src != "" &&
           <img src={src} />
@@ -93,6 +106,8 @@ export const EdgedIcon= ({ name=__RESOURCE__.name, src=__RESOURCE__.src, href=__
 
 export const EdgedResourceIcon= ({ resource=null, className=null, ...rest })=>{
 
+
+  //console.log(resource)
   return (
     <EdgedIcon {...(Object.assign(structuredClone(__RESOURCE__), resource??{}))} {...rest} className={className}/>
   )

@@ -5,7 +5,15 @@ import { _FetchJsonData } from "../res/lib/util.js"
 const _APP_PATH= "app"
 const _PORTFOLIO_PATH= "ptf"
 
+function checkDeviceDesktop(){
+  const useragent= navigator.userAgent.toLowerCase();
+  return !(['android', 'ios', 'mobile', 'tablet'].some((e) => useragent.includes(e))) && 
+    ['win64', 'win32', 'linux', 'unix', 'mac', 'macos', 'mac os'].some((e) => useragent.includes(e));
+}
+
 export const Constants= Object.freeze({
+  DESKTOP: checkDeviceDesktop(),
+  BREAKPOINTS: [ 1800, 1200, 992, 768, 480, 320 ],
   APP_MODE: { standard:0, util:1, project:2 },
   LEAVE_MODE: { link:0, mailto:1, project:2 },
   
@@ -13,10 +21,19 @@ export const Constants= Object.freeze({
   MISSING_TEXT_STRING: '<b class="col-1">Missing text string</b>',
   UNSAFE_HTML_STRING: '<b class="col-1">Unsafe Html detected</b>',
 
-  INVALID_OVERLAY_ELEMENT: <b className="col-1">Invalid Overlay ID</b>
+  INVALID_OVERLAY_ELEMENT: <b className="color-1">Invalid Overlay ID</b>
 })
 
 export const Functions= Object.freeze({
+
+  cleanRichText: (text)=>{
+    return text.replaceAll(/(<[^>]>)/g, "")
+  },
+
+  isHttps: ()=>{
+    return window.location.protocol === "https:"
+  },
+
   checkHtmlSafety: (text)=>{
     return text.match(/<[^>]*(\s|script|javascript|=)+[^>]*>/g)== null
   },
@@ -29,10 +46,25 @@ export const Functions= Object.freeze({
     e.preventDefault()
     e.stopPropagation()
     return false
+  },
+
+  setScroll: (x, y)=> {
+    const 
+      _element= Constants.DESKTOP ? document.getElementById("app").children[1] : document.getElementById("app")
+    _element.scrollLeft= x
+    _element.scrollTop= y
+  },
+
+  scrollTo: (x, y)=> {
+    const 
+      _options= {top:y, left: x, behavior: 'smooth'},
+      _element= Constants.DESKTOP ? document.getElementById("app").children[1] : document.getElementById("app")
+    _element.scrollTo(_options)
   }
 })
 
 import OverlaySlideshow from "../module/OverlaySlideshow.jsx"
+import EdgedScrollbar from "../component/EdgedScrollbar.jsx"
 
 const _OVERLAY_COMPONENT_= Object.freeze({
   slideshow: OverlaySlideshow
@@ -62,7 +94,7 @@ const AppContext= ReactComponent=>{
             content:      ()=> globals.content,
             portfolio:    ()=> globals.portfolio,
             pagedata:     ()=> globals.pagedata,
-            overlaydata:  ()=>globals.overlaydata,
+            overlaydata:  ()=> globals.overlaydata,
           },
           set: {
             ready:        (newData)=> _setGlobal({ ready: Object.assign(globals.ready, newData ? newData : { setup:false, page:false } ) }),
@@ -90,6 +122,17 @@ const AppContext= ReactComponent=>{
 
     React.useEffect(()=>{ 
       globals.actions._initialize() 
+      document.body.classList.toggle("mobile", !Constants.DESKTOP)
+
+      window.addEventListener('resize', onWindowResize)
+      window.addEventListener("load", onWindowLoad)
+
+      onWindowResize()
+
+      return ()=>{
+        window.removeEventListener('resize', onWindowResize)
+        window.removeEventListener("load", onWindowLoad)
+      }
     },[])
 
     React.useEffect(()=>{
@@ -104,10 +147,28 @@ const AppContext= ReactComponent=>{
       document.body.classList.toggle("hidescroll", !scrollbar)
 
     },[globals.overlaydata.timestamp])
+    
+    function handleEvent(e){ globals.actions.setEventdata(e) }
+
+    function onWindowLoad(){
+      //setTimeout(() => { Functions.scrollTo({top:0, left: 0, behavior: 'smooth'}) }, 15)
+    }
+
+    function onWindowResize(){
+      
+      const width= window.innerWidth
+      for(const e of Constants.BREAKPOINTS){
+        document.body.classList.toggle(`below${e}`, width < e)
+      }
+    }
 
 		return (
 			<Globals.Provider value={globals}>
-				<ReactComponent/>
+        { Constants.DESKTOP ? 
+          <EdgedScrollbar id="app" onMouseMove={handleEvent} options={{overflow:{x:'hidden'}, scrollbars:{visibility:'visible'}}} events={{ scroll: (_,e)=>handleEvent(e) }}><ReactComponent/></EdgedScrollbar>
+          :
+          <div id="app" onMouseMove={handleEvent} onScroll={handleEvent}><ReactComponent/></div>
+        }
 			</Globals.Provider>
 		)
   }
@@ -148,7 +209,7 @@ const globalsState= ({ actions, get, set })=> {
         
         for(const e in builder.page) builder.page[e] = { ...structuredClone(builder.default.page), ...builder.page[e], _name: e }
         
-        _resolveImagePaths(["social", "lang", "tech", "engine", "app"])
+        _resolveResources(["social", "lang", "tech", "engine", "app"])
 
         delete builder.default
       
@@ -158,17 +219,19 @@ const globalsState= ({ actions, get, set })=> {
         
         set.ready({ setup:true })
 
-        function _resolveImagePaths(types){
+        function _resolveResources(types){
           for(const i in types){
             const 
               _type= types[i],
               imgroot= resources[_type]._imgroot
             for(const e in resources[_type]) {
+
               if(e=="_imgroot") continue
-              else {
-                const src= resources[_type][e].src
-                resources[_type][e].src= src ? `${imgroot}/${src}` : null
-              }
+              
+              const src= resources[_type][e].src
+              
+              resources[_type][e].id=e 
+              resources[_type][e].src= src ? `${imgroot}/${src}` : null
             }
             delete resources[_type]._imgroot
           }
@@ -197,6 +260,24 @@ const globalsState= ({ actions, get, set })=> {
         const res= await fetch("https://fabform.io/f/W8Kl5O7", { method: "POST", body: data })
         console.log(res.ok)
         return res.ok
+      },
+
+      share: async(data)=>{
+        try { 
+          await navigator.share(data) 
+          return true
+        } 
+        catch (e) { console.log('Error while sharing:', e) }
+        return false
+      },
+
+      clipboard: async(data)=>{
+        try { 
+          await navigator.clipboard.writeText(data) 
+          return true
+        } 
+        catch (e) { console.log('Error writing into clipboard:', e) }
+        return false
       },
 
       // #region PAGE
@@ -283,6 +364,8 @@ const globalsState= ({ actions, get, set })=> {
 
         set.portfolio({...get.portfolio(), body})
         set.ready({portfolioBody: success})
+
+        return success
 
         function ensureHtmlSafety(element){
           
