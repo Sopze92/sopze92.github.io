@@ -30,9 +30,9 @@ const NavBarPage= ({ active, title, action }) => {
 
 const NavBarLink= ({ resource }) => {
   return (
-    <li className="nav-item" role="presentation">
-      <a className="nav-link header-socials-item" href={resource.href}>
-        <img className="no-select" src={resource.img}/>
+    <li role="presentation">
+      <a href={resource.href} target="_blank">
+        <img className="no-select" src={resource.src}/>
       </a>
     </li>
   );
@@ -104,7 +104,7 @@ const NavBar= ({ type }) => {
               </div>
               <div className="col-12 col-md-4 my-auto pt-2 d-flex justify-content-center justify-content-md-end">
                 { data.links && 
-                    <ul className="nav p-0 m-0 mb-2">
+                    <ul className="header-social-list">
                       {
                         data.links.map((e,i)=>
                           <NavBarLink 

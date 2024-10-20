@@ -22,6 +22,7 @@ const Page= ()=>{
     [explorerFixed, set_explorerFixed]= React.useState(false),
     [explorerStyle, set_explorerStyle]= React.useState(null),
     [filters, set_filters]= React.useState(null),
+    [queryParams, set_queryParams]= React.useState(getNavigatorBaseQuery()),
     [itemCount, set_itemCount]= React.useState(null),
     [buttonInfo_text, set_buttonInfo_text]= React.useState(""),
     [buttonInfo_timeout, set_buttonInfo_timeout]= React.useState(null),
@@ -35,15 +36,13 @@ const Page= ()=>{
     Functions.setScroll(0, 0)
 
     const 
-      queryParams= new URLSearchParams(window.location.search),
-      pArticle= queryParams.get('a'),
-      pFilters= queryParams.get('f')?.split(','),
+      pArticle= queryParams.a?? portfolio.items.find(e=>e.default).id,
+      pFilters= queryParams.f,
       new_filters= {}
 
     // intialize filters
 
     let type
-    
     if(pFilters){
       for(let i=0; i< portfolio.types.length; i++){
         type= portfolio.types[i]
@@ -63,24 +62,20 @@ const Page= ()=>{
       }
     }
 
-    updateFilters(new_filters)
-
     // initialize article
 
-    const 
-      _articleData= pArticle && portfolio.items.find(e=>e.id==pArticle),
-      article= _articleData ? pArticle : portfolio.items.find(e=>e.default).id
+    const _article= portfolio.items.find(e=>e.id==pArticle)
 
     if(!ready.portfolioBody || timestamp.pageHard){
-      actions.loadPortfolioElement(article)
+      actions.loadPortfolioElement(_article.id)
     }
 
-    if(!_articleData){
-      setTimeout(() => {
-        toggleExplorer()
-        if(window.innerWidth < 992) Functions.scrollTo(0, window.innerWidth < 992 ? (window.innerHeight + (Constants.DESKTOP ? 40 : 30)) : 0 )
-      }, 250)
-    }
+    setTimeout(() => {
+      toggleExplorer()
+      if(window.innerWidth < 992) Functions.scrollTo(0, window.innerWidth < 992 ? (window.innerHeight + (Constants.DESKTOP ? 40 : 30)) : 0 )
+    }, 250)
+
+    updateFilters(new_filters)
 
   } handle() },[timestamp.page])
 
@@ -104,15 +99,44 @@ const Page= ()=>{
 
   },[eventdata.scroll.timestamp])
 
+  // update query params on URL
+  React.useEffect(()=>{
+    
+    if (ready.portfolioBody && window.history.replaceState) {
+
+      const url = new URL(window.location.href)
+      url.search = ""
+
+      if(queryParams){
+        let _params= []
+        if(queryParams.f) _params.push("f=" + queryParams.f.join(','))
+        if(queryParams.a) _params.push("a=" + queryParams.a)
+        url.search = _params.length > 0 ? "?" + _params.join('&') : ""
+      }
+
+      if(!url.href != window.location.href) {
+        window.history.replaceState({ path: url.origin, type: "query" }, "", url)
+      }
+    }
+
+  },[queryParams])
+
+  function getNavigatorBaseQuery(){
+    const _queryParams= new URLSearchParams(window.location.search)
+    return {f:_queryParams.get('f'), a:_queryParams.get('a')}
+  }
+
   // update filters
   function updateFilters(new_filters){
     set_filters(new_filters)
     if(new_filters) set_itemCount(portfolio.items.filter(e=>
-      (e.types ? shouldListElement(e.types, new_filters) : true)
+      shouldListElement(e.types, new_filters)
     ).length)
+    
+    set_queryParams({...queryParams, f:Object.keys(new_filters).filter(e=>new_filters[e].state)})
   }
 
-  // filter flick
+  // filter click
   function handleFilterClick(name){
     const new_filters= structuredClone(filters)
     new_filters[name].state= !new_filters[name].state
@@ -137,6 +161,8 @@ const Page= ()=>{
         toggleExplorer()
       }, 125)
     }
+
+    set_queryParams({...queryParams, a:id})
   }
 
   // share click
@@ -180,6 +206,10 @@ const Page= ()=>{
 
   // element showstate compute
   function shouldListElement(types, _filters=filters){
+
+    if(!types) return false
+    else if(types.length == 0) return true 
+
     let 
       result= false,
       filter
@@ -222,7 +252,7 @@ const Page= ()=>{
                         <ul className="d-flex flex-column fs-5 ptf-explorer-list">
                           {
                             portfolio.items.map(e=> {
-                              const _classname= (portfolio.body?.name===e.id ? "active " : "") + (!e.types || shouldListElement(e.types) ? "" : "ptf-filtered")
+                              const _classname= (portfolio.body?.name===e.id ? "active " : "") + (shouldListElement(e.types) ? "" : "ptf-filtered")
                               return <li key={`pf-he-${e.id}`} className={_classname != "" ? _classname : null} onClick={()=>handleElementClick(e.id)} {...customTags.innerHtml(e.name)}/>
                             })
                           }
@@ -258,12 +288,12 @@ const Page= ()=>{
         <div ref={article_ref} className={`${Constants.DESKTOP ? "col-12 col-xl-9" : "col-12"} ptf-start edgedicon-portfolio`}>
         { ready.portfolioBody && 
           (
-              <PortfolioArticle/>
+            <PortfolioArticle portfolioNavigator={handleElementClick}/>
           )
         }
         </div>
       </div>
-      { portfolio.body && portfolio.body.overlay &&
+      { Constants.DESKTOP && portfolio.body && portfolio.body.overlay &&
         <div className="overlay-container">
           { portfolio.body.overlay.map((e,i)=>
               {
@@ -285,22 +315,25 @@ export default Page
 
 const __PORTFOLIO_EXPLORER_PLACEHOLDER__=
   (
-  <div className="col-3 ps-4">
-    <div className="ptf-explorer">
-      <p className="text-center m-0 py-3 fs-3 no-select fw-semibold">Portfolio Explorer</p>       
-      <ul className="d-flex justify-content-evenly ptf-explorer-types placeholder-glow">   
-        <li className="active"><span className="placeholder">000</span></li>
-        <li className="active"><span className="placeholder">000</span></li>
-        <li className="active"><span className="placeholder">000</span></li>
-        <li className="active"><span className="placeholder">000</span></li>
-      </ul>
-      <div className="ptf-explorer-list-wrapper">
-        <ul className="d-flex flex-column fs-5 ptf-explorer-list placeholder-glow">
-          <li className=""><span className="placeholder col-7"></span></li>
-          <li className=""><span className="placeholder col-4"></span></li>
-          <li className=""><span className="placeholder col-11"></span></li>
-          <li className=""><span className="placeholder col-5"></span></li>
+  <div className="ptf-explorer-container ptf-start">
+    <div className="ptf-explorer-wrapper">
+      <div className="ptf-explorer-toggler"/>
+      <div className="ptf-explorer">
+        <p className="text-center m-0 py-3 fs-3 no-select fw-semibold">Portfolio Explorer</p>       
+        <ul className="d-flex justify-content-evenly ptf-explorer-types placeholder-glow">   
+          <li className="active"><span className="placeholder">000</span></li>
+          <li className="active"><span className="placeholder">000</span></li>
+          <li className="active"><span className="placeholder">000</span></li>
+          <li className="active"><span className="placeholder">000</span></li>
         </ul>
+        <div className="ptf-explorer-list-wrapper">
+          <ul className="d-flex flex-column fs-5 ptf-explorer-list placeholder-glow">
+            <li className=""><span className="placeholder col-7"></span></li>
+            <li className=""><span className="placeholder col-4"></span></li>
+            <li className=""><span className="placeholder col-11"></span></li>
+            <li className=""><span className="placeholder col-5"></span></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>

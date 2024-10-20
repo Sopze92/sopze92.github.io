@@ -1,5 +1,6 @@
 {
   "title":"Bugsxecutor [PC]",
+  "titlepic": { "replace":true, "src":"ptf/{0}/title.webp" },
   "description":"Small and frenetic videogame inspired by the classic Flash-Player game BoxHead",
   "date":"2021",
   "header":[

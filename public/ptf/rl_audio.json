@@ -16,6 +16,10 @@
     {"type":"sep"},
     {"type":"txt", "data":"<#-0><b>S</b>ometimes projects doesn't have to be tangible products that one just release or sell, and so is in this case, this project was more focused in gather information and investigate a subject to achieve certain goal than developing an actual product or piece of software.</#>"},
     {"type":"sep"},
+    {"type":"lnk:ul", "css":"ptf-bunch-list ptf-link-bunch fs-2", "data":[
+      ["{g}/rlam-docs", "Online HTML Documentation"],
+      ["{g}/rlam-docs/data/reference/RocketLeague_SoundEvents_Reference.xml", "SoundEvents XSTL"]
+    ]},
     {"type":"img:xcar-", "data":[
       { "src":"ptf/{0}/preview.webp",
         "title":"Front page",
@@ -53,11 +57,6 @@
       "<b>P</b>ython script for <b-0>FNV-132</b> de-hasher. <i-0>(Generate words in several ways to test against a given list of hashes)</i>"
     ]},
     {"type":"sep"},
-    {"type":"txt", "css":"ptf-section-title", "data":"- Links"},
-    {"type":"lnk:ul", "css":"ptf-bunch-list ptf-link-bunch", "data":[
-      ["{g}/rlam-docs", "Online HTML Documentation"],
-      ["{g}/rlam-docs/data/reference/RocketLeague_SoundEvents_Reference.xml", "SoundEvents XSTL"]
-    ]},
     {"type":"txt", "css":"ptf-section-title", "data":"- Trivia"},
     {"type":"txt:ul", "separator":":", "data":[
       "<b>I</b> did let the <b-0>FNV-132</b> de-haser running overnight several times <i-0>(which translates into hundreds of hours)</i> to decrypt hashed audio element names such as <b-0>buses</b>, <b-0>effects</b>, <b-0>variables</b>, etc... whose name was required for the dummy project to be able to actually use those elements in-game."

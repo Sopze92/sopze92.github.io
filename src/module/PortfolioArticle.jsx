@@ -7,7 +7,7 @@ import useCustomTags from '../hooks/useCustomTags.jsx'
 import { EdgedResourceIcon } from "../component/EdgedIcon.jsx"
 import { CarouselRowSimple, CarouselRow, CarouselColumn } from '../component/Carousel.jsx'
 
-const PortfolioArticle= ()=>{
+const PortfolioArticle= ({portfolioNavigator})=>{
 
   const
     { portfolio, actions }= React.useContext(Globals),
@@ -36,7 +36,7 @@ const PortfolioArticle= ()=>{
       case "sep":
         return <div key={k} className="ptf-separator"/>
       case "row":
-        return <div key={k} className={"row d-flex " + (element.css?? "")}>
+        return <div key={k} className={"row ptf-row d-flex ptf-width-limit " + (element.css?? "")}>
           {
             element.data.map((e,i)=>
               parsePortfolioContent(e,i)
@@ -44,7 +44,7 @@ const PortfolioArticle= ()=>{
           }
         </div>
       case "col":
-        return <div key={k} className={"col d-flex flex-column " + (element.css?? "")}>
+        return <div key={k} className={"col ptf-col d-flex flex-column " + (element.css?? "")}>
           {
             element.data.map((e,i)=>
               parsePortfolioContent(e,i)
@@ -63,6 +63,17 @@ const PortfolioArticle= ()=>{
               <p {...customTags.innerHtml(element.data.text)}/>
             </div>
           </div>
+        )
+      // EDGEDICONS
+      case "ico":
+        return (
+          <div className="d-flex justify-content-center mx-auto ptf-edgedicon-container-small">
+          {
+            element.data.map((e,i)=> 
+              <EdgedResourceIcon key={`pf-ah-${i}`} resource={actions.getResource(e)}/>
+            )
+          }
+        </div>
         )
       // IMAGE / MULTIMEDIA
       case "img":
@@ -116,11 +127,11 @@ const PortfolioArticle= ()=>{
             if(!ldata[i].abs) ldata[i].src= parseImageSrc(ldata[i].src)
             delete ldata[i].abs
           }
-          return <CarouselRow key={k} aspect={element.aspect} items={ldata}/>
+          return <CarouselRow key={k} aspect={element.aspect} items={ldata} cssClass={element.css}/>
         }
       case "img:ycar":
         {
-          const ldata= structuredClone(element.data);
+          const ldata= structuredClone(element.data)
           for(let i in element.data){
             if(!ldata[i].abs) ldata[i].src= parseImageSrc(ldata[i].src)
             delete ldata[i].abs
@@ -130,6 +141,22 @@ const PortfolioArticle= ()=>{
       // TEXT
       case "txt":
         return <p key={k} className={element.css?? null} {...customTags.innerHtml(element.data)}/>
+      case "txt:blk":
+        return (
+          <div key={k} className={"ptf-textblock " + (element.css?? "")}>
+            { element.data.split('\n').map((e,i)=>
+              <p key={`${k}-${i}`} {...customTags.innerHtml(e)}/>
+            )}
+          </div>
+        )
+      case "txt:mln":
+        return (
+          <div key={k} className={"ptf-textblock " + (element.css?? "")}>
+            { element.data.map((e,i)=>
+              <p key={`${k}-${i}`} {...customTags.innerHtml(e)}/>
+            )}
+          </div>
+        )
       case "txt:ol":
       case "txt:ul":
         {
@@ -145,14 +172,6 @@ const PortfolioArticle= ()=>{
             </TagElement>
           )
         }
-      case "txt:blk":
-        return (
-          <div key={k} className={"ptf-textblock " + (element.css?? "")}>
-            { element.data.split('\n').map((e,i)=>
-              <p key={`${k}-${i}`} {...customTags.innerHtml(e)}/>
-            )}
-          </div>
-        )
       case "lnk":
         return <a key={k} href={parseLinkHref(element.href??"#")} target="_blank" className={element.css?? null} {...customTags.innerHtml(element.data)}/>
       case "lnk:ol":
@@ -183,10 +202,24 @@ const PortfolioArticle= ()=>{
             <iframe referrerPolicy="strict-origin-when-cross-origin" src={`https://sketchfab.com/models/${element.id}/embed?dnt=1`}/>
           </div>
         )
+      case "emb:twitter":
+        const _height= (element.height??"76px:76px").split(":")
+        return (
+          <div key={k} className="embed twitter" style={{"--cv-twittercard-height":_height[0], "--cv-twittercard-height-mobile":_height[1]}}>
+            <iframe scrolling="no" src={`https://platform.twitter.com/embed/Tweet.html?dnt=true&id=${element.id}&theme=dark`}/>
+          </div>
+        )
+      case "emb:portfolio":
+        return (
+          <button key={k} className="to-div embed ptf-article" onMouseDown={(e)=>{portfolioNavigator(element.id)}}>
+            <img className="framed-img" src={`res/img/ptf/${element.id}/preview.webp`}/>
+            <p {...customTags.innerHtml(portfolio.items.find(e=>e.id==element.id).name)}/>
+          </button>
+        )
       // FONT
       case "fon":
         return (
-          <div className={`dev-font-preview font-${element.data}`}>
+          <div key={k} className={`dev-font-preview font-${element.data}`}>
           {
             Array.from("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789=_&.,:;+-*()[]{}%$!?¿¡/\\~<>@#").map((e,i)=>
               <span key={`fc-${i}`}>{e}</span>
@@ -224,7 +257,7 @@ const PortfolioArticle= ()=>{
         }
       </div>
       { portfolio.body.header &&
-        <div className="d-flex justify-content-center mx-auto ptf-header-block ptf-edgedicon-container">
+        <div className="d-flex justify-content-center mx-auto ptf-header-block ptf-edgedicon-container edgedicon-portfolio-header">
           {
             portfolio.body.header.map((e,i)=> 
               <EdgedResourceIcon key={`pf-ah-${i}`} resource={actions.getResource(e)}/>

@@ -15,21 +15,19 @@
   ],
   "content":[
     {"type":"sep" },
-    {"type":"txt:blk", "css":"fs-4 text-center", "data":"Featured elements:"},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Featured elements"},
     {"type":"row", "data":[
-      {"type":"col", "data":[
-        { "type":"img:abs", "data":"https://i.imgur.com/eMbTEAN.png" },
-        { "type":"txt", "css":"fs-4 text-center", "data":"example text" }
-      ]},
-      {"type":"col", "data":[
-        { "type":"img:abs", "data":"https://i.imgur.com/eMbTEAN.png" },
-        { "type":"txt", "css":"fs-4 text-center", "data":"example text" }
-      ]},
-      {"type":"col", "data":[
-        { "type":"img:abs", "data":"https://i.imgur.com/eMbTEAN.png" },
-        { "type":"txt", "css":"fs-4 text-center", "data":"example text" }
-      ]}
+      {"type":"emb:portfolio", "id":"bng_junker" },
+      {"type":"emb:portfolio", "id":"rl_adidas" }
     ]},
-    {"type":"sep"}
+    {"type":"row", "data":[
+      {"type":"emb:portfolio", "id":"3d_collection" },
+      {"type":"emb:portfolio", "id":"3d_glock" },
+      {"type":"emb:portfolio", "id":"3d_faberge" }
+    ]},
+    {"type":"row", "data":[
+      {"type":"emb:portfolio", "id":"vg_reflexes" },
+      {"type":"emb:portfolio", "id":"vg_hiddenwoods" }
+    ]}
   ]
 }

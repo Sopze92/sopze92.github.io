@@ -141,13 +141,13 @@ const Page= ()=>{
         <div className="row subsection-padding edgedicon-home-social d-flex flex-column justify-content-center gap-page-social">
           <div className="d-flex justify-content-center gap-page-social">
             <EdgedResourceIcon resource={actions.getResource("social:github")} bgsize={1.5}/>
-            <EdgedResourceIcon resource={actions.getResource("social:linkedin")} bgsize={1.5}/>
             <EdgedResourceIcon resource={actions.getResource("social:artstation")} bgsize={1.5}/>
             <EdgedResourceIcon resource={actions.getResource("social:sketchfab")} bgsize={1.5}/>
+            <EdgedResourceIcon resource={actions.getResource("social:itchio")} bgsize={1.5}/>
           </div>
           <div className="d-flex justify-content-center gap-page-social">
 {/*             <EdgedResourceIcon resource={actions.getResource("social:fab")} bgsize={1.5}/> */}
-            <EdgedResourceIcon resource={actions.getResource("social:itchio")} bgsize={1.5}/>
+            <EdgedResourceIcon resource={actions.getResource("social:linkedin")} bgsize={1.5}/>
             <EdgedResourceIcon resource={actions.getResource("social:youtube")} bgsize={1.5}/>
             <EdgedResourceIcon resource={actions.getResource("social:twitter")} bgsize={1.5}/>
           </div>
@@ -196,7 +196,7 @@ const Page= ()=>{
         <div className="row subsection-padding">
           <div className="col text-center">
             <p id="home-subtitle" className="mono ts-bottom no-select">
-              <span id="fx_artist">Artist</span> · <span id="fx_coder" >Programmer</span> · <span id="fx_developer" >Developer</span> · <span id="fx_gamer">Maker</span>
+              <span id="fx_artist">Artist</span> · <span id="fx_coder">Programmer</span> · <span id="fx_developer" >Developer</span> · <span id="fx_maker">Maker</span>
             </p>
           </div>
         </div>

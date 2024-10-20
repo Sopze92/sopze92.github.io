@@ -1,0 +1,84 @@
+{
+  "title":"3D Collection",
+  "description":"A bunch of 3D models, some of are just part of greater projects",
+  "date":"-",
+  "header":[
+    "app:blender",
+    "app:substance_painter",
+    "app:paintdotnet"
+  ],
+  "content":[
+    {"type":"sep"},
+    {"type":"txt", "css":"ptf-section-title-big", "data":"- FlipFlop -"},
+    {"type":"txt", "data":"Hyper-realistic FlipFlop asset I made as commission (only left shown)"},
+    {"type":"img:xcar", "aspect":"16/10", "data":[
+      { "src":"ptf/{0}/flipflop/flipflop_0.webp" },
+      { "src":"ptf/{0}/flipflop/flipflop_1.webp" },
+      { "src":"ptf/{0}/flipflop/flipflop_2.webp" }
+    ]},
+    {"type":"img:box", "data":{
+      "src":"ptf/{0}/flipflop/flipflop_texprv.webp",
+      "text":"PBR Material + UV Layout"
+    }},
+    {"type":"sep"},
+    {"type":"txt", "css":"ptf-section-title-big", "data":"- Arcade Cabinet -"},
+    {"type":"txt", "data":"Colorful arcade cabinet based on one I saw on a book's cover"},
+    {"type":"img:xcar", "css":"w-75 mx-auto", "aspect":"1", "data":[
+      { "src":"ptf/{0}/cabinet/cabinet_0.webp" },
+      { "src":"ptf/{0}/cabinet/cabinet_1.webp" },
+      { "src":"ptf/{0}/cabinet/cabinet_2.webp" },
+      { "src":"ptf/{0}/cabinet/cabinet_3.webp" }
+    ]},
+    {"type":"img:box", "data":{
+      "src":"ptf/{0}/cabinet/cabinet_texprv.webp",
+      "text":"PBR Material + UV Layout"
+    }},
+    {"type":"sep"},
+    {"type":"txt", "css":"ptf-section-title-big", "data":"- HillClimb Racing 2 :: Dune Buggy -"},
+    {"type":"txt", "data":"3D lowpoly version of the dune buggy from the famous racing game for <b-0>Android</b>."},
+    {"type":"img:xcar", "aspect":"16/10", "data":[
+      { "src":"ptf/{0}/hcr2/buggy_0.webp", "title":"Bugz"},
+      { "src":"ptf/{0}/hcr2/buggy_0b.webp", "title":"Bugz"},
+      { "src":"ptf/{0}/hcr2/buggy_1.webp", "title":"Bomb"},
+      { "src":"ptf/{0}/hcr2/buggy_1b.webp", "title":"Bomb"},
+      { "src":"ptf/{0}/hcr2/buggy_2.webp", "title":"Princess"},
+      { "src":"ptf/{0}/hcr2/buggy_2b.webp", "title":"Princess"},
+      { "src":"ptf/{0}/hcr2/buggy_3.webp", "title":"White Pancake"},
+      { "src":"ptf/{0}/hcr2/buggy_3b.webp", "title":"White Pancake"},
+      { "src":"ptf/{0}/hcr2/buggy_6.webp", "title":"Halloween"},
+      { "src":"ptf/{0}/hcr2/buggy_6b.webp", "title":"Halloween"},
+      { "src":"ptf/{0}/hcr2/buggy_7.webp", "title":"Champ"},
+      { "src":"ptf/{0}/hcr2/buggy_7b.webp", "title":"Champ"},
+      { "src":"ptf/{0}/hcr2/buggy_9.webp", "title":"Flames"},
+      { "src":"ptf/{0}/hcr2/buggy_9b.webp", "title":"Flames"},
+      { "src":"ptf/{0}/hcr2/buggy_11.webp", "title":"Sunburnt"},
+      { "src":"ptf/{0}/hcr2/buggy_11b.webp", "title":"Sunburnt"},
+      { "src":"ptf/{0}/hcr2/buggy_12.webp", "title":"VIP"},
+      { "src":"ptf/{0}/hcr2/buggy_12b.webp", "title":"VIP"},
+      { "src":"ptf/{0}/hcr2/props.webp", "title":"Props"}
+    ]},
+    {"type":"sep"},
+    {"type":"txt", "css":"ptf-section-title-big", "data":"- Dioramas -"},
+    {"type":"img:xcar", "aspect":"1", "data":[
+      { "src":"ptf/{0}/sfw_frog/sfw_frog_0.webp" },
+      { "src":"ptf/{0}/sfw_frog/sfw_frog_1.webp" },
+      { "src":"ptf/{0}/sfw_frog/sfw_frog_2.webp" },
+      { "src":"ptf/{0}/interior/interior_0.webp" },
+      { "src":"ptf/{0}/interior/interior_1.webp" },
+      { "src":"ptf/{0}/island/island_0.webp" },
+      { "src":"ptf/{0}/island/island_1.webp" },
+      { "src":"ptf/{0}/bebes/bebes_0.webp" },
+      { "src":"ptf/{0}/bebes/bebes_1.webp" },
+      { "src":"ptf/{0}/bebes/bebes_2.webp" },
+      { "src":"ptf/{0}/bebes/bebes_3.webp" }
+    ]},
+    {"type":"txt", "css":"ptf-section-title-big", "data":"- Other -"},
+    {"type":"img:xcar-", "aspect":"1", "data":[
+      { "src":"ptf/{0}/perchero_0.webp" },
+      { "src":"ptf/{0}/floorcleaner_0.webp" }
+    ]}
+  ],
+  "overlay":[
+    { "type":"slideshow" }
+  ]
+}

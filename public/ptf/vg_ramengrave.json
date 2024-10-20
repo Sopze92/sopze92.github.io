@@ -1,7 +1,8 @@
 {
   "title":"Ramen Grave [PC]",
-  "description":"1-week GameJam participation where the topic was 'as ugly as possible'",
+  "description":"Solo project for a 1-week GameJam participation where the topic was <i>'as crappy as possible'</i>",
   "date":"2019",
+  "indent":["#ff4a4a","#aa3333"],
   "header":[
     "engine:unity",
     "lang:csharp",
@@ -9,10 +10,32 @@
   ],
   "content":[
     {"type":"sep"},
-    {"type":"txt", "data":"PLACEHOLDER TEXT"},
+    {"type":"txt:ul", "css":"ptf-bunch-list ptf-tag-bunch", "data":[
+      "2D Side-scroller",
+      "Platformer",
+      "Satire",
+      "Comedy"
+    ]},
+    {"type":"lnk", "css":"fs-2", "href":"https://sopze.itch.io/ramengrave", "data":"<b>See it on Itch.io</b"},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Info + plot"},
+    {"type":"txt:mln", "data":[
+      "The game is clearly '<b-0>crappy</b>' as asked, but only on visuals, the mechanics are simple but pretty polished so they don't cause bugs.",
+      "Your goal is to save the world from a villain enterprise named <b-0>Cojonovirus</b> <i-0>(the game was made during <b>covid-19</b> confinment and is based on it)</i>, to do that you must reach the company's building completing the <b-0>5 levels + a final boss</b> by picking <b-0>Ramen</b> dishes and farting your way to the level's exit while optionaly saving some souls. The final boss features infinite fart power, flying enemies and a ranged weapon, and the fight consists in defeat all enemies by picking and throwing <b-0>poop</b> chunks to them."
+    ]},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Pictures"},
+    {"type":"img:xcar", "aspect":"16/10", "data":[
+      { "src":"ptf/{0}/game_0.webp"},
+      { "src":"ptf/{0}/game_1.webp"}
+    ]},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Full walkthrough video"},
+    {"type":"emb:youtube", "full":1, "id":"jTAwjlqeI5Q"},
     {"type":"txt", "css":"ptf-section-title", "data":"- Trivia"},
     {"type":"txt:ul", "data":[
-      "PLACEHOLDER ELEMENT"
+      "<b-0>Ramen Grave</b> cames from <b-0>'Raven -> Ramen'</b> <i-0>(Raven was the jam's host nickname)</i> and <b-0>'Grave'</b> is spanish for <b-0>'serious/severe'</b> and refers to the severe farting it causes.",
+      "I didn't won the <b>GameJam</b>, host said it was <b><i>'really ugly but not crappy'</i></b>, as it is perfectly playable.",
+      "The amount of souls you save through the levels determine how many are in the final boss, so it's possible to skip the final boss by picking up zero.",
+      "Sounds played by souls are famous phrases said by some spanish youtubers and streamers.",
+      "The green haired woman that appears as <b>NPC</b> was a friend of mine who also made it's own game for this <b>GameJam</b>."
     ]}
   ]
 }

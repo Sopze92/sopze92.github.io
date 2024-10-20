@@ -1,6 +1,8 @@
 {
   "title":"RefleXes [Android]",
+  "titlepic": { "replace":true, "src":"ptf/{0}/title.webp" },
   "description":"Small commercial APP to train your reaction time and kill some time",
+  "indent":["#6dd615","#F47957FF"],
   "date":"2021",
   "header":[
     "engine:unity",
@@ -9,10 +11,29 @@
   ],
   "content":[
     {"type":"sep"},
-    {"type":"txt", "data":"PLACEHOLDER TEXT"},
-    {"type":"txt", "css":"ptf-section-title", "data":"- Trivia"},
-    {"type":"txt:ul", "data":[
-      "PLACEHOLDER ELEMENT"
+    {"type":"txt:ul", "css":"ptf-bunch-list ptf-tag-bunch", "data":[
+      "2D single-view",
+      "Minigame",
+      "App",
+      "Training",
+      "Casual"
+    ]},
+    {"type":"lnk", "css":"fs-1", "href":"https://play.google.com/store/apps/details?id=com.SopSoftware.RefleXes", "data":"<b>See it on Google Play Store</b"},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Info"},
+    {"type":"txt:mln", "data":[
+      "Small game/app for I developed to learn the process of developing for Android and publishing on <b-0>Google Play Store</b>.",
+      "Features a <b-0>Infinite game</b> where your task is to tap on the <b-0>good</b> dots and avoid the <b-0>bad</b> ones as long and fast as possible. The <b-0>good</b> dots do give you score points, while a single tap on a <b-0>bad</b> one will end the game and show your score. There are a bunch of settings to customize the game, that prevail across game sessions."
+    ]},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Pictures"},
+    {"type":"img:xcar", "aspect":"16/10", "data":[
+      { "src":"ptf/{0}/game_0.webp", "title":"Title screen"},
+      { "src":"ptf/{0}/game_1.webp", "title":"In-game view"},
+      { "src":"ptf/{0}/game_2.webp", "title":"Shapes"},
+      { "src":"ptf/{0}/game_3.webp", "title":"Endscreen"},
+      { "src":"ptf/{0}/game_4.webp", "title":"Settings"}
     ]}
+  ],
+  "overlay":[
+    { "type":"slideshow" }
   ]
 }

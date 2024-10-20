@@ -56,6 +56,10 @@ body:not(.mobile), body:not(.mobile) #root {
   }
 }
 
+ul {
+  margin: 0;
+}
+
 /* --------------------------------------------------------------------------------------------------------------- DEV */
 
 .dev {
@@ -191,17 +195,28 @@ img { user-select: none; pointer-events: none; }
   border-bottom: 4px solid var(--cv-section-dark-border);
 }
 
-.header-socials-item {
-  margin: 0px;
-  padding: .25em .5em;
-  opacity: 0.7;
-  transition: .125s;
+.header-social-list {
+  display: flex;
+  list-style-type: none;
 
-  &:hover {
-    opacity: 1.0;
+  & li{
+    display: flex;
+    padding: .75em;
+    opacity: 0.7;
+    scale: 1.0;
+    transition: .125s;
+      
+    &:hover {
+      scale: 1.1;
+      opacity: 1.0;
+    }
+
+    & a {
+      margin: auto;
+      
+      & img { width: 2em; }
+    }
   }
-
-  & img { width: 24px; }
 }
 
 /* --------------------------------------------------------------------------------------------------------------- FOOTER */
@@ -420,9 +435,9 @@ img { user-select: none; pointer-events: none; }
 
 .ptf-explorer-container {
   flex: 0;
-  width: 28em;
-  min-width: 28em;
-  max-width: 28em;
+  width: 30em;
+  min-width: 30em;
+  max-width: 30em;
   padding: 0;
 }
 
@@ -704,6 +719,7 @@ body:not(.mobile) .ptf-explorer-toggler {
 
   & .color-64 { color:#f2d59c } /* beamng */
   & .color-65 { color:#bce8e1 } /* rocketleague */
+  & .color-66 { color:#e8bcbc } /* gta */
 
   & b {
     &.b-0 {
@@ -742,8 +758,30 @@ body:not(.mobile) .ptf-explorer-toggler {
     text-align: left;
 
     margin: 0;
-    padding: 0;
-    padding-left: 3em;
+    padding: 1em 0 0 3em;
+  }
+
+  & .ptf-section-title-big {
+    
+    color: #f4f4f4;
+
+    font-size: 1.75em;
+    font-weight: 700;
+
+    margin: 0;
+    padding: 1em 0 0 0;
+  }
+
+  & .ptf-section-subtitle {
+    
+    color: #e0e0e0;
+
+    font-size: 1em;
+    font-weight: 700;
+    text-align: left;
+
+    margin: 0;
+    padding: 1em 0 0 7em;
   }
 
   & .ptf-separator {
@@ -848,7 +886,7 @@ ul.ptf-textlist {
   flex-wrap: wrap;
 
   text-align: center;
-  padding: .5em 1.5em;
+  padding: 1.5em 1.5em;
 
   gap: 1em;
 }
@@ -867,8 +905,14 @@ ul.ptf-textlist {
 }
 
 .ptf-width-limit {
-  width: 100%;
+  flex: 1;
+  min-width: 5em;
+  max-width: 100%;
   padding: 1em 3em;
+}
+
+.ptf-row .ptf-width-limit {
+  padding: 0;
 }
 
 /* --------------------------------------------------------------------------------------------------------------- CAROUSEL */
@@ -967,6 +1011,10 @@ ul.ptf-textlist {
   transition: opacity .125s linear;
 }
 
+.carousel-listx:not(:has([data-overlayscrollbars-viewport])) {
+  display: none;
+}
+
 .carousel-listx {
 
   border: 1px solid #222;
@@ -987,7 +1035,8 @@ ul.ptf-textlist {
     height: 9em;
 
     display: block;
-    flex: 1 0;
+    flex: 1 0 auto;
+
     aspect-ratio: 1;
   
     transition: all .125s linear;
@@ -1019,6 +1068,11 @@ ul.ptf-textlist {
       background: #2228;
     }
   }
+}
+
+.mobile .carousel-listx button {
+  width: 4.5em;
+  height: 4.5em;
 }
 
 .image-frame-hoverable {
@@ -1059,7 +1113,7 @@ ul.ptf-textlist {
 
 /* --------------------------------------------------------------------------------------------------------------- EMBEDS */
 
-.embed {
+.embed:not(.twitter) {
 
   background: #000b;
   box-shadow: inset 0 0 4em #000;
@@ -1087,6 +1141,36 @@ ul.ptf-textlist {
   & iframe {
     width: 100%;
     height: 100%;
+  }
+}
+
+.embed.twitter {
+
+  background: #000b;
+  box-shadow: inset 0 0 4em #000;
+  border: 1px solid #444;
+  width: 550px;
+  height: var(--cv-twittercard-height);
+
+  border-radius: 1em;
+
+  margin: .4em auto;
+  overflow: hidden;
+
+  & iframe {
+    width: 550px;
+    height: 100%;
+    background: #000;
+  }
+
+}
+
+.mobile .embed.twitter {
+  height: var(--cv-twittercard-height-mobile);
+  width: 300px;
+
+  & iframe {
+    width: 300px;
   }
 }
 
@@ -1294,12 +1378,16 @@ ul.ptf-textlist {
   padding: 0 5em;
 }
 
-.edgedicon-container, .ptf-edgedicon-container {
+.edgedicon-container, .ptf-edgedicon-container, .ptf-edgedicon-container-small {
   display: flex;
   flex-wrap: wrap;
   gap: 1em;
   margin: 0;
   padding: 0;
+}
+
+.ptf-edgedicon-container-small {
+  gap: .5em;
 }
 
 .edgedicon-container {
@@ -1327,10 +1415,19 @@ ul.ptf-textlist {
   }
 }
 
-.edgedicon-portfolio {
+.edgedicon-portfolio-header {
   --cv-edgedicon-size: 6em;
   & .labelbox-wrapper { 
     font-size: 1.25em; 
+    font-weight: 700;
+  }
+}
+
+.edgedicon-portfolio {
+  --cv-edgedicon-size: 4rem;
+  
+  & .labelbox-wrapper { 
+    font-size: 1.25rem; 
     font-weight: 700;
   }
 }

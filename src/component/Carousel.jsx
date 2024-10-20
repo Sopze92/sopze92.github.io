@@ -1,9 +1,10 @@
 import React from "react"
 
-import { Globals } from "../context/AppContext.jsx"
+import { Globals, Constants } from "../context/AppContext.jsx"
 import useCustomTags from '../hooks/useCustomTags.jsx'
 
 import EdgedScrollbar from "../component/EdgedScrollbar.jsx"
+import { useNavigate } from "react-router-dom"
 
 export const CarouselRowSimple= ({ cssClass, items })=>{
 
@@ -49,7 +50,8 @@ export const CarouselRow= ({ cssClass, aspect=null, items })=>{
 
   const 
     { actions }= React.useContext(Globals),
-    [ activeIndex, set_activeIndex]= React.useState(0)
+    [ activeIndex, set_activeIndex]= React.useState(0),
+    nav= useNavigate()
     
   const customTags= useCustomTags()
   
@@ -63,13 +65,16 @@ export const CarouselRow= ({ cssClass, aspect=null, items })=>{
     e.preventDefault()
     e.stopPropagation()
 
-    actions.setOverlayData('slideshow', {
-      active: true,
-      content: items,
-      current: activeIndex,
-      timestamp: Date.now()
-    })
+    if(Constants.DESKTOP){
 
+      actions.setOverlayData('slideshow', {
+        active: true,
+        content: items,
+        current: activeIndex,
+        timestamp: Date.now()
+      })
+    }
+    else window.location.href= `${window.location.origin}/${items[activeIndex].src}`
     return false
   }
 
