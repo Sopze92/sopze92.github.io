@@ -2,7 +2,7 @@
   "title":"Rocket League Custom Field for Adidas",
   "description":"full environment with extra features for Rocket League (not official)",
   "date":"Sep-Oct 2023",
-  "indent":["#1EF8FFFF","#20DBCBFF"],
+  "indent":["#d0fb12","#1EF8FF"],
   "header":[
     "engine:unreal3",
     "lang:as",
@@ -11,11 +11,71 @@
   ],
   "content":[
     {"type":"sep"},
-    {"type":"txt", "data":"PLACEHOLDER TEXT"},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Info"},
+    {"type":"txt", "data":"A custom styled standard <b-0>Rocket-League</b> field with an added playable stadium outer part to run a tournament as part of an Adidas marketing campaign."},
+    {"type":"txt:mln", "data":[
+      "It uses a ton of custom logic made in <b-0>UE3</b>'s basic node-scripting, named <b-0>Kismet</b> <i-0>(modding in <b>Rocket-League</b> doesn't allow custom actual game code)</i> and helped by some actual code using <b-0>ActionScript</b> through an <b>.swf</b> player in the background.",
+      "Features two gamemodes: <b-0>Training</b> (automatically active while the map is loaded in single-player) and <b-0>Play</b>. "
+    ]},
+    {"type":"txt", "css":"ptf-section-subtitle", "data":"- Gamemode: Training"},
+    {"type":"txt", "data":"<b-0>Training</b> gamemode can only be played when the map is loaded in <b-0>single-player</b> mode, and is the default mode for it."},
+    {"type":"txt", "data":"The gamemode features the <b-0>field's outer zone</b>, where a circuit is available to play by driving through the start. There's also modes for the circuit: <b-0>Race</b> and <b-0>Dribble</b>, Completing the circuit once will activate the <b-0>Teleports</b>, located below each net, which allows the player to get inside the field by driving over them. <i-0>(A message appears notifying the player that the field is unlocked and the arrows on the Teleport's driveway will switch from red to green)</i>"},
+    {"type":"txt:ul", "data":[
+      "<b-0>Race</b>: Activated when starting normally, the mode places some random <b-0>Adidas boots</b> and obstacles and you just have to do a lap as fast as you can without falling off of the circuit.",
+      "<b-0>Dribbling</b>: Activated when starting the circuit with the ball on your roof <i-0>(called dribbling in <b>Rocket-League</b>)</i>, consist on finish the circuit without leaving the ball touch the ground."
+    ]},
+    {"type":"txt", "css":"ptf-section-subtitle", "data":"- Gamemode: Play"},
+    {"type":"txt", "data":"This is the default gamemode of <b-0>Rocket-League</b>, consisting on play car soccer, but wit a tweak: there are some <b-0>Adidas boots</b> placed on the field of which you can take advantage of during the game to make crazy plays."},
+    {"type":"txt", "css":"ptf-section-subtitle", "data":"- Adidas boots"},
+    {"type":"txt", "data":"A pair of <b-0>Adidas' X-CrazyFast.1</b> Boots that will instantlty set the car to max speed upon pickup, they also respawn after 10 seconds."},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Pictures"},
+    {"type":"img:xcar", "aspect":"16/10", "data":[
+      { "src":"ptf/{0}/general_0.webp", "title":"General", "desc":"Top view"},
+      { "src":"ptf/{0}/general_1.webp", "title":"General", "desc":"Diagonal front view"},
+      { "src":"ptf/{0}/general_2.webp", "title":"General", "desc":"Diagonal back view"},
+      { "src":"ptf/{0}/general_3.webp", "title":"General", "desc":"X-Crazyfast 3D typography"},
+      { "src":"ptf/{0}/general_4.webp", "title":"General", "desc":"Crowd stands"},
+      { "src":"ptf/{0}/general_5.webp", "title":"Statues", "desc":"Ball, Box, Shoes and X-Crazyfast Logo"},
+      { "src":"ptf/{0}/general_6.webp", "title":"Teleport", "desc":"Used to get inside the field (after unlocking it)"},
+      { "src":"ptf/{0}/field_0.webp", "title":"Field"},
+      { "src":"ptf/{0}/field_1.webp", "title":"Field"},
+      { "src":"ptf/{0}/field_2.webp", "title":"Field"},
+      { "src":"ptf/{0}/field_3.webp", "title":"Field"},
+      { "src":"ptf/{0}/circuit_0.webp", "title":"Circuit"},
+      { "src":"ptf/{0}/circuit_1.webp", "title":"Circuit"},
+      { "src":"ptf/{0}/circuit_2.webp", "title":"Circuit"},
+      { "src":"ptf/{0}/circuit_3.webp", "title":"Circuit"},
+      { "src":"ptf/{0}/shoe_0.webp", "title":"Shoes"},
+      { "src":"ptf/{0}/shoe_1.webp", "title":"Shoes"},
+      { "src":"ptf/{0}/shoe_2.webp", "title":"Shoes"},
+      { "src":"ptf/{0}/shoe_3.webp", "title":"Shoes + box", "desc": "In-game view"},
+      { "src":"ptf/{0}/ball_0.webp", "title":"Ball"},
+      { "src":"ptf/{0}/ball_1.webp", "title":"Ball", "desc": "In-game view"}
+    ]},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Videos"},
+    {"type":"emb:youtube", "full":1, "id":"7MWo2rBf3v8"},
+    {"type":"emb:youtube", "full":1, "id":"JKrhCyrGnkk"},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Reactions"},
+    {"type":"emb:twitter", "height":"628px:469px", "scale":"0.5", "id":"1700597550875590664"},
+    {"type":"emb:twitter", "height":"753px:490px", "scale":"0.5", "id":"1702281067149828359"},
+    {"type":"emb:twitter", "height":"825px:547px", "scale":"0.5", "id":"1701296547781021814"},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Cheatcodes"},
+    {"type":"txt:ul", "data":[
+      "<b-0>SERGIOAUTHOR</b> - Shows a <b><i>thanks for playing</i></b> message from the author <b-0>(me)</b> <i-0>(the minigame easter-egg activates this same message)</i>", 
+      "<b-0>ISAMINIBEBI</b> - Shows a brief message to Isa", 
+      "<b-0>RLRACE</b> - Setups the field props as if <b-0>Race</b> mode were activated", 
+      "<b-0>RLDRIBBLE</b> - Setups the field props as if <b-0>Dribble</b> mode were activated", 
+      "<b-0>RLCLEAR</b> - Clears all <b-0>Race</b>/<b-0>Dribble</b> mode props", 
+      "<b-0>RLFIELD</b> - Unlocks the field without the need of completing the circuit first"
+    ]},
     {"type":"txt", "css":"ptf-section-title", "data":"- Trivia"},
     {"type":"txt:ul", "data":[
       "<b>T</b>here are some <b-0>Easter Eggs</b> included in the field, most of them are <b-0>cheatcodes</b> you just type in-game but one is a <b-0>hidden minigame</b> involving the 4 statues surrounding the field.",
-      "<b>A</b> week after starting this project I discovered the way to add user-made audio content into the game, so this environment doesn't make any use of custom audio."
+      "<b>A</b> week after starting this project I discovered the way to add user-made audio content into the game, so this environment doesn't make any use of custom audio.",
+      "<b>F</b>or schedule reasons, I had around 30 days to do everything (designing + modeling + programming)."
     ]}
+  ],
+  "overlay":[
+    { "type":"slideshow" }
   ]
 }

@@ -408,6 +408,13 @@
       "src": "tech/flask_dark.svg",
       "col": ["#6abbc6", "#f4f0ef"]
     },
+    "jbeam": { 
+      "name": "JBeam",
+      "class": "syntax",
+      "usage": ["data"],
+      "src": "tech/jbeam.svg",
+      "col": ["#F48626FF", "#E41C1CFF"]
+    },
     "dotnet": { 
       "learning": true,
       "name": "DotNet",

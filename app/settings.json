@@ -28,7 +28,8 @@
         "social:linkedin",
         "social:github",
         "social:artstation",
-        "social:sketchfab"
+        "social:sketchfab",
+        "social:itchio"
       ]
     },
 
@@ -51,23 +52,22 @@
     "home": {
       "navbar": [
         "home",
-        "portfolio",
-        "services"
+        "portfolio"
       ]
     },
     
     "worker": {
       "navbar": [
         "home",
-        "portfolio",
-        "aboutme"
+        "portfolio"
       ],
-      "social": [
-        { "type": "email", "name": "gmail", "image":"gmail" },
-        { "type": "url", "name": "linkedin", "image":"linkedin" },
-        { "type": "url", "name": "github", "image":"github" },
-        { "type": "url", "name": "artstation", "image":"artstation" },
-        { "type": "url", "name": "sketchfab", "image":"sketchfab" }
+      "links": [
+        "social:gmail",
+        "social:linkedin",
+        "social:github",
+        "social:artstation",
+        "social:sketchfab",
+        "social:itchio"
       ]
     },
 
@@ -76,10 +76,10 @@
         "home",
         "utils"
       ],
-      "social": [
-        { "type": "url", "name": "github", "image":"github" },
-        { "type": "url", "name": "linkedin", "image":"linkedin" },
-        { "type": "email", "name": "gmail", "image":"gmail" }
+      "links": [
+        "social:github",
+        "social:linkedin",
+        "social:gmail"
       ]
     }
   },
@@ -114,7 +114,7 @@
     "home": {
       "title": "Home", 
       "showTitle": false,
-      "header": "empty",
+      "header": "home",
       "footer": "minimal"
     },
 

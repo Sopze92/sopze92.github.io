@@ -1,5 +1,6 @@
 {
   "title":"Hidden Woods [PC]",
+  "titlepic": { "replace":true, "src":"ptf/{0}/title.webp" },
   "description":"Polished prototype I wanted to release because of its beauty",
   "date":"2019",
   "indent":["#FFE438FF","#EBC52EFF"],
@@ -11,10 +12,31 @@
   ],
   "content":[
     {"type":"sep"},
-    {"type":"txt", "data":"PLACEHOLDER TEXT"},
-    {"type":"txt", "css":"ptf-section-title", "data":"- Trivia"},
-    {"type":"txt:ul", "data":[
-      "PLACEHOLDER ELEMENT"
+    {"type":"txt:ul", "css":"ptf-bunch-list ptf-tag-bunch", "data":[
+      "3D Third Person",
+      "Experimental",
+      "Deep",
+      "TechDemo"
+    ]},
+    {"type":"lnk", "css":"fs-2", "href":"https://sopze.itch.io/hidden-woods", "data":"<b>See it on Itch.io</b"},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Info + plot"},
+    {"type":"txt:mln", "data":[
+      "The game is an evolved prototype that emerged while I was practising some programming in <b-0>Unity</b> for a bigger project.",
+      "Features a <b-0>never-ending forest</b> where you have to find <b-0>notes</b> and perform <b-0>1 out of 3</b> actions on them, which will slightly move you towards one of the two possible sides, the game ends when you fully reach one side so there's two endings (a good and bad ones). If your lamp's fuel fully consumes, a <b-0>cottage</b> <i>will eventually find you</i> and your progress will be reset, so you'll need to pickup another lamp and try again <i-0>(you cannot find the <b>cottage</b> by mistake while you're carrying a lit lamp)</i>."
+    ]},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Pictures"},
+    {"type":"img:xcar", "aspect":"16/10", "data":[
+      { "src":"ptf/{0}/game_0.webp", "title":"Menu"},
+      { "src":"ptf/{0}/game_1.webp", "title":"Starting info text"},
+      { "abs":1, "src":"https://img.itch.zone/aW1hZ2UvNTU1MjA2LzI5MDc4NjYucG5n/original/VhNKfl.png", "title":"Cottage", "desc":"outside"},
+      { "src":"ptf/{0}/game_2.webp", "title":"Cottage", "desc":"inside"},
+      { "src":"ptf/{0}/game_3.webp", "title":"Note", "desc":"Notes are found on trees"},
+      { "src":"ptf/{0}/game_4.webp", "title":"Side 1"},
+      { "src":"ptf/{0}/game_5.webp", "title":"Side 2"},
+      { "src":"ptf/{0}/game_6.webp", "title":"Side 1 almost full"}
     ]}
+  ],
+  "overlay":[
+    { "type":"slideshow" }
   ]
 }

@@ -1,28 +1,69 @@
 {
   "title":"Miscellanea",
   "description":"A catch-all zone where I put very small projects that wouldn't fit in their own section",
-  "header":[
-    "lang:html",
-    "lang:css",
-    "lang:javascript",
-    "lang:python",
-    "tech:tailwind",
-    "tech:react",
-    "tech:react_router",
-    "tech:webpack",
-    "tech:flask",
-    "tech:sqlalchemy"
-  ],
   "content":[
     {"type":"sep"},
-    {"type":"txt", "data":"Rocket League :: Keyboard input"},
-    {"type":"txt", "data":"BeamNG :: Minecart"},
-    {"type":"txt", "data":"PNG 2 SNES"},
+    {"type":"txt", "css":"ptf-section-title-big", "data":"- <#-66>GTA</#> :: 1974 Chevrolet Camaro -"},
+    {"type":"ico", "data":[
+      "lang:html",
+      "lang:css",
+      "lang:javascript",
+      "lang:python",
+      "tech:tailwind",
+      "tech:react",
+      "tech:react_router",
+      "tech:webpack",
+      "tech:flask",
+      "tech:sqlalchemy"
+    ]},
+    {"type":"txt", "data":"As opposed to usual <b-0>GTA</b> mods, I followed original art style so they integrate in-game nicely."},
+    {"type":"img:xcar", "aspect":"16/10", "data":[
+      { "src":"ptf/{0}/gta_camaro/4_0.webp", "title":"GTA Vice City Version", "desc":"Front view" },
+      { "src":"ptf/{0}/gta_camaro/4_1.webp", "title":"GTA Vice City Version", "desc":"Rear view" },
+      { "src":"ptf/{0}/gta_camaro/3_0.webp", "title":"GTA III Version", "desc":"Front view" },
+      { "src":"ptf/{0}/gta_camaro/3_1.webp", "title":"GTA III Version", "desc":"Rear view" },
+      { "src":"ptf/{0}/gta_camaro/4_2.webp", "title":"GTA Vice City Version", "desc":"Interior view" },
+      { "src":"ptf/{0}/gta_camaro/4_3.webp", "title":"GTA Vice City Version", "desc":"Damaged view" },
+      { "src":"ptf/{0}/gta_camaro/4_4.webp", "title":"GTA Vice City Version", "desc":"Damaged view" },
+      { "src":"ptf/{0}/gta_camaro/3_2.webp", "title":"GTA III Version", "desc":"Damaged view" },
+      { "src":"ptf/{0}/gta_camaro/3_3.webp", "title":"GTA III Version", "desc":"Damaged view" },
+      { "src":"ptf/{0}/gta_camaro/3_4.webp", "title":"GTA III Version", "desc":"Damaged view" }
+    ]},
     {"type":"sep"},
-    {"type":"txt", "data":"PLACEHOLDER TEXT"},
-    {"type":"txt", "css":"ptf-section-title", "data":"- Trivia"},
-    {"type":"txt:ul", "data":[
-      "PLACEHOLDER ELEMENT"
-    ]}
+    {"type":"txt", "css":"ptf-section-title-big", "data":"- <#-64>BeamNG</#> :: Minecart -"},
+    {"type":"ico", "data":[
+      "lang:lua",
+      "tech:jbeam",
+      "app:blender",
+      "app:paintdotnet"
+    ]},
+    {"type":"txt", "data":"A small mod that adds the minecart from <b-0>Minecraft</b> with all its variants."},
+    {"type":"emb:youtube", "full":1, "id":"-_7m8t0C75o"},
+    {"type":"sep"},
+    {"type":"txt", "css":"ptf-section-title-big", "data":"- <#-64>BeamNG</#> :: DemoDerby ETK-i -"},
+    {"type":"ico", "data":[
+      "lang:lua",
+      "tech:jbeam",
+      "app:blender",
+      "app:paintdotnet"
+    ]},
+    {"type":"txt", "data":"Heavily modified version of the official <b-0>ETK-i</b> vehicle."},
+    {"type":"emb:youtube", "full":1, "id":"Ms_Dw6q26GI"},
+    {"type":"sep"},
+    {"type":"txt", "css":"ptf-section-title-big", "data":"- <#-65>Rocket League</#> :: Keyboard input -"},
+    {"type":"ico", "data":[
+      "lang:as",
+      "engine:unreal3"
+    ]},
+    {"type":"txt", "data":"Hooks and handles Keyboard Input through <b-0>SWF</b> + <b-0>Kismet</b> techniques."},
+    {"type":"sep"},
+    {"type":"txt", "css":"ptf-section-title-big", "data":"- PNG 2 SNES -"},
+    {"type":"ico", "data":[
+      "lang:java"
+    ]},
+    {"type":"txt", "data":"A PNG to SNES image format converter that supports 24/32 bpp <b-0>.png</b> files as input images and converts them into <b-0>2bpp</b>, <b-0>4bpp</b> or <b-0>8bpp</b> binary images that use color-indexes."},
+    {"type":"txt", "data":"Each <b-0>.png</b> image must be accompanied by a <b-0>.txt</b> file where user defines the <b-0>bpp</b> to convert to, the tiles to make, and the palette to use. The palette can also be converted to <b-0>.bin</b> to be later used in the actual <b-0>SNES</b> system."},
+    {"type":"txt", "data":"The resulting <b-0>.bin</b> files can be included and used in the <b-0>SNES</b> assembly project on any <b-0>IDE</b> that supports the language, such as <b-0>Sublime Text</b>"},
+    {"type":"sep"}
   ]
 }

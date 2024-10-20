@@ -13,6 +13,7 @@
   "content":[
     {"type":"sep"},
     {"type":"txt", "css":"ptf-section-title", "data":"- Videogame"},
+    {"type":"txt", "data":"Synth Travel - Musical Game"},
     {"type":"txt", "data":"Victoria - Survival Horror"},
     {"type":"txt", "data":"Cargo - Puzzle"},
     {"type":"txt", "data":"nCells - Puzzle"},
