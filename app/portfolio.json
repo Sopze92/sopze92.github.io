@@ -12,7 +12,7 @@
   "items":[
     { "id":"0_welcome", "default":1 },
 
-    { "id":"bng_junker",            "types":["ftd","wip"],        "name":"<#-64>BeamNG</#> <b-1>::</b> <#-32>The Junker</#>" },
+    { "id":"bng_junker",            "types":["ftd"],                "name":"<#-64>BeamNG</#> <b-1>::</b> <#-32>The Junker</#>" },
     { "id":"vg_airdribbler",        "_types":["ftd","wip","vgm"],  "name":"<#-33>AirDribbler</#>" },
     { "id":"rl_adidas",             "types":["ftd","3da","dev"],  "name":"<#-65>Rocket League</#> <b-1>::</b> <#-32>Adidas Stadium</#>" },
     { "id":"web_keqqu",             "_types":["web"],              "name":"<#-35>KeQQu</#>" },

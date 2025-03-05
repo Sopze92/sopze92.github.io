@@ -1,7 +1,7 @@
 {
   "title":"The Junker",
   "titlepic": { "replace":true, "src":"ptf/{0}/title.webp" },
-  "description":"Remake of the musclecar from Half-Life 2 Episode 2 for BeamNG",
+  "description":"Remake from scratch for BeamNG of the musclecar from Half-Life 2 Episode 2",
   "date":"2023-2024",
   "indent":["#f6bc00","#a95f3a"],
   "header":[
@@ -16,31 +16,58 @@
   ],
   "content":[
     {"type":"sep"},
-    {"type":"txt", "data":"<#-0><b>T</b>his is not a finished project but a <b>WIP</b> <i-0>(Work In Progress)</i>, it's not very common to showcase <b>WIP</b>s in a portfolio, still, it's here because I'm proud of how it's turning out due the amount of required quality and the effort it takes.</#>"},
-    {"type":"sep"},
-    {"type":"lnk", "css":"fs-1", "href":"https://www.beamng.com/threads/63933", "data":"<b>See Official Forum thread</b"},
+    {"type":"lnk", "css":"fs-1", "href":"https://www.beamng.com/resources/the-junker.33700", "data":"<b>See Official Mod Repository post</b"},
     {"type":"txt", "data":"<b>T</b>his is a project I started back in <b>2017</b> with zero idea about <b-0>BeamNG</b> modding, then in <b>2019</b> I had to pause this project and it stayed like that until in <b>2024</b> when I finally decided it was time to pick this up again and finish it."},
     {"type":"txt", "css":"ptf-section-title", "data":"- Pictures"},
     {"type":"img:xcar", "aspect":"16/10", "data":[
       { "src":"ptf/{0}/ingame.webp"},
       { "src":"ptf/{0}/ingame_0.webp"},
-      { "src":"ptf/{0}/ingame_1.webp"},
-      { "src":"ptf/{0}/ingame_2.webp"},
-      { "src":"ptf/{0}/ingame_3.webp"},
-      { "src":"ptf/{0}/ingame_4.webp"},
-      { "src":"ptf/{0}/ingame_5.webp"},
-      { "src":"ptf/{0}/ingame_6.webp"}
+      { "abs": 1, "src":"https://cdnb.artstation.com/p/assets/images/images/085/122/199/large/sergio-sopze-screenshot-2025-02-20-02-23-56.jpg"},
+      { "abs": 1, "src":"https://cdnb.artstation.com/p/assets/images/images/085/123/009/large/sergio-sopze-screenshot-2025-02-20-03-42-51.jpg"},
+      { "abs": 1, "src":"https://cdna.artstation.com/p/assets/images/images/085/122/212/large/sergio-sopze-screenshot-2025-02-20-02-26-13.jpg"},
+      { "abs": 1, "src":"https://cdna.artstation.com/p/assets/images/images/085/123/034/large/sergio-sopze-screenshot-2025-02-20-03-47-00.jpg"},
+      { "src":"ptf/{0}/showroom_0.webp"},
+      { "abs": 1, "src":"https://cdnb.artstation.com/p/assets/images/images/085/123/039/large/sergio-sopze-screenshot-2025-02-20-03-47-54.jpg"},
+      { "src":"ptf/{0}/showroom_1.webp"},
+      { "abs": 1, "src":"https://cdna.artstation.com/p/assets/images/images/085/122/196/large/sergio-sopze-screenshot-2025-02-20-02-23-00.jpg"},
+      { "abs": 1, "src":"https://cdna.artstation.com/p/assets/images/images/085/122/188/large/sergio-sopze-screenshot-2025-02-20-02-21-49.jpg"},
+      { "src":"ptf/{0}/showroom_2.webp"},
+      { "src":"ptf/{0}/showroom_3.webp"},
+      { "src":"ptf/{0}/showroom_4.webp"},
+      { "abs": 1, "src":"https://cdnb.artstation.com/p/assets/images/images/085/122/191/large/sergio-sopze-screenshot-2025-02-20-02-22-35.jpg"},
+      { "abs": 1, "src":"https://cdna.artstation.com/p/assets/images/images/085/122/202/large/sergio-sopze-screenshot-2025-02-20-02-24-13.jpg"},
+      { "abs": 1, "src":"https://cdna.artstation.com/p/assets/images/images/085/122/214/large/sergio-sopze-screenshot-2025-02-20-02-27-09.jpg"},
+      { "abs": 1, "src":"https://cdna.artstation.com/p/assets/images/images/085/122/216/large/sergio-sopze-screenshot-2025-02-20-02-20-46.jpg"},
+      { "abs": 1, "src":"https://cdna.artstation.com/p/assets/images/images/085/123/014/large/sergio-sopze-screenshot-2025-02-20-03-43-20.jpg"},
+      { "abs": 1, "src":"https://cdna.artstation.com/p/assets/images/images/085/123/018/large/sergio-sopze-screenshot-2025-02-20-03-43-36.jpg"}
     ]},
-    {"type":"txt", "css":"ptf-section-title", "data":"- Latest video"},
-    {"type":"emb:youtube", "full":1, "id":"AYghp4bFHzU"},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Review videos"},
+    {"type":"txt", "data":"<b>A</b>ll the review videos were made during the beta stage, the final release."},
+    {"type":"emb:youtube", "full":1, "id":"qczijH0ZigM"},
+    {"type":"emb:youtube", "full":1, "id":"heyRwCOZvgg"},
+    {"type":"emb:youtube", "full":1, "id":"jJ0_gEZshiY"},
+    {"type":"emb:youtube", "full":1, "id":"C7EAr8s_bLM"},
     {"type":"txt", "css":"ptf-section-title", "data":"- Implications"},
     {"type":"txt:ol", "data":[
-      "<b>T</b>he <b>3D</b> model has been fully remade <i-0>(not yet finished)</i> from scratch, as the original from <b>2007</b> was a single-mesh-mess, too far from this game standards and from the current generation ones.",
-      "<b>T</b>extures are currently upscaled versions of the originals, except for the wheels. I won't start with car texture work until I finish the <b>3D</b> model.",
-      "<b-0>JBEAM</b> syntax is a custom <b-0>JSON</b> derivation so the base is the same, it's used to setup the vehicle data, variables and define all the shapes to be used in the game / physics engine.",
+      "<b>T</b>he <b>3D</b> model has been fully remade from scratch, as the original (from <b>2007</b>) was a single-mesh-mess, too far from nowadays' standards.",
+      "<b>T</b>extures are made from scrath too, taking originals as a mere reference.",
+      "<b-0>JBEAM</b> syntax is a custom <b-0>JSON</b> derivation so the base is the same, it's used to define and setup the actual vehicle physic structures, lights, variables and other behaviours.",
       "<b-0>LUA</b> is the main language for most of the game engine content, it's used to drive the extra logic added to this specific vehicle such as the radar and some engine behaviours.",
-      "<b-0>Javascript</b>, <b-0>HTML</b> and <b-0>CSS</b> are the languages for all UI and <b>2D</b> rendering via <b-0>Angular Components</b>, it's used to give the radar <b-0>LUA</b> data nice visuals then use it as a <b>2D</b> texture."
+      "<b-0>Javascript</b>, <b-0>HTML</b> and <b-0>CSS</b> are the languages for all UI and <b>2D</b> rendering via <b-0>Angular Components</b>, it's used to make the radar's <b-0>LUA</b> frontend to use it as a <b>2D</b> texture."
     ]},
+    {"type":"txt", "css":"ptf-section-title", "data":"- Technical"},
+    {"type":"img:box", "data":{
+      "abs":1, "src":"https://cdna.artstation.com/p/assets/images/images/085/122/556/large/sergio-sopze-junker-main-showcase.jpg",
+      "text":"Main PBR Material + UVs"
+    }},
+    {"type":"img:box", "data":{
+      "abs":1, "src":"https://cdnb.artstation.com/p/assets/images/images/085/122/551/large/sergio-sopze-junker-secondary-showcase.jpg",
+      "text":"Secondary PBR Material + UVs"
+    }},
+    {"type":"img:box", "data":{
+      "abs":1, "src":"https://cdnb.artstation.com/p/assets/images/images/085/122/555/large/sergio-sopze-junker-detail-showcase.jpg",
+      "text":"Detail PBR Material + UVs"
+    }},
     {"type":"txt", "css":"ptf-section-title", "data":"- Trivia"},
     {"type":"txt:ul", "data":[
       "<b>A</b>fter the <b>5</b>-year pause, I did basically restarted the mod instead of resuming it as I had grown a lot in overall knowledge."
